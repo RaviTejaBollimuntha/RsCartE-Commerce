@@ -17,10 +17,10 @@
 <!--/head-->
 
 <body>
-	<div class="container text-center">
-		<div class="logo-404">
-			<a href="home"><img src="resources/logo.png" /></a>
-		</div>
+     <header id="header">
+		<%@include file="template/header.jsp"%>
+	</header>
+	<div class="container text-center">		
 		<div class="content-404">
 			<img src="resources/images/404/404.png" class="img-responsive" />
 			<h3>

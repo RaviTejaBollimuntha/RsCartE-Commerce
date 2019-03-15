@@ -17,9 +17,12 @@
 <!--/head-->
 
 <body>
+     <header id="header">
+		<%@include file="template/header.jsp"%>
+	</header>
 	<div class="container text-center">
 		<div class="logo-404">
-			<a href="home"><img src="resources/logo.png" /></a>
+			<img src="resources/images/404/404.png" class="img-responsive" />
 		</div>
 		<div class="content-404">
 			<h3>Ops! We are currently experiencing some technical issues.
