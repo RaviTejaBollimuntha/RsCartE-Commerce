@@ -15,9 +15,10 @@ Following are the operations that can be performed by the Respective User
 # Technologies:
  - Maven Project
  - Apache Tomcat Server
- -  Spring Java Configuration
+ - Spring Java Configuration
  - Spring JDBC
  - JSP, Spring Forms
  - JSTL
- -  oracle
+ - oracle
  - PMD
+Rs-tx account number:98745632198745

@@ -23,9 +23,9 @@
     <header id="header">
 		<%@include file="template/header.jsp"%>
 	</header>
-	<section id="slider"><!--slider-->
+	<section id="slider">
 		<%@include file="slider.jsp"%>
-	</section><!--/slider-->
+	</section>
 	<section>
 		<div class="container">
 			<div class="row">
@@ -94,7 +94,7 @@
 		</div>
 	</footer>
 	<!--/Footer-->
-
+    <script src="resources/js/bootstrap.min.js"></script>
 	<script src="resources/js/jquery-1.8.0.js"></script>
 	<script src="resources/js/price-range.js"></script>
 	<script src="resources/js/jquery.scrollUp.min.js"></script>	

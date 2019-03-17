@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+      layout:decorator="layout/mainLayout">
+      
+      <head>
+        <title>Home</title>
+    </head>
+    <body>
+    	<div layout:fragment="pageHeader">
+        <section class="content-header">
+        	<h1>
+            	RsCart Administration
+            	<small>Manage RsCart Site Content</small>
+          	</h1>
+        </section>
+        </div>
+    	<div layout:fragment="content">
+	        <p>Welcome <span th:text="${authenticatedUser.user.name}">User</span>!</p>
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="mini-stat clearfix bx-shadow bg-info">
+                                <span class="mini-stat-icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                                <div class="mini-stat-info text-left">
+                                  <label>Total Orders:</label><span style="padding-left:50px;font-size:55px;font:bold;color: orange;" th:text="${orders}"></span> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="mini-stat clearfix bg-purple bx-shadow">
+                                <span class="mini-stat-icon"><i class="fa fa-comments-o" aria-hidden="true"></i></span>
+                                <div class="mini-stat-info text-left">
+                                   <label>Total Sales:</label><span style="padding-left:50px;font-size:50px;font:bold;color: orange;" th:text="${sales}"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="mini-stat clearfix bg-success bx-shadow">
+                                <span class="mini-stat-icon"><i class="fa fa-cloud-upload"
+                                                                aria-hidden="true"></i></span>
+                                <div class="mini-stat-info text-left">
+                                   <label>Total Users:</label><span style="padding-left:50px;font-size:50px;font:bold;color: orange;" th:text="${users}"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="mini-stat clearfix bg-primary bx-shadow">
+                                <span class="mini-stat-icon"><i class="fa fa-link" aria-hidden="true"></i></span>
+                                <div class="mini-stat-info text-left">
+                                   <label>Total Visitors:</label><span style="padding-left:50px;font-size:50px;font:bold;color: orange;" th:text="${visitors}"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div><label>Recent Data</label></div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">Latest Products</h4>
+                                </div>
+                                <div class="panel-body">                                    
+                         <table class="table table-hover">
+							<tr>
+								<th style="width: 10px">#</th>
+								<th>Image</th>
+								<th>Name</th>								
+							</tr>
+							<tr th:each="product,iterStat : ${products}">
+								<td th:text="${iterStat.count}">1</td>
+								<td><img src="assets/img/products/2.jpg" alt="" width="100" height="100" 
+		                            		th:src="@{'/assets/img/products/{id}.jpg'(id=${product.id})}"/></td>
+								<td th:text="${product.name}">Product Name</td>
+							</tr>
+
+						</table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">Latest Reviews.</h4>
+                                </div>
+                                <div class="panel-body">
+                                     <table class="table table-hover">
+							<tr>
+								<th style="width: 10px">#</th>
+								<th>Image</th>
+								<th>Name</th>								
+							</tr>
+							<tr th:each="product,iterStat : ${products}">
+								<td th:text="${iterStat.count}">1</td>
+								<td><img src="assets/img/products/2.jpg" alt="" width="100" height="100" 
+		                            		th:src="@{'/assets/img/products/{id}.jpg'(id=${product.id})}"/></td>
+								<td th:text="${product.name}">Product Name</td>
+							</tr>
+
+						</table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">Orders History</h4>
+                                </div>
+                                <div class="panel-body">
+                                     <table class="table table-hover">
+							<tr>
+								<th style="width: 10px">#</th>
+								<th>Image</th>
+								<th>Name</th>								
+							</tr>
+							<tr th:each="product,iterStat : ${products}">
+								<td th:text="${iterStat.count}">1</td>
+								<td><img src="assets/img/products/2.jpg" alt="" width="100" height="100" 
+		                            		th:src="@{'/assets/img/products/{id}.jpg'(id=${product.id})}"/></td>
+								<td th:text="${product.name}">Product Name</td>
+							</tr>
+
+						</table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+         </div>    
+    </body>
+    
+</html>

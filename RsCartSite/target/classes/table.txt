@@ -3,7 +3,12 @@ CREATE TABLE category (
   Name varchar(45) NOT NULL,
   PRIMARY KEY (Category_Id)
 );
-
+CREATE SEQUENCE category_id_seq
+  MINVALUE 1
+  START WITH 1000127
+  INCREMENT BY 1
+  CACHE 200;
+  
 CREATE TABLE subcategory (
   SubCategory_Id NUMBER(10)  NOT NULL ,
   Category_Id NUMBER(10)  NOT NULL,
@@ -11,6 +16,11 @@ CREATE TABLE subcategory (
   CONSTRAINT pk_subid  PRIMARY KEY (SubCategory_Id),  
   CONSTRAINT FK_subcategory_1 FOREIGN KEY (Category_Id) REFERENCES category(Category_Id)
 ) ;
+CREATE SEQUENCE subcategory_id_seq
+  MINVALUE 1
+  START WITH 1000116
+  INCREMENT BY 1
+  CACHE 200;
 
 CREATE TABLE product (
   Product_Id NUMBER(10)  NOT NULL ,
