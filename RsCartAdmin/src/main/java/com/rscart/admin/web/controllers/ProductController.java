@@ -80,7 +80,7 @@ public class ProductController extends RsCartAdminBaseController
 	@RequestMapping(value="/products", method=RequestMethod.POST)
 	public String createProduct(@Valid @ModelAttribute("product") ProductForm productForm, BindingResult result, 
 			Model model, RedirectAttributes redirectAttributes) {
-		productFormValidator.validate(productForm, result);
+		System.out.println(result);
 		if(result.hasErrors()){
 			return viewPrefix+"create_product";
 		}

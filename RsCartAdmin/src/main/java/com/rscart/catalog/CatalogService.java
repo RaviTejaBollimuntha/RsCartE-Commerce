@@ -87,14 +87,14 @@ public class CatalogService {
 		return productRepository.findOne(id);
 	}
 
-	public Product getProductBySku(String featured) {
-		return productRepository.findByfeatured(featured);
+	public Product getProductByName(String name) {
+		return productRepository.findByName(name);
 	}
 
 	public Product createProduct(Product product) {
-		Product persistedProduct = getProductBySku(product.getName());
+		Product persistedProduct = getProductByName(product.getName());
 		if (persistedProduct != null) {
-			throw new RsCartException("Product ID " + product.getId() + " already exist");
+			throw new RsCartException("Product  " + product.getName() + " already exist");
 		}
 		return productRepository.save(product);
 	}
