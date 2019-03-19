@@ -36,6 +36,11 @@ CREATE TABLE product (
   CONSTRAINT FK_product_1 FOREIGN KEY (Category_Id) REFERENCES category (Category_Id),
   CONSTRAINT FK_product_2 FOREIGN KEY (SubCategory_Id) REFERENCES subcategory (SubCategory_Id)
 );
+CREATE SEQUENCE product_id_seq
+  MINVALUE 1
+  START WITH 125
+  INCREMENT BY 1
+  CACHE 200;
 
 CREATE TABLE  customer (
   Customer_Id NUMBER(10) NOT NULL ,
