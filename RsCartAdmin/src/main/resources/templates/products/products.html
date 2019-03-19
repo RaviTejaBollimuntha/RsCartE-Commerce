@@ -27,6 +27,7 @@
 						<table class="table table-hover">
 							<tr>
 								<th style="width: 10px">#</th>
+								<th>Product Id</th>
 								<th>Image</th>
 								<th>Name</th>
 								<th>Available</th>
@@ -35,10 +36,11 @@
 							</tr>
 							<tr th:each="product,iterStat : ${products}">
 								<td th:text="${iterStat.count}">1</td>
+								<td th:text="${product.id}">Product Id</td>
 								<td><img src="assets/img/products/2.jpg" alt="" width="100" height="100" 
 		                            		th:src="@{'/assets/img/products/{id}.jpg'(id=${product.id})}"/></td>
 								<td th:text="${product.name}">Product Name</td>
-								<td th:text="${product.id}">Available</td>
+								<td th:text="${product.available}">Available</td>
 								<td th:text="${product.description}">Product Description</td>
 								<td><a th:href="@{/products/{id}(id=${product.id})}"
 									class="btn btn-sm btn-default"><i class="fa fa-edit"></i>

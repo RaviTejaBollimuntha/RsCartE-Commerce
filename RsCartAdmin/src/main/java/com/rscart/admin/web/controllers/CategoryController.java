@@ -116,11 +116,10 @@ public class CategoryController extends RsCartAdminBaseController
 	public void editCategory(HttpServletRequest request,HttpServletResponse response) throws IOException {
 		Category category = catalogService.getCategoryById(Integer.parseInt(request.getParameter("id")));
 		List<SubCategory> subCategoryList =catalogService.getSubCategoryByCATEGORY_ID(category.getId());
-		 String buffer="<select name='subcategory'>"; 
+		 String buffer="<select th:field='*{subcategory}'name='subcategory'>"; 
 			for (SubCategory subcat : subCategoryList) {
 				buffer=buffer+"<option value='"+subcat.getId()+"'>"+subcat.getName()+"</option>"; 
 			}		 
-			 
 			 buffer=buffer+"</select>"; 
 			response.getWriter().print(buffer);
 	}

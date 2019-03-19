@@ -105,9 +105,11 @@ public class CatalogService {
 			throw new RsCartException("Product " + product.getId() + " doesn't exist");
 		}
 		persistedProduct.setDescription(product.getDescription());
-		persistedProduct.setManufacturer(product.getManufacturer());
 		persistedProduct.setPrice(product.getPrice());
 		persistedProduct.setCategory(getCategoryById(product.getCategory().getId()));
+		persistedProduct.setFeatured(product.getFeatured());
+		persistedProduct.setSubcategory_id(product.getSubcategory_id());
+		persistedProduct.setCreatedOn(product.getCreatedOn());
 		return productRepository.save(persistedProduct);
 	}
 

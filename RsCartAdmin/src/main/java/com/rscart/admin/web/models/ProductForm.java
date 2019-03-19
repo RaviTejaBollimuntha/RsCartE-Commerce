@@ -19,21 +19,122 @@ import com.rscart.entities.Product;
 public class ProductForm 
 {
 	private Integer id;
-	@NotEmpty
-	private String manufacturer;
+	@NotNull
+	private Integer featured;
 	@NotEmpty
 	private String name;
 	private String description;
 	@NotNull
 	@DecimalMin("0.1")
 	private BigDecimal price = new BigDecimal("0.0");
-	private String imageUrl;
+	private Integer available;
 	private MultipartFile image;
-	private boolean disabled;
+	private String manufacturer;
 	@NotNull
 	private Integer categoryId;
+	private String subcategory;
 	
 	
+	public Integer getId() {
+		return id;
+	}
+
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+
+	public Integer getFeatured() {
+		return featured;
+	}
+
+
+	public void setFeatured(Integer featured) {
+		this.featured = featured;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public String getDescription() {
+		return description;
+	}
+
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+
+	public BigDecimal getPrice() {
+		return price;
+	}
+
+
+	public void setPrice(BigDecimal price) {
+		this.price = price;
+	}
+
+
+	public Integer getAvailable() {
+		return available;
+	}
+
+
+	public void setAvailable(Integer available) {
+		this.available = available;
+	}
+
+
+	public MultipartFile getImage() {
+		return image;
+	}
+
+
+	public void setImage(MultipartFile image) {
+		this.image = image;
+	}
+
+
+	public String getManufacturer() {
+		return manufacturer;
+	}
+
+
+	public void setManufacturer(String manufacturer) {
+		this.manufacturer = manufacturer;
+	}
+
+
+	public Integer getCategoryId() {
+		return categoryId;
+	}
+
+
+	public void setCategoryId(Integer categoryId) {
+		this.categoryId = categoryId;
+	}
+
+
+	public String getSubcategory() {
+		return subcategory;
+	}
+
+
+	public void setSubcategory(String subcategory) {
+		this.subcategory = subcategory;
+	}
+
+
 	public Product toProduct() {
 		Product p = new Product();
 		p.setId(id);
@@ -41,97 +142,27 @@ public class ProductForm
 		p.setDescription(description);
 		p.setManufacturer(manufacturer);
 		p.setPrice(price);
-		p.setFeatured(manufacturer);
+		p.setFeatured(featured);
 		Category category = new Category();
 		category.setId(categoryId);
 		p.setCategory(category );
-		//p.setImageUrl(WebUtils.IMAGES_PREFIX+id+".jpg");
+		p.setSubcategory_id(Integer.parseInt(subcategory));
+		p.setAvailable(available);
 		return p;
-	}
-	
-	public Integer getId() {
-		return id;
-	}
+	}	
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public String getManufacturer() {
-		return manufacturer;
-	}
-
-	public void setManufacturer(String manufacturer) {
-		this.manufacturer = manufacturer;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public BigDecimal getPrice() {
-		return price;
-	}
-
-	public void setPrice(BigDecimal price) {
-		this.price = price;
-	}
-
-	public String getImageUrl() {
-		return imageUrl;
-	}
-
-	public void setImageUrl(String imageUrl) {
-		this.imageUrl = imageUrl;
-	}
-
-	public MultipartFile getImage() {
-		return image;
-	}
-
-	public void setImage(MultipartFile image) {
-		this.image = image;
-	}
-
-	public boolean isDisabled() {
-		return disabled;
-	}
-
-	public void setDisabled(boolean disabled) {
-		this.disabled = disabled;
-	}
-
-	public Integer getCategoryId() {
-		return categoryId;
-	}
-
-	public void setCategoryId(Integer categoryId) {
-		this.categoryId = categoryId;
-	}
-
-	public static ProductForm fromProduct(Product product)
+	public static ProductForm fromProduct(Product product) 
 	{
 		ProductForm p = new ProductForm();
 		p.setId(product.getId());
 		p.setName(product.getName());
 		p.setDescription(product.getDescription());
-		p.setDisabled(true);
+		p.setAvailable(product.getAvailable());
+		p.setSubcategory(Integer.toString(product.getSubcategory_id()));
 		p.setPrice(product.getPrice());
 		p.setManufacturer(product.getManufacturer());
 		p.setCategoryId(product.getCategory().getId());
-		//p.setImageUrl(WebUtils.IMAGES_PREFIX+product.getId()+".jpg");
+		p.setFeatured(product.getFeatured());
 		return p;
 	}
 }

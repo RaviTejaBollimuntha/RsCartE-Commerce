@@ -48,13 +48,21 @@
                       <input type="text" class="form-control" name="price" th:field="*{price}" placeholder="Enter Product Price"/>
                       <p th:if="${#fields.hasErrors('price')}" th:errors="*{price}" th:class="text-red">Incorrect data</p>
                     </div>
-                    
+                    <div class="form-group" th:classappend="${#fields.hasErrors('featured')}? 'has-error'">
+                      <label>featured</label>
+                      <input type="text" class="form-control" name="featured" th:field="*{featured}" placeholder="Enter Product featured(0 or 1)"/>
+                      <p th:if="${#fields.hasErrors('featured')}" th:errors="*{featured}" th:class="text-red">Incorrect data</p>
+                    </div>
                     <div class="form-group" th:classappend="${#fields.hasErrors('description')}? 'has-error'">
                       <label>Description</label>
                       <textarea class="form-control" rows="3" name="description" th:field="*{description}" placeholder="Enter Role Description"></textarea>
                       <p th:if="${#fields.hasErrors('description')}" th:errors="*{description}" th:class="text-red">Incorrect data</p>
                     </div>
-					
+                    <div class="form-group" th:classappend="${#fields.hasErrors('available')}? 'has-error'">
+                      <label>Available</label>
+                      <input type="hidden" class="form-control"  name="available" th:field="*{available}" placeholder="Enter available Description"></input>
+                      <p th:if="${#fields.hasErrors('available')}" th:errors="*{available}" th:class="text-red">Incorrect data</p>
+                    </div>					
 					<div class="form-group" th:classappend="${#fields.hasErrors('image')}? 'has-error'">
                       <label for="image">Image</label>
                       <input type="file" class="form-control" name="image" th:field="*{image}"/>

@@ -97,7 +97,6 @@ public class ProductController extends RsCartAdminBaseController
 	public String editProductForm(@PathVariable Integer id, Model model) {
 		Product product = catalogService.getProductById(id);
 		model.addAttribute("product",ProductForm.fromProduct(product));
-		//model.addAttribute("categoriesList",catalogService.getAllCategories());
 		return viewPrefix+"edit_product";
 	}
 	
@@ -120,7 +119,6 @@ public class ProductController extends RsCartAdminBaseController
 		if(result.hasErrors()){
 			return viewPrefix+"edit_product";
 		}
-		
 		Product product = productForm.toProduct();
 		Product persistedProduct = catalogService.updateProduct(product);
 		this.saveProductImageToDisk(productForm);
