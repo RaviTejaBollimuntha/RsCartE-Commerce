@@ -82,7 +82,7 @@ public class InvoiceUtil {
 		// Set Column widths
 		float[] columnWidths = { 1.5f, 1f, 1f };
 		tab.setWidths(columnWidths);
-		String imFile = "file:///G:/JavaWorkspace/RsCartE-Commerce/RsCartE-Commerce/RsCartSite/src/main/webapp/resources/images/home/logo.png";
+		String imFile = "file:///G:/JavaWorkspace/RsCartE-Commerce/RsCartE-Commerce/RsCartSite/src/main/webapp/resources/images/logo.png";
 		Image img = Image.getInstance(imFile);
 
 		PdfPCell cell1 = new PdfPCell();

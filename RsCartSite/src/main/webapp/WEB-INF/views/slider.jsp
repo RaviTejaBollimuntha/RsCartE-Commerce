@@ -38,9 +38,9 @@
 							now</button>
 					</div>
 					<div class="col-sm-6">
-						<img src="resources/images/home/girl1.jpg"
+						<img src="resources/images/girl1.jpg"
 							class="girl img-responsive" alt="" /> <img
-							src="resources/images/home/pricing.png" class="pricing" alt="" />
+							src="resources/images/pricing.png" class="pricing" alt="" />
 					</div>
 				</div>
 				<div class="item">
@@ -57,9 +57,9 @@
 							now</button>
 					</div>
 					<div class="col-sm-6">
-						<img src="resources/images/home/girl2.jpg"
+						<img src="resources/images/girl2.jpg"
 							class="girl img-responsive" alt="" /> <img
-							src="resources/images/home/pricing.png" class="pricing" alt="" />
+							src="resources/images/pricing.png" class="pricing" alt="" />
 					</div>
 				</div>
 				<div class="item">
@@ -76,9 +76,9 @@
 							now</button>
 					</div>
 					<div class="col-sm-6">
-						<img src="resources/images/home/girl3.jpg"
+						<img src="resources/images/girl3.jpg"
 							class="girl img-responsive" alt="" /> <img
-							src="resources/images/home/pricing.png" class="pricing" alt="" />
+							src="resources/images/pricing.png" class="pricing" alt="" />
 					</div>
 				</div>
 			</div>

@@ -22,7 +22,7 @@
 	</header>
 	<div class="container text-center">
 		<div class="logo-404">
-			<img src="resources/images/404/404.png" class="img-responsive" />
+			<img src="resources/images/404.png" class="img-responsive" />
 		</div>
 		<div class="content-404">
 			<h3>Ops! We are currently experiencing some technical issues.

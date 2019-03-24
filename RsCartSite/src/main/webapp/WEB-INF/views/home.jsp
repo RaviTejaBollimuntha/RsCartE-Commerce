@@ -47,7 +47,7 @@
 						<div class="item  col-xs-4 col-lg-4">
 							<div class="thumbnail">
 								<img class="group list-group-image"
-									src="resources/images/home/${featProds.productId}.jpg" alt="" />
+									src="resources/images/${featProds.productId}.jpg" alt="" />
 								<div class="caption">
 									<h4 class="group inner list-group-item-heading">
 										<a href="${url}"><c:out value="${featProds.name}" /></a>

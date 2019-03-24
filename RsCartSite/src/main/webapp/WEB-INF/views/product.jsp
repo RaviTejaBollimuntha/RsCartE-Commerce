@@ -36,7 +36,7 @@
 						<!--product-details-->
 						<div class="col-sm-5">
 							<div class="view-product">
-								<img src="resources/images/home/${product.productId}.jpg" alt="" />
+								<img src="resources/images/${product.productId}.jpg" alt="" />
 							</div>
 							<div id="similar-product" class="carousel slide"
 								data-ride="carousel">
@@ -44,23 +44,23 @@
 								<div class="carousel-inner">
 									<div class="item active">
 										<a href=""><img
-											src="resources/images/product-details/product1.jpg" width="80px" height="300px" alt=""></a>
+											src="resources/images/${product.productId}-1.jpg" width="80px" height="300px" alt=""></a>
 										<a href=""><img
-											src="resources/images/product-details/product2.jpg" width="80px" height="300px" alt=""></a>
+											src="resources/images/${product.productId}-2.jpg" width="80px" height="300px" alt=""></a>
 										<a href=""><img
-											src="resources/images/product-details/product3.jpg" width="80px" height="300px" alt=""></a>
+											src="resources/images/${product.productId}-3.jpg" width="80px" height="300px" alt=""></a>
 											<a href=""><img
-											src="resources/images/product-details/product4.jpg" width="80px" height="300px" alt=""></a>
+											src="resources/images/${product.productId}-4.jpg" width="80px" height="300px" alt=""></a>
 									</div>
 									<div class="item">
 										<a href=""><img
-											src="resources/images/product-details/product5.jpg" width="80px" height="300px" alt=""></a>
+											src="resources/images/${product.productId}-5.jpg" width="80px" height="300px" alt=""></a>
 										<a href=""><img
-											src="resources/images/product-details/product6.jpg" width="80px" height="300px" alt=""></a>
+											src="resources/images/${product.productId}-6.jpg" width="80px" height="300px" alt=""></a>
 										<a href=""><img
-											src="resources/images/product-details/product7.jpg" width="80px" height="300px" alt=""></a>
+											src="resources/images/${product.productId}-7.jpg" width="80px" height="300px" alt=""></a>
 											<a href=""><img
-											src="resources/images/product-details/product8.jpg" width="80px" height="300px" alt=""></a>
+											src="resources/images/${product.productId}-8.jpg" width="80px" height="300px" alt=""></a>
 									</div>
 
 								</div>
@@ -77,7 +77,7 @@
 						<div class="col-sm-7">
 							<div class="product-information">
 								<!--/product-information-->
-								<img src="resources/images/product-details/new.jpg"
+								<img src="resources/images/new.jpg"
 									class="newarrival" alt="" />
 								<c:set var="product" value="${product}" />
 								<c:url var="add" value="/addProduct">
@@ -108,7 +108,7 @@
 									<c:out value="${product.manufacturer}" />
 								</p>
 								<a href=""><img
-									src="resources/images/product-details/share.png"
+									src="resources/images/share.png"
 									class="share img-responsive" alt="" /></a>
 							</div>
 							<!--/product-information-->

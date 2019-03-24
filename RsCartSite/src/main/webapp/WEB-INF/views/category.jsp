@@ -38,7 +38,7 @@
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
-													<img src="resources/images/home/${catProds.productId}.jpg"
+													<img src="resources/images/${catProds.productId}.jpg"
 														alt="" /> <a href="${url}">
 														<h2>
 															<c:out value="${catProds.name}" />
@@ -96,7 +96,7 @@
 											<div class="single-products">
 												<div class="productinfo text-center">
 													<img
-														src="resources/images/home/${subCatProds.productId}.jpg"
+														src="resources/images/${subCatProds.productId}.jpg"
 														alt="" /> <a href="${url}">
 														<h2>
 															<c:out value="${subCatProds.name}" />

@@ -22,7 +22,7 @@
 	</header>
 	<div class="container text-center">		
 		<div class="content-404">
-			<img src="resources/images/404/404.png" class="img-responsive" />
+			<img src="resources/images/404.png" class="img-responsive" />
 			<h3>
 			<b>OPPS!</b> 
 			</h3><br>

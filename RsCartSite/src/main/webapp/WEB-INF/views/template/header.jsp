@@ -25,7 +25,7 @@
 			</button>
 			<c:url var="home" value="home" />
 			<div id="logo">
-				<a href="${home}"><img src="resources/images/home/logo.png" /></a>
+				<a href="${home}"><img src="resources/images/logo.png" /></a>
 			</div>
 		</div>
 
