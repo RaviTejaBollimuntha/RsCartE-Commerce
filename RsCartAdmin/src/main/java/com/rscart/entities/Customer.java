@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.Email;
@@ -17,25 +18,31 @@ import org.hibernate.validator.constraints.NotEmpty;
  *
  */
 @Entity
-@Table(name="customers")
+@Table(name="customer")
 public class Customer implements Serializable
 {
 	private static final long serialVersionUID = 1L;
-	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "Cust_SEQ")
+    @SequenceGenerator(sequenceName = "customer_id_seq", allocationSize = 1, name = "Cust_SEQ")
+	@Column(name="Customer_Id")
 	private Integer id;
-	@Column(name="firstname", nullable=false)
+	@Column(name="First_Name", nullable=false)
 	@NotEmpty
 	private String firstName;
-	@Column(name="lastname")
+	@Column(name="Last_Name")
 	private String lastName;
 	@NotEmpty
 	@Email
-	@Column(name="email", nullable=false, unique=true)
+	@Column(name="Email_Address", nullable=false, unique=true)
 	private String email;
 	@NotEmpty
-	@Column(name="password", nullable=false)
-	private String password;
+	@Column(name="User_Name", nullable=false)
+	private String User_Name;
+	@Column(name="Phone_Number")
 	private String phone;
+	@Column(name="active")
+	private String Active;
 	
 	public Integer getId()
 	{
@@ -77,11 +84,18 @@ public class Customer implements Serializable
 	{
 		this.phone = phone;
 	}
-	public String getPassword() {
-		return password;
+	public String getUser_Name() {
+		return User_Name;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setUser_Name(String user_Name) {
+		User_Name = user_Name;
 	}
+	public String getActive() {
+		return Active;
+	}
+	public void setActive(String active) {
+		Active = active;
+	}
+	
 	
 }

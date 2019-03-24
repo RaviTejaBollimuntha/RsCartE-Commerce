@@ -21,13 +21,15 @@ public class CustomerService {
 	public Customer getCustomerByEmail(String email) {
 		return customerRepository.findByEmail(email);
 	}
-
+	public void getCustomerDeactivate(int id) {
+		customerRepository.deactivate(id);
+	}
 	public Customer createCustomer(Customer customer) {
 		return customerRepository.save(customer);
 	}
 
 	public List<Customer> getAllCustomers() {
-		return customerRepository.findAll();
+		return customerRepository.getCustomers();
 	}
 
 	public Customer getCustomerById(Integer id) {

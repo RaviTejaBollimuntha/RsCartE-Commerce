@@ -13,74 +13,68 @@ import javax.persistence.Table;
  *
  */
 @Entity
-@Table(name="addresses")
-public class Address implements Serializable
-{
+@Table(name = "shippingaddress")
+public class Address implements Serializable {
 	private static final long serialVersionUID = 1L;
-	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Integer id;
-	private String addressLine1;
-	private String addressLine2;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer SHIPPING_ID;
+	private String FULLNAME;
+	private String ADDRESS_1;
+	private String ADDRESS_2;
 	private String city;
 	private String state;
-	private String zipCode;
+	private String zip;
 	private String country;
 	
-	public Integer getId()
-	{
-		return id;
+	public Integer getSHIPPING_ID() {
+		return SHIPPING_ID;
 	}
-	public void setId(Integer id)
-	{
-		this.id = id;
+	public void setSHIPPING_ID(Integer sHIPPING_ID) {
+		SHIPPING_ID = sHIPPING_ID;
 	}
-	public String getAddressLine1()
-	{
-		return addressLine1;
+	public String getFULLNAME() {
+		return FULLNAME;
 	}
-	public void setAddressLine1(String addressLine1)
-	{
-		this.addressLine1 = addressLine1;
+	public void setFULLNAME(String fULLNAME) {
+		FULLNAME = fULLNAME;
 	}
-	public String getAddressLine2()
-	{
-		return addressLine2;
+	public String getADDRESS_1() {
+		return ADDRESS_1;
 	}
-	public void setAddressLine2(String addressLine2)
-	{
-		this.addressLine2 = addressLine2;
+	public void setADDRESS_1(String aDDRESS_1) {
+		ADDRESS_1 = aDDRESS_1;
 	}
-	public String getCity()
-	{
+	public String getADDRESS_2() {
+		return ADDRESS_2;
+	}
+	public void setADDRESS_2(String aDDRESS_2) {
+		ADDRESS_2 = aDDRESS_2;
+	}
+	public String getCity() {
 		return city;
 	}
-	public void setCity(String city)
-	{
+	public void setCity(String city) {
 		this.city = city;
 	}
-	public String getState()
-	{
+	public String getState() {
 		return state;
 	}
-	public void setState(String state)
-	{
+	public void setState(String state) {
 		this.state = state;
 	}
-	public String getZipCode()
-	{
-		return zipCode;
+	public String getZip() {
+		return zip;
 	}
-	public void setZipCode(String zipCode)
-	{
-		this.zipCode = zipCode;
+	public void setZip(String zip) {
+		this.zip = zip;
 	}
-	public String getCountry()
-	{
+	public String getCountry() {
 		return country;
 	}
-	public void setCountry(String country)
-	{
+	public void setCountry(String country) {
 		this.country = country;
 	}
+
 	
 }

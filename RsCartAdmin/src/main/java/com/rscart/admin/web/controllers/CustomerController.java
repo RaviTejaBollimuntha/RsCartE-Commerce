@@ -47,5 +47,10 @@ public class CustomerController extends RsCartAdminBaseController
 		model.addAttribute("customer",customer);
 		return viewPrefix+"view_customer";
 	}
+	@RequestMapping(value="/customers-deactivate/{id}", method=RequestMethod.GET)
+	public String deactivateCustome(@PathVariable Integer id,Model model) {
+		customerService.getCustomerDeactivate(id);
+		return "redirect:/customers";
+	}
 		
 }

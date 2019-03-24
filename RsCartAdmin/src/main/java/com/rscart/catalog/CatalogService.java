@@ -24,6 +24,11 @@ public class CatalogService {
 	SubCategoryRepository subcategoryRepository;
 	@Autowired
 	ProductRepository productRepository;
+	
+	public List<Product> getLastestedProducts() {
+
+		return productRepository.findTop5ByOrderByCreatedOnDesc();
+	}
 
 	public List<Category> getAllCategories() {
 

@@ -3,6 +3,7 @@ package com.rscart.entities;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,66 +17,64 @@ import javax.persistence.Table;
  *
  */
 @Entity
-@Table(name="order_items")
-public class OrderItem implements Serializable
-{
+@Table(name = "orderitem")
+public class OrderItem implements Serializable {
 	private static final long serialVersionUID = 1L;
-	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Id
+	@Column(name="ORDERITEM_ID")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	@ManyToOne
-	@JoinColumn(name="product_id")
+	@JoinColumn(name = "product_id")
 	private Product product;
 	private BigDecimal price;
 	private int quantity;
 	@ManyToOne
-	@JoinColumn(name="order_id")
+	@JoinColumn(name = "order_id")
 	private Order order;
-	
-	public Integer getId()
-	{
+
+	public Integer getId() {
 		return id;
 	}
-	public void setId(Integer id)
-	{
+
+	public void setId(Integer id) {
 		this.id = id;
 	}
-	public Product getProduct()
-	{
+
+	public Product getProduct() {
 		return product;
 	}
-	public void setProduct(Product product)
-	{
+
+	public void setProduct(Product product) {
 		this.product = product;
 	}
-	
-	public BigDecimal getPrice()
-	{
+
+	public BigDecimal getPrice() {
 		return price;
 	}
-	public void setPrice(BigDecimal price)
-	{
+
+	public void setPrice(BigDecimal price) {
 		this.price = price;
 	}
-	public Order getOrder()
-	{
+
+	public Order getOrder() {
 		return order;
 	}
-	public void setOrder(Order order)
-	{
+
+	public void setOrder(Order order) {
 		this.order = order;
 	}
-	public int getQuantity()
-	{
+
+	public int getQuantity() {
 		return quantity;
 	}
-	public void setQuantity(int quantity)
-	{
+
+	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-	
-	public BigDecimal getSubTotal()
-	{
+
+	public BigDecimal getSubTotal() {
 		return product.getPrice().multiply(new BigDecimal(quantity));
 	}
-	
+
 }

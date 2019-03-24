@@ -24,7 +24,7 @@
                       <th>View</th>
                       
                     </tr>
-                    <tr th:each="customer,iterStat : ${customers}">
+                    <tr th:each="customer,iterStat : ${customers}">                
                       <td><span th:text="${iterStat.count}">1</span></td>
                       <td th:text="${customer.firstName}">Customer Name</td>
                       <td th:text="${customer.email}">Customer Email</td>

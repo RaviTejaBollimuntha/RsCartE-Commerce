@@ -15,16 +15,12 @@
 <link href="resources/css/animate.css" rel="stylesheet">
 <link href="resources/css/main.css" rel="stylesheet">
 <link href="resources/css/responsive.css" rel="stylesheet">
-<link rel="shortcut icon" href="images/ico/favicon.ico">
-<link rel="apple-touch-icon-precomposed" sizes="144x144"
-	href="images/ico/apple-touch-icon-144-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="114x114"
-	href="images/ico/apple-touch-icon-114-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="72x72"
-	href="images/ico/apple-touch-icon-72-precomposed.png">
-<link rel="apple-touch-icon-precomposed"
-	href="images/ico/apple-touch-icon-57-precomposed.png">
-</head>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 <body>
 	<header> 
@@ -41,36 +37,30 @@
 						<div class="col-sm-5">
 							<div class="view-product">
 								<img src="resources/images/home/${product.productId}.jpg" alt="" />
-								<h3>ZOOM</h3>
 							</div>
 							<div id="similar-product" class="carousel slide"
 								data-ride="carousel">
-
 								<!-- Wrapper for slides -->
 								<div class="carousel-inner">
 									<div class="item active">
 										<a href=""><img
-											src="resources/images/product-details/similar1.jpg" alt=""></a>
+											src="resources/images/product-details/product1.jpg" width="80px" height="300px" alt=""></a>
 										<a href=""><img
-											src="resources/images/product-details/similar2.jpg" alt=""></a>
+											src="resources/images/product-details/product2.jpg" width="80px" height="300px" alt=""></a>
 										<a href=""><img
-											src="resources/images/product-details/similar3.jpg" alt=""></a>
+											src="resources/images/product-details/product3.jpg" width="80px" height="300px" alt=""></a>
+											<a href=""><img
+											src="resources/images/product-details/product4.jpg" width="80px" height="300px" alt=""></a>
 									</div>
 									<div class="item">
 										<a href=""><img
-											src="resources/images/product-details/similar1.jpg" alt=""></a>
+											src="resources/images/product-details/product5.jpg" width="80px" height="300px" alt=""></a>
 										<a href=""><img
-											src="resources/images/product-details/similar2.jpg" alt=""></a>
+											src="resources/images/product-details/product6.jpg" width="80px" height="300px" alt=""></a>
 										<a href=""><img
-											src="resources/images/product-details/similar3.jpg" alt=""></a>
-									</div>
-									<div class="item">
-										<a href=""><img
-											src="resources/images/product-details/similar1.jpg" alt=""></a>
-										<a href=""><img
-											src="resources/images/product-details/similar2.jpg" alt=""></a>
-										<a href=""><img
-											src="resources/images/product-details/similar3.jpg" alt=""></a>
+											src="resources/images/product-details/product7.jpg" width="80px" height="300px" alt=""></a>
+											<a href=""><img
+											src="resources/images/product-details/product8.jpg" width="80px" height="300px" alt=""></a>
 									</div>
 
 								</div>
@@ -101,7 +91,6 @@
 										<c:out value="${product.name}" />
 									</h2>
 								</div>
-								<p>Web ID: 1089772</p>
 								<span> <span class="product-price"> <c:out
 											value="Rs.${product.price}" />
 								</span> <a href="${add}" role="button" class="btn btn-default cart">
@@ -112,7 +101,7 @@
 								</a>
 								</span>
 								<p>
-									<b>Availability:</b> In Stock
+									<b>Availability:</b> <blink style="color: green;"> In Stock</blink> ${product.available} Left Only
 								</p>
 								<p>
 									<b>Brand:</b>
