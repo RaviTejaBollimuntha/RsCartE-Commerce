@@ -65,7 +65,7 @@
                     </div>					
 					<div class="form-group" th:classappend="${#fields.hasErrors('image')}? 'has-error'">
                       <label for="image">Image</label>
-                      <input type="file" class="form-control" name="image" th:field="*{image}"/>
+                      <input type="file" class="form-control" name="image" th:field="*{image}" multiple="multiple"/>
                       <p th:if="${#fields.hasErrors('image')}" th:errors="*{image}" th:class="text-red">Incorrect data</p>
                       <p class="help-block">Select JPG Image</p>
                       <p>

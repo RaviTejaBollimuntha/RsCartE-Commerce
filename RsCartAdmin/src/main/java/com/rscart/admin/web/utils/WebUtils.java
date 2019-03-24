@@ -13,7 +13,7 @@ public class WebUtils
 	}
 	public static final String IMAGES_PREFIX = "/products/images/";
 	public static final String IMAGES_DIR =System.getProperty("user.dir")+ "/src/main/resources/static/assets/img/products/";
-	public static final String IMAGES_COPY =System.getProperty("user.dir").replace("RsCartAdmin", "RsCartSite")+ "\\src\\main\\webapp\\resources\\images\\home\\";
+	public static final String IMAGES_COPY =System.getProperty("user.dir").replace("RsCartAdmin", "RsCartSite")+ "\\src\\main\\webapp\\resources\\images\\";
 	
 	public static String getURLWithContextPath(HttpServletRequest request)
 	{

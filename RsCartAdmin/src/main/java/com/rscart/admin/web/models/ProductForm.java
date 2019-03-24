@@ -1,6 +1,7 @@
 package com.rscart.admin.web.models;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotNull;
@@ -28,7 +29,7 @@ public class ProductForm
 	@DecimalMin("0.1")
 	private BigDecimal price = new BigDecimal("0.0");
 	private Integer available;
-	private MultipartFile image;
+	private List<MultipartFile> image;
 	private String manufacturer;
 	@NotNull
 	private Integer categoryId;
@@ -95,12 +96,12 @@ public class ProductForm
 	}
 
 
-	public MultipartFile getImage() {
+	public List<MultipartFile> getImage() {
 		return image;
 	}
 
 
-	public void setImage(MultipartFile image) {
+	public void setImage(List<MultipartFile> image) {
 		this.image = image;
 	}
 

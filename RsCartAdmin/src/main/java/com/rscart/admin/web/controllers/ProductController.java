@@ -73,7 +73,6 @@ public class ProductController extends RsCartAdminBaseController
 	public String createProductForm(Model model) {
 		ProductForm product = new ProductForm();
 		model.addAttribute("product",product);
-		//model.addAttribute("categoriesList",catalogService.getAllCategories());
 		return viewPrefix+"create_product";
 	}
 
@@ -128,18 +127,30 @@ public class ProductController extends RsCartAdminBaseController
 	}
 	
 	private void saveProductImageToDisk(ProductForm productForm) {
-		MultipartFile file = productForm.getImage();
-		if (file!= null && !file.isEmpty()) {
-			String name = WebUtils.IMAGES_DIR + productForm.getId() + ".jpg";
-			String dest = WebUtils.IMAGES_COPY + productForm.getId() + ".jpg";
+		List<MultipartFile> multipart = productForm.getImage();
+		if (multipart!= null && !multipart.isEmpty()) {
+			String name ="";
+			String dest ="";
 			try {
+				int i=0;
+				for(MultipartFile file:multipart) {
 				byte[] bytes = file.getBytes();
+				if(i>=1) {
+					name = WebUtils.IMAGES_DIR + productForm.getId()+"-"+i+".jpg";
+					dest = WebUtils.IMAGES_COPY + productForm.getId()+"-"+i+".jpg";
+					i++;
+				}else {
+					 name = WebUtils.IMAGES_DIR + productForm.getId() + ".jpg";
+					 dest = WebUtils.IMAGES_COPY + productForm.getId() + ".jpg";
+					 i++;
+				}
 				BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(new File(name)));
 				stream.write(bytes);
 				stream.close();
 				Path psrc = Paths.get(name);
 				Path pdest = Paths.get(dest); 
 				Files.copy(psrc, pdest,StandardCopyOption.REPLACE_EXISTING);
+				}
 			} catch (Exception e) {
 				throw new RsCartException(e);
 			}
