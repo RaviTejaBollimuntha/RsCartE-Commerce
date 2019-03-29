@@ -1,9 +1,18 @@
 package com.rscart.config;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -18,24 +27,45 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.ResourceBundleViewResolver;
 
 import com.rscart.interceptor.BaseInterceptor;
+import com.rscart.repository.CustomerRepository;
 
+@SuppressWarnings("deprecation")
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = { "com.rscart.controller", "com.rscart.interceptor" })
 public class WebMvcAppConfig extends WebMvcConfigurerAdapter {
+	@Autowired
+	private CustomerRepository cr;
+	private Map<String,String> sessionip=new HashMap<>();
+	private static final Logger LOGGE = LoggerFactory.getLogger(WebMvcAppConfig.class);
+	@Autowired
+	private HttpServletRequest request;
 	@Bean
 	public HttpSessionListener httpSessionListener() {
 		return new HttpSessionListener() {
 			@Override
 			public void sessionCreated(HttpSessionEvent se) {
-				System.out.println("Session Created with session id: " + se.getSession().getId());
+				LOGGE.info("Session Created with session id: ", se.getSession().getId());				
+				InetAddress inetAddress=null;
+				try {
+					 inetAddress = InetAddress.getLocalHost();
+				} catch (UnknownHostException e) {					
+					e.printStackTrace();
+				}
+				String appUrl = inetAddress.getHostAddress()+request.getHeader("user-agent");
+				
+				if(!sessionip.containsKey(appUrl)) {
+				cr.updateHitCount();
+				sessionip.put(appUrl,se.getSession().getId());
+				}
 				HttpSession session = se.getSession();
-				session.setMaxInactiveInterval(1* 60);
+				session.setMaxInactiveInterval(5* 60);
 			}
 
 			@Override
 			public void sessionDestroyed(HttpSessionEvent se) {
-				System.out.println("Session Destroyed, Session id: " + se.getSession().getId());
+				LOGGE.info("Session Destroyed, Session id: ", se.getSession().getId());
+				while (sessionip.values().remove(se.getSession().getId()));
 			}
 		};
 	}

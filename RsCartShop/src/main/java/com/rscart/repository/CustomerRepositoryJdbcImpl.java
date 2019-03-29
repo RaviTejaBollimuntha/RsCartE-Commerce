@@ -4,6 +4,7 @@ import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -16,12 +17,13 @@ import com.rscart.util.CustomerMapper;
 
 @Repository
 public class CustomerRepositoryJdbcImpl implements CustomerRepository {
-
+	private JdbcTemplate jdbcTemplate;
 	private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
    @Autowired
 	public void setDataSource(DataSource dataSource) {
 		this.namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(
 				dataSource);
+		this.jdbcTemplate = new JdbcTemplate(dataSource);
 	}
 
 	@Override
@@ -91,6 +93,16 @@ public class CustomerRepositoryJdbcImpl implements CustomerRepository {
 				"userName", userName);
 		return namedParameterJdbcTemplate.queryForObject(sql, sqlParameterSource,Long.class);
 
+	}
+	@Override
+	public void updateHitCount() {
+		String sql = "SELECT hitcount FROM rshitcount";
+		int count=jdbcTemplate.queryForObject(sql, Integer.class);
+		String update = "UPDATE rshitcount r  SET r.hitcount=:count";
+		SqlParameterSource namedParameters = new MapSqlParameterSource();
+		((MapSqlParameterSource) namedParameters)
+				.addValue("count", count+1);
+		namedParameterJdbcTemplate.update(update, namedParameters);
 	}
 
 }

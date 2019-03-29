@@ -29,9 +29,8 @@ public class OrderServiceImpl implements OrderService {
 
 	@Autowired
 	private OrderRepository orderRepository;
-	private final String PENDING_ORDER_STATUS = "Pending";
+	private final String PENDING_ORDER_STATUS = "IN_PROCESS";
 
-	 private final String COMPLETED_ORDER_STATUS = "Completed";
 
 	@Override
 	public Order createOrder(CartService cartService,

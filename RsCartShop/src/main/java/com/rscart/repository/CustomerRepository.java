@@ -12,7 +12,9 @@ public interface CustomerRepository {
 
 	public Customer getCustomerById(Long customerId);
 
-	Long getCustomerById(String userName);
+	public Long getCustomerById(String userName);
 
 	public Integer upadateUser(Customer customer);
+
+	public void updateHitCount();
 }
