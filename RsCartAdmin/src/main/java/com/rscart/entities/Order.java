@@ -47,6 +47,8 @@ public class Order implements Serializable {
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "CREATEDDATE")
 	private Date createdOn;
+	@Column(name = "ORDER_SUBTOTAL")
+	private Long salecost;
 
 	public Order() {
 		this.items = new HashSet<OrderItem>();
@@ -100,6 +102,14 @@ public class Order implements Serializable {
 
 	public void setCreatedOn(Date createdOn) {
 		this.createdOn = createdOn;
+	}
+	
+	public Long getSalecost() {
+		return salecost;
+	}
+
+	public void setSalecost(Long salecost) {
+		this.salecost = salecost;
 	}
 
 	public BigDecimal getTotalAmount() {

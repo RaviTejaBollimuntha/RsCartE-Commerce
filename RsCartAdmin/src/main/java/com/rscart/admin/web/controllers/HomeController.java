@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.rscart.catalog.CatalogService;
 import com.rscart.customers.CustomerService;
 import com.rscart.entities.Customer;
+import com.rscart.entities.Order;
 import com.rscart.entities.Product;
+import com.rscart.orders.OrderService;
 
 /**
  * @author RaviTeja Bollimuntha
@@ -22,6 +24,8 @@ public class HomeController extends RsCartAdminBaseController {
 	private CatalogService catalogService;
 	@Autowired 
 	private CustomerService customerService;
+	@Autowired
+	protected OrderService orderService;
 	
 	@Override
 	protected String getHeaderTitle() {
@@ -31,10 +35,16 @@ public class HomeController extends RsCartAdminBaseController {
 	@RequestMapping("/home")
 	public String home(Model model) {
 		List<Customer> list = customerService.getAllCustomers();
-		model.addAttribute("orders", "1");
-		model.addAttribute("sales", "1");
+		List<Order> orders = orderService.getAllOrders();
+		Long totalamount=0L;
+		for(Order order:orders)
+		{
+		  totalamount+=order.getSalecost();	
+		}
+		model.addAttribute("orders", orders.size());
+		model.addAttribute("sales", totalamount);
 		model.addAttribute("users", list.size());
-		model.addAttribute("visitors", "2");
+		model.addAttribute("visitors", catalogService.getHitCount());
 		model.addAttribute("products", catalogService.getLastestedProducts());
 		model.addAttribute("reviews", "");
 		model.addAttribute("ordershistory", "");

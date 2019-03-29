@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.rscart.entities.Category;
+import com.rscart.entities.HitCount;
 import com.rscart.entities.Product;
 import com.rscart.entities.SubCategory;
 import com.rscart.exception.RsCartException;
@@ -24,6 +25,8 @@ public class CatalogService {
 	SubCategoryRepository subcategoryRepository;
 	@Autowired
 	ProductRepository productRepository;
+	@Autowired
+	HitCountRepository hitcountRepository;
 	
 	public List<Product> getLastestedProducts() {
 
@@ -120,5 +123,9 @@ public class CatalogService {
 
 	public List<Product> searchProducts(String query) {
 		return productRepository.search("%" + query + "%");
+	}
+
+	public int getHitCount() {
+		return hitcountRepository.getHitCount();
 	}
 }
