@@ -13,6 +13,7 @@ import com.rscart.entities.Customer;
 import com.rscart.entities.Order;
 import com.rscart.entities.Product;
 import com.rscart.orders.OrderService;
+import com.rscart.review.ReviewService;
 
 /**
  * @author RaviTeja Bollimuntha
@@ -26,6 +27,8 @@ public class HomeController extends RsCartAdminBaseController {
 	private CustomerService customerService;
 	@Autowired
 	protected OrderService orderService;
+	@Autowired
+	protected ReviewService reviewService;
 	
 	@Override
 	protected String getHeaderTitle() {
@@ -36,6 +39,7 @@ public class HomeController extends RsCartAdminBaseController {
 	public String home(Model model) {
 		List<Customer> list = customerService.getAllCustomers();
 		List<Order> orders = orderService.getAllOrders();
+		List<Order> Recentorders = orderService.getLastestedOrders();
 		Long totalamount=0L;
 		for(Order order:orders)
 		{
@@ -46,8 +50,8 @@ public class HomeController extends RsCartAdminBaseController {
 		model.addAttribute("users", list.size());
 		model.addAttribute("visitors", catalogService.getHitCount());
 		model.addAttribute("products", catalogService.getLastestedProducts());
-		model.addAttribute("reviews", "");
-		model.addAttribute("ordershistory", "");
+		model.addAttribute("reviews", reviewService.getLastestedReviews());
+		model.addAttribute("ordershistory",Recentorders);
 		return "home";
 	}
 

@@ -51,6 +51,9 @@ public class OrderService
 		Order savedOrder = orderRepository.save(o);
 		return savedOrder;
 	}
-	
+	public List<Order> getLastestedOrders() {
+
+		return orderRepository.findTop5ByOrderByCreatedOnDesc();
+	}
 	
 }

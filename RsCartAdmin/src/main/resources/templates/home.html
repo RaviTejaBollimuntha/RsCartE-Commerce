@@ -56,7 +56,7 @@
                     </div>
                     <div><label>Recent Data</label></div>
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-5">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">Latest Products</h4>
@@ -81,30 +81,33 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-7">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title">Latest Reviews.</h4>
+                                    <h4 class="panel-title">Latest Reviews</h4>
                                 </div>
                                 <div class="panel-body">
                                      <table class="table table-hover">
 							<tr>
 								<th style="width: 10px">#</th>
-								<th>Image</th>
-								<th>Name</th>								
+								<th>Review Title</th>
+								<th>Customer Name</th>
+								<th>Review Text</th>
+								<th>Reviewed Date</th>								
 							</tr>
-							<tr th:each="product,iterStat : ${products}">
+							<tr th:each="reviews,iterStat : ${reviews}">
 								<td th:text="${iterStat.count}">1</td>
-								<td><img src="assets/img/products/2.jpg" alt="" width="100" height="100" 
-		                            		th:src="@{'/assets/img/products/{id}.jpg'(id=${product.id})}"/></td>
-								<td th:text="${product.name}">Product Name</td>
+								<td th:text="${reviews.rtitle}"></td>
+								<td th:text="${reviews.customer.firstName}"></td>
+								<td th:text="${reviews.rtext}"></td>
+								<td th:text="${reviews.createdOn}"></td>
 							</tr>
 
 						</table>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-7">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">Orders History</h4>
@@ -113,14 +116,17 @@
                                      <table class="table table-hover">
 							<tr>
 								<th style="width: 10px">#</th>
-								<th>Image</th>
-								<th>Name</th>								
+								<th>Order Number</th>
+								<th>Customer Name</th>
+								<th>Order Amount</th>
+								<th>Order Date</th>								
 							</tr>
-							<tr th:each="product,iterStat : ${products}">
+							<tr th:each="ordershistory,iterStat : ${ordershistory}">
 								<td th:text="${iterStat.count}">1</td>
-								<td><img src="assets/img/products/2.jpg" alt="" width="100" height="100" 
-		                            		th:src="@{'/assets/img/products/{id}.jpg'(id=${product.id})}"/></td>
-								<td th:text="${product.name}">Product Name</td>
+								<td th:text="${ordershistory.orderNumber}"></td>
+								<td th:text="${ordershistory.customer.firstName}"></td>
+								<td th:text="${ordershistory.salecost}"></td>
+								<td th:text="${ordershistory.createdOn}"></td>
 							</tr>
 
 						</table>
