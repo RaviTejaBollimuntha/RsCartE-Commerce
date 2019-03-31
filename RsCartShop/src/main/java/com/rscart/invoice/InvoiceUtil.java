@@ -42,7 +42,7 @@ public class InvoiceUtil {
 
 	public static int emailInvoice(Map<String, Object> model, JavaMailSender mailSenderService,
 			HttpServletRequest request, String emailto) {
-		File f = new File("G:\\JavaWorkspace\\RsCartE-Commerce\\RsCartE-Commerce\\RsCartSite\\src\\main\\resources\\invoice.pdf");
+		File f = new File(System.getProperty("user.dir")+"\\src\\main\\resources\\invoice.pdf");
 		Document doc = new Document();
 		PdfWriter writer;
 		try {			
@@ -51,10 +51,10 @@ public class InvoiceUtil {
 			MimeMessage mimeMessage = mailSenderService.createMimeMessage();
 			MimeMessageHelper mailMsg = new MimeMessageHelper(mimeMessage, true);
 			mailMsg.setFrom(FROM_ID);
-			mailMsg.setTo(/* emailto */FROM_ID);
+			mailMsg.setTo(FROM_ID);
 			mailMsg.setSubject("Test mail with Attachment");
 			mailMsg.setText("Please find Attachment.");
-			FileSystemResource file1 = new FileSystemResource("G:\\JavaWorkspace\\RsCartE-Commerce\\RsCartE-Commerce\\RsCartSite\\src\\main\\resources\\invoice.pdf");
+			FileSystemResource file1 = new FileSystemResource(System.getProperty("user.dir")+"\\src\\main\\resources\\invoice.pdf");
 			// send off the email
 			mailMsg.addAttachment("invoice.pdf",file1);
 			mailSenderService.send(mimeMessage);
@@ -71,9 +71,7 @@ public class InvoiceUtil {
 		HeaderFooterPageEvent event = new HeaderFooterPageEvent();
 		writer.setPageEvent(event);
 		doc.open();
-		// get data model which is passed by the Spring container
 		Order order = (Order) model.get("order");
-		// List<Book> listBooks = (List<Book>) model.get("listBooks");
 		PdfPTable tab = new PdfPTable(3); // 3 columns.
 		tab.setWidthPercentage(100); // Width 100%
 		tab.setSpacingBefore(10f); // Space before table
@@ -82,7 +80,7 @@ public class InvoiceUtil {
 		// Set Column widths
 		float[] columnWidths = { 1.5f, 1f, 1f };
 		tab.setWidths(columnWidths);
-		String imFile = "file:///G:/JavaWorkspace/RsCartE-Commerce/RsCartE-Commerce/RsCartSite/src/main/webapp/resources/images/logo.png";
+		String imFile =System.getProperty("user.dir")+"/src/main/webapp/resources/images/logo.png";
 		Image img = Image.getInstance(imFile);
 
 		PdfPCell cell1 = new PdfPCell();
@@ -102,7 +100,7 @@ public class InvoiceUtil {
 		cell2.setHorizontalAlignment(Element.ALIGN_LEFT);
 		cell2.setVerticalAlignment(Element.ALIGN_MIDDLE);
 		Paragraph para1 = new Paragraph();
-		para1.add(new Chunk("Tax Invoice #:" + String.valueOf(order.getOrderId()*0.0001)));
+		para1.add(new Chunk("Tax Invoice #:" + String.valueOf(order.getOrderId()%5000)));
 		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 		Date date = new Date();
 		para1.add(new Chunk("\n Date:" + dateFormat.format(date)));

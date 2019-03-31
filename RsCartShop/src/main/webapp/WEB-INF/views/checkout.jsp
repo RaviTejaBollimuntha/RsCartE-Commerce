@@ -112,7 +112,7 @@
 
 	<footer id="footer">
 		<!--Footer-->
-		<div class="footer-bottom" style="background:#FFBB00">
+		<div class="footer-bottom" style="background:#F1F2F3">
 			<div class="container">
 				<div class="row">
 					<%@include file="template/footer.jsp" %>

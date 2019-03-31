@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<h4 style="color:#708090" align="center">Copyright @2019 RsCart Inc. All rights reserved.</h4>
+<h4 style="color:#1995AD" align="center">Copyright @2019 RsCart Inc. All rights reserved.</h4>
 
 	
 </body>

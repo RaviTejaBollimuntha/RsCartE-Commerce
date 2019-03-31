@@ -45,7 +45,7 @@ public class WebMvcAppConfig extends WebMvcConfigurerAdapter {
 		return new HttpSessionListener() {
 			@Override
 			public void sessionCreated(HttpSessionEvent se) {
-				LOGGE.info("Session Created with session id: ", se.getSession().getId());				
+				LOGGE.info("Session Created with session id: "+se.getSession().getId());				
 				InetAddress inetAddress=null;
 				try {
 					 inetAddress = InetAddress.getLocalHost();
@@ -64,7 +64,7 @@ public class WebMvcAppConfig extends WebMvcConfigurerAdapter {
 
 			@Override
 			public void sessionDestroyed(HttpSessionEvent se) {
-				LOGGE.info("Session Destroyed, Session id: ", se.getSession().getId());
+				LOGGE.info("Session Destroyed, Session id: "+se.getSession().getId());
 				while (sessionip.values().remove(se.getSession().getId()));
 			}
 		};

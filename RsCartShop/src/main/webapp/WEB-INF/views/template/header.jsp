@@ -14,7 +14,7 @@
 </head>
 <body>
 
-	<div style="background:#FFBB00" >
+	<div style="background:#F1F2F3" >
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed"

@@ -47,7 +47,7 @@
 						<div class="item  col-xs-4 col-lg-4">
 							<div class="thumbnail">
 								<img class="group list-group-image"
-									src="resources/images/${featProds.productId}.jpg" alt="" />
+									src="resources/images/${featProds.productId}.jpg" width="193" height="80" />
 								<div class="caption">
 									<h4 class="group inner list-group-item-heading">
 										<a href="${url}"><c:out value="${featProds.name}" /></a>
@@ -84,7 +84,7 @@
 
 	<footer id="footer">
 		<!--Footer-->
-		<div class="footer-bottom" style="background:#FFBB00">
+		<div class="footer-bottom" style="background:#F1F2F3">
 			<div class="container">
 				<div class="row">
 					<%@include file="template/footer.jsp" %>
