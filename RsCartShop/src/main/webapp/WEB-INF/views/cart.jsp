@@ -62,7 +62,7 @@
 												<div class="media">
 													<a class="thumbnail pull-left" href="#"> <img
 														class="media-object"
-														src="resources/images/home/${list.product.productId}.jpg"
+														src="resources/images/${list.product.productId}.jpg"
 														style="width: 72px; height: 72px;">
 													</a>
 													<div class="media-body">

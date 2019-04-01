@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 import com.rscart.model.Customer;
 import com.rscart.model.InvoiceOrderItem;
 import com.rscart.model.Order;
-import com.rscart.model.OrderItem;
 import com.rscart.model.Product;
 import com.rscart.model.ShippingForm;
 

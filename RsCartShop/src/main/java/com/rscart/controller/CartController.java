@@ -50,7 +50,7 @@ public class CartController {
 	public String addProducts(Model model,
 			@RequestParam(value = "productId") Long productId,
 			HttpServletRequest request) {
-		
+		logger.info("add products into cart");
 		// When a customer adds a product to the cart, we have to check
 		// if he is a registered or an anonymous customer.
 		Customer customer = SessionUtils.getSessionVariables(request,
@@ -215,9 +215,7 @@ public class CartController {
 	
 	public @ResponseBody CountryList getCountry(Model model, HttpServletRequest request) {
 		CountryList cl=new CountryList();
-	    cl.setConlist(locdata.getCountries());
-		/*SessionUtils.setSessionVariables(locdata.getCountries(), request, "countrydata");	*/
-		
+	    cl.setConlist(locdata.getCountries());		
 		return cl;
 	}
 	public static String getRedirectview() {

@@ -19,8 +19,6 @@ import com.rscart.model.Customer;
 import com.rscart.model.Product;
 import com.rscart.model.ReviewForm;
 import com.rscart.service.CartData;
-import com.rscart.service.CartService;
-import com.rscart.service.CategoryConfigService;
 import com.rscart.service.CustomerService;
 import com.rscart.service.ProductConfigService;
 import com.rscart.service.ReviewService;
@@ -30,11 +28,7 @@ import com.rscart.util.SessionUtils;
 public class ProductController {
 
 	@Autowired
-	private CartService cartService;
-	@Autowired
 	private ProductConfigService productConfigurationService;
-	@Autowired
-    private CategoryConfigService categoryConfigurationService;
 	@Autowired
 	private ReviewService reviewService;
 	@Autowired

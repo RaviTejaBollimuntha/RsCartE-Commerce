@@ -22,7 +22,6 @@ import com.rscart.model.ShippingForm;
 import com.rscart.repository.OrderRepository;
 import com.rscart.service.CategoryConfigService;
 import com.rscart.util.InvoiceOrderItemMapper;
-import com.rscart.util.OrderItemMapper;
 import com.rscart.util.OrderMapper;
 import com.rscart.util.ProductMapper;
 

@@ -4,9 +4,6 @@ package com.rscart.service;
 import com.rscart.model.Customer;
 import com.rscart.util.EmailResetDTO;
 import com.rscart.util.PasswordForgotDTO;
-import com.rscart.util.PasswordResetDTO;
-
-import java.security.Principal;
 
 public interface TokenService {	
 	public void createEmailConfirmToken(Customer user, String requestUrl);

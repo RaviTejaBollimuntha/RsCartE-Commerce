@@ -3,16 +3,15 @@ package com.rscart.interceptor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
-import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Custom Interceptor
- * Created by RAVI TEJA BOLLIMUNTHA on 19/01/2019.
- */
+Custom Interceptor
+Created by RAVI TEJA BOLLIMUNTHA on 19/01/2019.
+*/
 @Component
 public class BaseInterceptor extends HandlerInterceptorAdapter {
     private static final Logger LOGGE = LoggerFactory.getLogger(BaseInterceptor.class);

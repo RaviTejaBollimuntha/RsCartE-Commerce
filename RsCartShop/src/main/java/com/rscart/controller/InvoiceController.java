@@ -22,7 +22,6 @@ import com.rscart.model.InvoiceOrderItem;
 import com.rscart.model.Order;
 import com.rscart.model.ShippingForm;
 import com.rscart.service.AddressService;
-import com.rscart.service.MailSenderService;
 import com.rscart.service.OrderService;
 import com.rscart.util.SessionUtils;
 
@@ -30,7 +29,6 @@ import com.rscart.util.SessionUtils;
 public class InvoiceController {
 
 	private static String orderHistoryPage = "template/ordersList";
-	private static String orderDetailsPage = "template/orderDetails";
 	@SuppressWarnings("unused")
 	private HttpSession session;
 	@Autowired

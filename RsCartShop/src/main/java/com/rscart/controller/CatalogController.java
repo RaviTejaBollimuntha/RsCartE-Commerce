@@ -20,7 +20,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.rscart.model.Category;
 import com.rscart.model.Product;
 import com.rscart.model.SubCategory;
-import com.rscart.service.CartService;
 import com.rscart.service.CategoryConfigService;
 import com.rscart.service.ProductConfigService;
 
@@ -36,8 +35,6 @@ public class CatalogController {
 	private ProductConfigService productConfigurationService;
 	@Autowired
 	private ServletContext context;
-	@Autowired
-    private CartService cartService;
 
 	private String accountsTemplatePage = "template/accountInformation";
 

@@ -1,19 +1,28 @@
 package com.rscart.controller;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.text.ParseException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+import javax.mail.MessagingException;
+import javax.mail.internet.MimeMessage;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.thymeleaf.context.Context;
+import org.thymeleaf.spring4.SpringTemplateEngine;
 
 import com.rscart.constants.ControllerConstants;
 import com.rscart.model.AddressForm;
@@ -22,12 +31,11 @@ import com.rscart.model.Customer;
 import com.rscart.model.Order;
 import com.rscart.model.Product;
 import com.rscart.model.ShippingForm;
+import com.rscart.service.AddressService;
 import com.rscart.service.CartData;
 import com.rscart.service.CartService;
-import com.rscart.service.MailSenderService;
 import com.rscart.service.OrderService;
 import com.rscart.service.PaymentService;
-import com.rscart.service.ProductConfigService;
 import com.rscart.util.SessionUtils;
 
 @Controller
@@ -40,9 +48,12 @@ public class OrderController {
 	@Autowired
 	private CartService cartService;
 	@Autowired
-	private ProductConfigService productConfigService;
+    private JavaMailSender emailSender;
 	@Autowired
-	private MailSenderService mailSenderService;
+    private AddressService addressService;
+
+    @Autowired
+    private SpringTemplateEngine templateEngine;
 	@SuppressWarnings("unused")
 	private HttpSession session;
 
@@ -50,7 +61,7 @@ public class OrderController {
 	public String createOrder(Model model,
 			@ModelAttribute("paymentForm") CreditCardForm creditCardForm,
 			HttpServletRequest request, HttpServletResponse response) throws ParseException,
-			IOException {
+			IOException, MessagingException {
 
 		session = SessionUtils.createSession(request);
 		// Retrieve Details about the Cart,Customer and Address Details
@@ -64,20 +75,16 @@ public class OrderController {
 		payAmountByCreditCard(creditCardForm, request);
 
 		SessionUtils.setSessionVariables(order, request, "orderDetails");
-		List<Product> productsList = orderService.getAllOrderItems(order);
-		StringBuffer sb = new StringBuffer();
-		sb.append("Hello " + customer.getUserName() + "\n");
-		sb.append("Thank you for shopping at RS-Shopper.Happy Shopping!!\n");
-		sb.append("OrderId-" + order.getOrderId() + "/n");
-		sb.append("Products-/n");
-		for (Product p : productsList) {
-			sb.append(p.getName() + "  Rs." + p.getPrice() + "\n");
-		}
-		sb.append("Your Order Status is: " + order.getOrderStatus());
-		sb.append("You will get further notification.Once your order is processed");
-		mailSenderService.sendEmail(customer.getEmailAddress(),
-				customer.getUserName(), sb.toString(),
-				"Order Confirmation for " + customer.getUserName());
+		AddressForm billingaddress=addressService.getPermentAddressByCustomerId(customer.getCustomerId());
+		CartData customerCartData = SessionUtils.getSessionVariables(request,ControllerConstants.CART);
+		 Map<String, Object> emodel = new HashMap<String, Object>();
+	        emodel.put("name", customer.getFirstName()+" "+customer.getLastName());
+	        emodel.put("email", customer.getEmailAddress());
+	        emodel.put("shippingaddress",shippingAddress);
+	        emodel.put("billingaddress",billingaddress);
+	        emodel.put("order",order);
+	        emodel.put("cartdata",customerCartData);
+	        sendConfirmationEmailMessage(emodel);
 		return "redirect:order";
 	}
 
@@ -90,6 +97,25 @@ public class OrderController {
 		paymentService.payByCreditCard(creditCardForm);
 	}
 
+    public void sendConfirmationEmailMessage(Map<String,Object> model) throws MessagingException, IOException {
+        MimeMessage message = emailSender.createMimeMessage();
+        MimeMessageHelper helper = new MimeMessageHelper(message,
+                MimeMessageHelper.MULTIPART_MODE_MIXED_RELATED,
+                StandardCharsets.UTF_8.name());
+
+        //helper.addAttachment("logo.png", new ClassPathResource("logo.png"));
+
+        Context context = new Context();
+        context.setVariables(model);
+        String html = templateEngine.process("email-template", context);
+
+        helper.setTo(model.get("email").toString());
+        helper.setText(html, true);
+        helper.setSubject("RsCart Shopping order Confirmation Status");
+        helper.setFrom("rscartsite@gmail.com");
+
+        emailSender.send(message);
+    }
 	@RequestMapping(value = "/order", method = RequestMethod.GET)
 	public String getOrderConfirmPage(Model model, HttpServletRequest request) {
 		Order order = SessionUtils.getSessionVariables(request, "orderDetails");

@@ -3,11 +3,9 @@ package com.rscart.util;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import org.springframework.jdbc.core.RowCallbackHandler;
 import org.springframework.jdbc.core.RowMapper;
 
 import com.rscart.model.InvoiceOrderItem;
-import com.rscart.model.OrderItem;
 
 public class InvoiceOrderItemMapper implements RowMapper<InvoiceOrderItem> {
 

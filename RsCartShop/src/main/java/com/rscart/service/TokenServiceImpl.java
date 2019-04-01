@@ -1,6 +1,5 @@
 package com.rscart.service;
 
-import java.security.Principal;
 import java.util.Calendar;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,13 +20,11 @@ import com.rscart.util.VerificationToken;
 
 @Service
 public class TokenServiceImpl implements TokenService, ApplicationEventPublisherAware {
-	private PasswordEncoder passwordEncoder;
 	private ApplicationEventPublisher eventPublisher;
 	private TokenRepository TokenRepository;
 
 	@Autowired
-	public TokenServiceImpl( PasswordEncoder passwordEncoder, TokenRepository TokenRepository) {
-		this.passwordEncoder = passwordEncoder;		
+	public TokenServiceImpl( PasswordEncoder passwordEncoder, TokenRepository TokenRepository) {	
 		this.TokenRepository = TokenRepository;
 	}
 

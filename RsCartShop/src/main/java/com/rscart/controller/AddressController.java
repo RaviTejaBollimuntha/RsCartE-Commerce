@@ -13,7 +13,6 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.rscart.model.AddressForm;
 import com.rscart.model.Customer;
-import com.rscart.model.ShippingForm;
 import com.rscart.service.AddressService;
 import com.rscart.util.SessionUtils;
 

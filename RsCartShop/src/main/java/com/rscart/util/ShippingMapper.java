@@ -5,7 +5,6 @@ import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 
-import com.rscart.model.AddressForm;
 import com.rscart.model.ShippingForm;
 
 public class ShippingMapper implements RowMapper<ShippingForm> {

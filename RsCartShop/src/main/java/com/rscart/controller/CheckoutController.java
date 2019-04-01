@@ -10,13 +10,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.rscart.model.AddressForm;
 import com.rscart.model.Customer;
 import com.rscart.model.ShippingForm;
 import com.rscart.service.AddressService;
 import com.rscart.service.CartService;
-import com.rscart.service.PaymentService;
-import com.rscart.service.ProductConfigService;
 import com.rscart.util.SessionUtils;
 
 @Controller

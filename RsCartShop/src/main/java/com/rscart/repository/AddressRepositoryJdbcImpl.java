@@ -17,7 +17,6 @@ import com.rscart.model.ShippingForm;
 import com.rscart.repository.AddressRepository;
 import com.rscart.util.AddressMapper;
 import com.rscart.util.ShippingMapper;
-import com.rscart.util.States;
 
 @Repository
 public class AddressRepositoryJdbcImpl implements AddressRepository {

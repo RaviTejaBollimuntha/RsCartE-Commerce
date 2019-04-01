@@ -25,11 +25,16 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.ResourceBundleViewResolver;
+import org.thymeleaf.spring4.SpringTemplateEngine;
+import org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver;
+import org.thymeleaf.spring4.view.ThymeleafViewResolver;
+import org.thymeleaf.templatemode.StandardTemplateModeHandlers;
+import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
+import org.thymeleaf.templateresolver.ITemplateResolver;
 
 import com.rscart.interceptor.BaseInterceptor;
 import com.rscart.repository.CustomerRepository;
 
-@SuppressWarnings("deprecation")
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = { "com.rscart.controller", "com.rscart.interceptor" })
@@ -94,7 +99,7 @@ public class WebMvcAppConfig extends WebMvcConfigurerAdapter {
 	}
 
 	@Bean
-	@Order(2)
+	@Order(1000)
 	public ViewResolver createIVR() {
 		InternalResourceViewResolver ivr = null;
 		ivr = new InternalResourceViewResolver();
@@ -102,4 +107,49 @@ public class WebMvcAppConfig extends WebMvcConfigurerAdapter {
 		ivr.setSuffix(".jsp");
 		return ivr;
 	}
+	@Bean
+    public ViewResolver thymeleafViewResolver() {
+ 
+        ThymeleafViewResolver viewResolver = new ThymeleafViewResolver();
+ 
+        viewResolver.setTemplateEngine(thymeleafTemplateEngine());
+        viewResolver.setCharacterEncoding("UTF-8");
+        viewResolver.setOrder(0);
+ 
+        // Important!!
+        viewResolver.setViewNames(new String[] { "email-*" });
+ 
+        return viewResolver;
+    }
+ 
+    // Thymeleaf template engine with Spring integration
+    @Bean
+    public SpringTemplateEngine thymeleafTemplateEngine() {
+ 
+        SpringTemplateEngine templateEngine = new SpringTemplateEngine();
+        templateEngine.setTemplateResolver(thymeleafTemplateResolver());
+ 
+        return templateEngine;
+    }
+ 
+    @Bean
+    public SpringResourceTemplateResolver springResourceTemplateResolver() {
+        return new SpringResourceTemplateResolver();
+    }
+ 
+    // Thymeleaf template resolver serving HTML 5
+    @Bean
+    public ITemplateResolver thymeleafTemplateResolver() {
+ 
+        ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
+ 
+        templateResolver.setPrefix("templates/");
+        templateResolver.setCacheable(false);
+        templateResolver.setSuffix(".html");
+        templateResolver.setTemplateMode(StandardTemplateModeHandlers.HTML5.getTemplateModeName());
+        templateResolver.setCharacterEncoding("UTF-8"); 
+        return templateResolver;
+    }
+  
+
 }

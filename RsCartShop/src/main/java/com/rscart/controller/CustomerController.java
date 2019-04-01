@@ -22,7 +22,6 @@ import com.rscart.model.Customer;
 import com.rscart.service.CartData;
 import com.rscart.service.CartService;
 import com.rscart.service.CustomerService;
-import com.rscart.service.MailSenderService;
 import com.rscart.service.TokenService;
 import com.rscart.util.SessionUtils;
 
@@ -35,9 +34,6 @@ public class CustomerController {
 	private CustomerService customerService;
 	@Autowired
 	private TokenService tokenService;
-	@Autowired
-	private MailSenderService mailSenderService;
-	private StringBuffer sb = new StringBuffer();
 	private String changeAccDetailsPage = "template/accountInformation";
 	/**
 	 * This method used to Validate the customer and login to the application
@@ -99,15 +95,7 @@ public class CustomerController {
 		return "signup";
 	}
 	@RequestMapping(value = "/signup", method = RequestMethod.POST)
-	public String registerUser(
-			/*@RequestParam(value = "firstName", required = true) String firstName,
-			@RequestParam(value = "lastName", required = true) String lastName,
-			@RequestParam(value = "emailAddress", required = true) String email,
-			@RequestParam(value = "userName", required = true) String userName,
-			@RequestParam(value = "password", required = true) String password,
-			@RequestParam(value = "confirmPassword", required = true) String confirmPassword,
-			@RequestParam(value = "phoneNumber", required = true) String phoneNumber,*/
-			@ModelAttribute("customerForm") @Valid Customer customer,BindingResult error, Model model,
+	public String registerUser(	@ModelAttribute("customerForm") @Valid Customer customer,BindingResult error, Model model,
 			RedirectAttributes redir, HttpServletRequest request) {
 		if (error.hasErrors()){
 			System.out.println(error.getErrorCount());
@@ -116,14 +104,7 @@ public class CustomerController {
 		if (validateCustomer(customer.getUserName(), customer.getPassword()) == null) {
 			long result = customerService.registerUser(customer);
 			if (result > 0) {
-				/*
-				 * sb.append("Hello " + customer.getUserName() + "\n");
-				 * sb.append("Thank you for registering at RS Shopper.Happy Shopping!!\n");
-				 * mailSenderService.sendEmail( customer.getEmailAddress(),
-				 * customer.getUserName(),
-				 * sb.toString(),"Activation mail for "+customer.getUserName()); sb.delete(0,
-				 * sb.length());
-				 */
+				
 				customer.setCustomerId(result);
 				//String appUrl = request.getRemoteHost();
 				InetAddress inetAddress=null;
@@ -153,7 +134,7 @@ public class CustomerController {
 		Boolean registerFlag = (Boolean) model.asMap().get("registerFlag");
 		Long result = (Long) model.asMap().get("result");
 		if (registerFlag != null && registerFlag != false) {
-			 String regStatus = (String) model.asMap().get("regStatus");
+			// String regStatus = (String) model.asMap().get("regStatus");
 			if (result != null && result != 0) {
 				return "redirect:successSignUp";
 			} else {
