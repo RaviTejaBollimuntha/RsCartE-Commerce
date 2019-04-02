@@ -49,8 +49,8 @@ public class InvoiceUtil {
 			MimeMessage mimeMessage = mailSenderService.createMimeMessage();
 			MimeMessageHelper mailMsg = new MimeMessageHelper(mimeMessage, true);
 			mailMsg.setFrom(FROM_ID);
-			mailMsg.setTo(FROM_ID);
-			mailMsg.setSubject("Test mail with Attachment");
+			mailMsg.setTo(emailto);
+			mailMsg.setSubject("Invoice with Attachment");
 			mailMsg.setText("Please find Attachment.");
 			FileSystemResource file1 = new FileSystemResource(System.getProperty("user.dir")+"\\src\\main\\resources\\invoice.pdf");
 			// send off the email

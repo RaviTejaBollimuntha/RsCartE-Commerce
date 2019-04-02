@@ -1,5 +1,6 @@
 package com.rscart.controller;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.text.ParseException;
@@ -14,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.FileSystemResource;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Controller;
@@ -84,7 +86,7 @@ public class OrderController {
 	        emodel.put("billingaddress",billingaddress);
 	        emodel.put("order",order);
 	        emodel.put("cartdata",customerCartData);
-	        sendConfirmationEmailMessage(emodel);
+	        sendConfirmationEmailMessage(emodel,customerCartData);
 		return "redirect:order";
 	}
 
@@ -97,20 +99,27 @@ public class OrderController {
 		paymentService.payByCreditCard(creditCardForm);
 	}
 
-    public void sendConfirmationEmailMessage(Map<String,Object> model) throws MessagingException, IOException {
+    public void sendConfirmationEmailMessage(Map<String,Object> model,CartData CartData) throws MessagingException, IOException {
         MimeMessage message = emailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message,
                 MimeMessageHelper.MULTIPART_MODE_MIXED_RELATED,
                 StandardCharsets.UTF_8.name());
 
         //helper.addAttachment("logo.png", new ClassPathResource("logo.png"));
-
         Context context = new Context();
         context.setVariables(model);
         String html = templateEngine.process("email-template", context);
 
         helper.setTo(model.get("email").toString());
         helper.setText(html, true);
+        FileSystemResource rs=null;
+        rs=new FileSystemResource(new File(System.getProperty("user.dir")+"\\src\\main\\webapp\\resources\\images\\logo.png"));
+        helper.addInline("logo", rs);
+        List<Product> plist=CartData.getProductsList();
+        for(Product p:plist) {
+        		rs=new FileSystemResource(new File(System.getProperty("user.dir")+"\\src\\main\\webapp\\resources\\images\\"+p.getProductId()+".jpg"));
+        		helper.addInline(p.getProductId().toString(), rs);
+        }
         helper.setSubject("RsCart Shopping order Confirmation Status");
         helper.setFrom("rscartsite@gmail.com");
 
