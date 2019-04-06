@@ -56,7 +56,7 @@ public class CatalogController {
 	 * @return Home Page View
 	 */
 	@RequestMapping(value = {"/home","/"}, method = RequestMethod.GET)
-	public String returnHomePage(Model model, HttpServletRequest request) {
+	public String returnHomePage(Model model,@RequestParam(value="page",required = false) String page, HttpServletRequest request) {
 		Map<Category, List<SubCategory>> categoryMap = new HashMap<Category, List<SubCategory>>();
 		logger.info("Processing information for home page");
 		if (categoryMap.isEmpty()) {
@@ -66,9 +66,19 @@ public class CatalogController {
 			context.setAttribute("categoryMap", categoryMap);
 		}
 		List<Product> featProdList = new ArrayList<Product>();
-		if (featProdList.isEmpty()) {			
-			model.addAttribute("featProd",
-					productConfigurationService.getFeaturedProducts());
+		if (featProdList.isEmpty()) {	
+			featProdList=productConfigurationService.getFeaturedProducts();
+			model.addAttribute("pagecount", featProdList.size()/5);
+			int total = 5;
+			int page_id=0;
+			if(page == null) {
+				page_id=1;
+	        } else { 
+	        	page_id=Integer.parseInt(page);
+	            page_id= (page_id-1)*total+1;  
+	        }
+			featProdList=productConfigurationService.getPagenumberByProducts(page_id,total+page_id);
+			model.addAttribute("featProd",featProdList);
 		}
 		
 		return getHomePage();

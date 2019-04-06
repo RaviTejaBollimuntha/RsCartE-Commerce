@@ -44,4 +44,14 @@ public class ProductConfigRepositoryJdbcImpl implements ProductConfigRepository 
 		return product;
 	}
 
+	@Override
+	public List<Product> readPagenumberProducts(int page_id, int total) {
+		String sql = "SELECT * FROM (SELECT PRODUCT_ID,name,PRICE,CATEGORY_ID,DESCRIPTION,SUBCATEGORY_ID,MANUFACTURER,CREATED_ON,FEATURED,AVAILABLE, rownum AS rnum  FROM   (SELECT * FROM PRODUCT where FEATURED=1 ORDER BY PRODUCT_ID)WHERE rownum <=:total)WHERE  rnum > :nop";
+		SqlParameterSource sqlParameterSource = new MapSqlParameterSource().addValue("nop", page_id).addValue("total",
+				total);
+		List<Product> productsList = namedParameterJdbcTemplate.query(sql,
+				sqlParameterSource, new ProductMapper());
+		return productsList;
+	}
+
 }

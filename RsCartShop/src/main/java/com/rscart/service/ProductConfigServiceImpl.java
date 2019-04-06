@@ -26,4 +26,11 @@ public class ProductConfigServiceImpl implements ProductConfigService {
 		return product;
 	}
 
+	@Override
+	public List<Product> getPagenumberByProducts(int page_id, int total) {
+		List<Product> featuredProdList = productConfigRepository
+				.readPagenumberProducts(page_id, total);
+		return featuredProdList;
+	}
+
 }

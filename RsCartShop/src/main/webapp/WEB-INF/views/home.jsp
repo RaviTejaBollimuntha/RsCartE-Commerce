@@ -15,7 +15,66 @@
 <link href="resources/css/animate.css" rel="stylesheet">
 <link href="resources/css/main.css" rel="stylesheet">
 <link href="resources/css/responsive.css" rel="stylesheet">
+<style type="text/css" style="display: none">
+   .glyphicon { margin-right:5px; }
+.thumbnail
+{
+    margin-bottom: 20px;
+    padding: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
 
+.item.list-group-item
+{
+    float: none;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+.item.list-group-item:nth-of-type(odd):hover,.item.list-group-item:hover
+{
+    background: #f1f2f3;
+}
+
+.item.list-group-item .list-group-image
+{
+    margin-right: 10px;
+}
+.item.list-group-item .thumbnail
+{
+    margin-bottom: 0px;
+}
+.item.list-group-item .caption
+{
+    padding: 9px 9px 0px 9px;
+}
+.item.list-group-item:nth-of-type(odd)
+{
+    background: #eeeeee;
+}
+
+.item.list-group-item:before, .item.list-group-item:after
+{
+    display: table;
+    content: " ";
+}
+
+.item.list-group-item img
+{
+    float: left;
+}
+.item.list-group-item:after
+{
+    clear: both;
+}
+.list-group-item-text
+{
+    margin: 0 0 11px;
+}
+   
+</style>
 
 </head>
 
@@ -31,7 +90,6 @@
 			<div class="row">
 				<div class="col-sm-12">
 				<div id="well" class="well well-sm">
-					<strong>Category Title</strong>
 					<div class="btn-group">
 						<a href="#" id="list" class="btn btn-default btn-sm"><span
 							class="glyphicon glyphicon-th-list"> </span>List</a> <a href="#"
@@ -75,8 +133,10 @@
 						</div>
 					</c:forEach>
 				</div>	
-					
-				
+       		    <div id='page'></div>
+       		    <div class="demo4_top demo4_bottom" align="center">
+       		    <input id="total" type="hidden"  value="${pagecount}"/>
+       		    </div>		
 				</div>
 			</div>
 		</div>
@@ -100,6 +160,8 @@
 	<script src="resources/js/jquery.scrollUp.min.js"></script>	
 	<script src="resources/js/jquery.prettyPhoto.js"></script>
 	<script src="resources/js/main.js"></script>
+	<script src="resources/js/pagenation.js"></script>
+	<script src="resources/js/jquery.bootpag.min.js"></script>
 </body>
 </html>
 <script>
@@ -117,6 +179,19 @@
 					$(this).toggleClass('open');
 				});
 		});
+	
+	
+	 $(document).ready(function() {
+		$('#list').click(function(event) {
+			event.preventDefault();
+			$('#products .item').addClass('list-group-item');
+		});
+		$('#grid').click(function(event) {
+			event.preventDefault();
+			$('#products .item').removeClass('list-group-item');
+			$('#products .item').addClass('grid-group-item');
+		});
+	}); 
 </script>
 
 

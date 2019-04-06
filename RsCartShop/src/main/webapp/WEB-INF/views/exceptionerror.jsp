@@ -21,7 +21,7 @@
 		<%@include file="template/header.jsp"%>
 	</header>
 	<div class="container text-center">
-		<div class="logo-404">
+		<div class="logo-404" align="center">
 			<img src="resources/images/404.png" class="img-responsive" />
 		</div>
 		<div class="content-404">

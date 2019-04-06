@@ -5,7 +5,10 @@ import java.util.List;
 import com.rscart.model.Product;
 
 public interface ProductConfigService {
-	List<Product> getFeaturedProducts();
+	public List<Product> getFeaturedProducts();
 
-	Product getProductById(Long productId);
+	public Product getProductById(Long productId);
+
+	public List<Product> getPagenumberByProducts(int page_id, int total);
+
 }

@@ -6,8 +6,10 @@ import com.rscart.model.Product;
 
 public interface ProductConfigRepository {
 
-	List<Product> readFeaturedProducts();
+	public List<Product> readFeaturedProducts();
 
-	Product readProductById(Long productId);
+	public Product readProductById(Long productId);
+
+	public List<Product> readPagenumberProducts(int page_id, int total);
 
 }

@@ -98,7 +98,7 @@ public class CartData implements Serializable {
 
 	public double getSubtotal() {
 
-		subtotal = getTotal() * 0.001;
+		subtotal = getTotal() * 0.18;
 		return subtotal;
 	}
 

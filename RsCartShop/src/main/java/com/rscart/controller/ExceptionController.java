@@ -19,10 +19,9 @@ public ModelAndView exception(DataAccessException e) {
 @ExceptionHandler(Exception.class)	
 public ModelAndView globalException(Exception e) {
 		e.printStackTrace();
-		ModelAndView mav = new ModelAndView("error");
+	    ModelAndView mav = new ModelAndView("error");
 		mav.addObject("name", e.getClass().getSimpleName());
 		mav.addObject("message", e.getMessage());
-
 		return mav;
 	}
 }
