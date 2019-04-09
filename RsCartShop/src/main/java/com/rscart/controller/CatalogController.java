@@ -68,17 +68,22 @@ public class CatalogController {
 		List<Product> featProdList = new ArrayList<Product>();
 		if (featProdList.isEmpty()) {	
 			featProdList=productConfigurationService.getFeaturedProducts();
-			model.addAttribute("pagecount", featProdList.size()/5);
-			int total = 5;
-			int page_id=0;
+			if(featProdList.size()%6==0)
+			    model.addAttribute("pagecount", featProdList.size()/6);
+			else
+				model.addAttribute("pagecount", (featProdList.size()/6)+1);
+			int total = 6,page_id=0,pageno=0;
 			if(page == null) {
 				page_id=1;
+				pageno=1;
 	        } else { 
 	        	page_id=Integer.parseInt(page);
+	        	pageno=page_id;
 	            page_id= (page_id-1)*total+1;  
 	        }
 			featProdList=productConfigurationService.getPagenumberByProducts(page_id,total+page_id);
 			model.addAttribute("featProd",featProdList);
+			model.addAttribute("pageno", pageno);
 		}
 		
 		return getHomePage();

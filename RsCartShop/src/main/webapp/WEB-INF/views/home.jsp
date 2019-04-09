@@ -136,6 +136,7 @@
        		    <div id='page'></div>
        		    <div class="demo4_top demo4_bottom" align="center">
        		    <input id="total" type="hidden"  value="${pagecount}"/>
+       		    <input id="pageno" type="hidden"  value="${pageno}"/>
        		    </div>		
 				</div>
 			</div>

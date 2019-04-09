@@ -1,8 +1,9 @@
 $(document).ready(function(){
 	var total = document.getElementById("total").value;
+	var pageno = document.getElementById("pageno").value;
 $('.demo4_top,.demo4_bottom').bootpag({
     total: total,
-    page: 1,
+    page: pageno,
     maxVisible: 10,
     leaps: true,
     firstLastUse: true,
