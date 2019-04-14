@@ -196,9 +196,9 @@ public class InvoiceUtil {
 			price += orders.getPRICE();
 			table.addCell(String.valueOf(orders.getQUANTITY()));// qty
 			qty += orders.getQUANTITY();
-			table.addCell(String.valueOf(orders.getPRICE() * 0.1));// gst
-			tax += orders.getPRICE() * 0.1;
-			table.addCell(String.valueOf(orders.getPRICE() * 0.1 + (orders.getQUANTITY() * orders.getPRICE())));// total
+			table.addCell(String.valueOf(orders.getPRICE() * 0.18));// gst
+			tax += orders.getPRICE() * 0.18;
+			table.addCell(String.valueOf(orders.getPRICE() * 0.18 + (orders.getQUANTITY() * orders.getPRICE())));// total
 			sub += tax + orders.getQUANTITY() * orders.getPRICE();
 		}
 		doc.add(table);

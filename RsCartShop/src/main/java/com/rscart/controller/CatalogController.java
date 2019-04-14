@@ -16,12 +16,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import com.rscart.model.Category;
 import com.rscart.model.Product;
 import com.rscart.model.SubCategory;
+import com.rscart.repository.ProductSearch;
 import com.rscart.service.CategoryConfigService;
 import com.rscart.service.ProductConfigService;
+
 
 /**
  * @author RaviTeja Bollimuntha Handles requests for the application home page.
@@ -35,6 +36,8 @@ public class CatalogController {
 	private ProductConfigService productConfigurationService;
 	@Autowired
 	private ServletContext context;
+	@Autowired
+	private ProductSearch productSearch;
 
 	private String accountsTemplatePage = "template/accountInformation";
 
@@ -56,9 +59,12 @@ public class CatalogController {
 	 * @return Home Page View
 	 */
 	@RequestMapping(value = {"/home","/"}, method = RequestMethod.GET)
-	public String returnHomePage(Model model,@RequestParam(value="page",required = false) String page, HttpServletRequest request) {
+	public String returnHomePage(Model model,@RequestParam(value="page",required = false) String page,@RequestParam(value="search",required = false) String search, HttpServletRequest request) {
 		Map<Category, List<SubCategory>> categoryMap = new HashMap<Category, List<SubCategory>>();
 		logger.info("Processing information for home page");
+		if("".equals(search)){
+			search=null;
+		}
 		if (categoryMap.isEmpty()) {
 			categoryMap = categoryConfigurationService.getCategoriesMap();
 		}
@@ -66,25 +72,41 @@ public class CatalogController {
 			context.setAttribute("categoryMap", categoryMap);
 		}
 		List<Product> featProdList = new ArrayList<Product>();
-		if (featProdList.isEmpty()) {	
-			featProdList=productConfigurationService.getFeaturedProducts();
-			if(featProdList.size()%6==0)
-			    model.addAttribute("pagecount", featProdList.size()/6);
+		if (featProdList.isEmpty()&&search==null) {	
+			List<Product> PaginationcountList=productConfigurationService.getFeaturedProducts();
+			if(PaginationcountList.size()%6==0)
+			    model.addAttribute("pagecount", PaginationcountList.size()/6);
 			else
-				model.addAttribute("pagecount", (featProdList.size()/6)+1);
+				model.addAttribute("pagecount", (PaginationcountList.size()/6)+1);
+		}else {
+			List<Product> PaginationcountList=productSearch.search(search, 0);
+			if(PaginationcountList.size()%6==0)
+			    model.addAttribute("pagecount", PaginationcountList.size()/6);
+			else
+				model.addAttribute("pagecount", (PaginationcountList.size()/6)+1);
+		}
 			int total = 6,page_id=0,pageno=0;
-			if(page == null) {
+			if(page == null && search==null) {
 				page_id=1;
 				pageno=1;
-	        } else { 
+				featProdList=productConfigurationService.getPagenumberByProducts(page_id,total+page_id);
+	        } else if(page != null && search==null){ 
 	        	page_id=Integer.parseInt(page);
 	        	pageno=page_id;
-	            page_id= (page_id-1)*total+1;  
+	            page_id= (page_id-1)*total+1;
+	            featProdList=productConfigurationService.getPagenumberByProducts(page_id,total+page_id);
+	        }else if(page == null && search!=null){
+				pageno=1;
+	        	featProdList=productSearch.search(search,1);
+	        }else {
+	        	page_id=Integer.parseInt(page);
+	        	pageno=page_id;
+	            page_id= (page_id-1)*total+1;
+	            featProdList=productSearch.search(search,page_id);
 	        }
-			featProdList=productConfigurationService.getPagenumberByProducts(page_id,total+page_id);
 			model.addAttribute("featProd",featProdList);
 			model.addAttribute("pageno", pageno);
-		}
+			model.addAttribute("search", search);
 		
 		return getHomePage();
 	}
@@ -114,7 +136,6 @@ public class CatalogController {
 		model.addAttribute("page", accountsTemplatePage);
 		return getAccountPage();
 	}
-
 	public String getAccountPage() {
 		return accountsPage;
 	}

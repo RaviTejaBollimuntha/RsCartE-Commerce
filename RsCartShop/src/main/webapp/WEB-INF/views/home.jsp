@@ -98,45 +98,56 @@
 					</div>
 				</div>
 				<div id="products" class="row list-group">
-					<c:forEach var="featProds" items="${featProd}">					 
-						<c:url var="url" value="product">
-							<c:param name="productId" value="${featProds.productId}" />
-						</c:url>
-						<div class="item  col-xs-4 col-lg-4">
-							<div class="thumbnail">
-								<img class="group list-group-image"
-									src="resources/images/${featProds.productId}.jpg" width="193" height="80" />
-								<div class="caption">
-									<h4 class="group inner list-group-item-heading">
-										<a href="${url}"><c:out value="${featProds.name}" /></a>
-									</h4>
-									<p class="group inner list-group-item-text">
-										<c:out value="${featProds.manufacturer}" />
-									</p>
-									<p class="group inner list-group-item-text"><c:out value="${featProds.description}" /></p>
-									<div class="row">
-										<div class="col-xs-12 col-md-6">
-											<p class="lead">
-												Rs.
-												<c:out value="${featProds.price}" />
-											</p>
-										</div>
-										<c:url var="add" value="/addProduct">
-											<c:param name="productId" value="${featProds.productId}" />
-										</c:url>
-										<div class="col-xs-12 col-md-6">
-											<a class="btn btn-success" href="${add}">Add to cart</a>
+						<c:choose>
+							<c:when test="${featProd.size() != 0 }">
+								<c:forEach var="featProds" items="${featProd}">
+									<c:url var="url" value="product">
+										<c:param name="productId" value="${featProds.productId}" />
+									</c:url>
+									<div class="item  col-xs-4 col-lg-4">
+										<div class="thumbnail">
+											<img class="group list-group-image"
+												src="resources/images/${featProds.productId}.jpg"
+												width="193" height="80" />
+											<div class="caption">
+												<h4 class="group inner list-group-item-heading">
+													<a href="${url}"><c:out value="${featProds.name}" /></a>
+												</h4>
+												<p class="group inner list-group-item-text">
+													<c:out value="${featProds.manufacturer}" />
+												</p>
+												<p class="group inner list-group-item-text">
+													<c:out value="${featProds.description}" />
+												</p>
+												<div class="row">
+													<div class="col-xs-12 col-md-6">
+														<p class="lead">
+															Rs.
+															<c:out value="${featProds.price}" />
+														</p>
+													</div>
+													<c:url var="add" value="/addProduct">
+														<c:param name="productId" value="${featProds.productId}" />
+													</c:url>
+													<div class="col-xs-12 col-md-6">
+														<a class="btn btn-success" href="${add}">Add to cart</a>
+													</div>
+												</div>
+											</div>
 										</div>
 									</div>
-								</div>
-							</div>
-						</div>
-					</c:forEach>
+								</c:forEach>
+							</c:when>
+							<c:otherwise>
+								<h3 align="center" style="color:maroon; ">Searching Products Not Available </h3>
+							</c:otherwise>
+						</c:choose>
 				</div>	
        		    <div id='page'></div>
        		    <div class="demo4_top demo4_bottom" align="center">
        		    <input id="total" type="hidden"  value="${pagecount}"/>
        		    <input id="pageno" type="hidden"  value="${pageno}"/>
+       		    <input id="search" type="hidden"  value="${search}"/>
        		    </div>		
 				</div>
 			</div>

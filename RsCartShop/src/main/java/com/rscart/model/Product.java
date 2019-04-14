@@ -3,22 +3,31 @@ package com.rscart.model;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.hibernate.search.annotations.Field;
+import org.hibernate.search.annotations.Indexed;
+@Entity
+@Indexed
+@Table(name = "product")
 public class Product implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-
+	@Id
 	private Long productId;
-
+	@Field
 	private String name;
 
 	private Integer featured;
-
+	@Field
 	private BigDecimal price;
 
 	private Integer available;
-
+	@Field
 	private String description;
-
+	@Field
 	private String manufacturer;
 
 	public static class ProductBuilder {

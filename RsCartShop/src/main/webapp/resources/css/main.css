@@ -255,11 +255,11 @@ a#scrollUp i{
 .search_box input {
   background: #F0F0E9;
   border: medium none;
-  color: #B2B2B2;
+  color: #4a4a4a;
   font-family: 'roboto';
   font-size: 12px;
   font-weight: 300;
-  height: 35px;
+  height: 55px;
   outline: medium none;
   padding-left: 10px;
   width: 155px;
@@ -506,8 +506,8 @@ ul.sub-menu {
 
 
 .searchform input {
-  border: 1px solid #DDDDDD;
-  color: #CCCCC6;
+  border: 1px solid #4fb4f0;
+  color: #000000;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   margin-top: 0;
@@ -518,11 +518,11 @@ ul.sub-menu {
 
 
 .searchform button {
-  background: #FE980F;
+  background: #51b0ea;
   border: medium none;
   border-radius: 0;
   margin-left: -5px;
-  margin-top: -3px;
+  margin-top: -2px;
   padding: 7px 17px;
 }
 
@@ -533,7 +533,7 @@ ul.sub-menu {
 
 .searchform  button:hover, 
 .searchform  button:focus{
-	background-color:#FE980F;
+	background-color:#8bd1f3;
 }
 
 .searchform p {
@@ -1477,7 +1477,7 @@ h2.title {
 }
 
 .login-form form button {
-  margin-top: 23px;
+  margin-top: 20px;
 }
 
 .login-form form button, .signup-form form button {
