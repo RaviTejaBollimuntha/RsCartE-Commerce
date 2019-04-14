@@ -37,7 +37,7 @@ Following are the operations that can be performed by the Respective User
 
 
 #### 2.4 ordes
-(screenshots/Admin4.png)
+![Article read](screenshots/Admin4.png)
 
 
 #### 2.5 users
@@ -55,7 +55,7 @@ Following are the operations that can be performed by the Respective User
 ##Site
 
 #### 2.9 Home
-(screenshots/site1.png)
+![Editor](screenshots/site1.png)
 
 
 #### 2.10 Footer
@@ -73,8 +73,7 @@ Following are the operations that can be performed by the Respective User
 
 
 #### 2.14 cart
-(screenshots/site6.png)
-
+![Article read](screenshots/site6.png)
 
 #### 2.15 login
 ![Editor](screenshots/site7.png)
@@ -91,7 +90,7 @@ Following are the operations that can be performed by the Respective User
 
 
 #### 2.19 invoice
-(screenshots/site11.png)
+![Editor](screenshots/site11.png)
 
 
 #### 2.20 coupon
