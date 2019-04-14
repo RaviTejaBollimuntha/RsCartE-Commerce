@@ -21,7 +21,7 @@ Following are the operations that can be performed by the Respective User
  - JSTL
  - oracle
  - PMD
-#Rs-tx account number:98745632198745
+# Rs-tx account number:98745632198745
 
 ### 2. Renderings
 ## Admin
