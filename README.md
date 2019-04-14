@@ -24,7 +24,7 @@ Following are the operations that can be performed by the Respective User
 #Rs-tx account number:98745632198745
 
 ### 2. Renderings
-##Admin
+## Admin
 #### 2.1 home
 ![Home](screenshots/Admin1.png)
 
@@ -52,7 +52,7 @@ Following are the operations that can be performed by the Respective User
 
 #### 2.8 edit order
 ![Article read](screenshots/Admin8.png)
-##Site
+## Site
 
 #### 2.9 Home
 ![Editor](screenshots/site1.png)
