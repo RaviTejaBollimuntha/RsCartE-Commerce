@@ -42,26 +42,13 @@ public class AddressRepositoryJdbcImpl implements AddressRepository {
 	}
 
 	@Override
-	public List<ShippingForm> readAddressById(Long shippingId) {
+	public List<ShippingForm> readShippmentAddressByCId(Long shippingId) {
 		
-		String sql = "SELECT * FROM SHIPPINGADDRESS a where a.SHIPPING_ID=:addressId";
+		String sql = "SELECT * FROM SHIPPINGADDRESS a where a.Customer_Id=:addressId";
 		SqlParameterSource sqlParameterSource = new MapSqlParameterSource(
 				"addressId", shippingId);
 		List<ShippingForm> listBO=null;
-		listBO=namedParameterJdbcTemplate.query(sql,sqlParameterSource,(rs)->{
-			List<ShippingForm> listStBO=null;
-			ShippingForm bo=null;
-			listStBO = new ArrayList<>();
-			while(rs.next()){
-				bo=new ShippingForm();
-								
-				
-				listStBO.add(bo);
-			}
-			return listStBO;
-			
-		}
-		);
+		listBO=namedParameterJdbcTemplate.query(sql,sqlParameterSource,new ShippingMapper());
 		return listBO;
 	}
 	@Override
@@ -70,30 +57,11 @@ public class AddressRepositoryJdbcImpl implements AddressRepository {
 		String sql = "SELECT * FROM address a where a.Customer_Id=:customerid";		
 		SqlParameterSource sqlParameterSource = new MapSqlParameterSource(
 				"customerid", customerid);
-		try {
 	        address = namedParameterJdbcTemplate.queryForObject(sql,sqlParameterSource, new AddressMapper());
-		} catch (Exception e) {
-			return  null;
-		}
+		
 		
 		return address;
 	}
-
-	@Override
-	public ShippingForm readAddressByCustomerId(Long customerid) {
-		ShippingForm address=null;
-		String sql = "SELECT * FROM shippingaddress a where a.Customer_Id=:customerid";		
-		SqlParameterSource sqlParameterSource = new MapSqlParameterSource(
-				"customerid", customerid);
-		try {
-	        address = namedParameterJdbcTemplate.queryForObject(sql,sqlParameterSource, new ShippingMapper());
-		} catch (Exception e) {
-			return  null;
-		}
-		
-		return address;
-	}
-
 	@Override
 	public void shippingAddress(ShippingForm shippingAddress) {
 		String sql = "insert into shippingaddress (Shipping_Id,Address_1, Address_2,City,Zip,State,FullName,Customer_Id,Country) "
@@ -123,14 +91,14 @@ public class AddressRepositoryJdbcImpl implements AddressRepository {
 	@Override
 	public void upadateShippingAddress(ShippingForm shippingAddress) {
 		String sql = "update shippingaddress set Address_1=:address1,  Address_2=:address2,City=:city,Zip=:zipCode,State=:state,FullName=:fullName,Country=:country "
-				+ "Where Customer_Id=:Customer_Id";
+				+ "Where Shipping_Id=:shippingId";
 		SqlParameterSource sqlParameterSource = new BeanPropertySqlParameterSource(
 				shippingAddress);
 		namedParameterJdbcTemplate.update(sql, sqlParameterSource);
 	}
 
 	@Override
-	public ShippingForm readShippmentAddressById(Long shippingId) {
+	public ShippingForm readShippmentAddressBySId(Long shippingId) {
 		String sql = "SELECT * FROM SHIPPINGADDRESS a where a.SHIPPING_ID=:addressId";
 		SqlParameterSource sqlParameterSource = new MapSqlParameterSource(
 				"addressId", shippingId);		

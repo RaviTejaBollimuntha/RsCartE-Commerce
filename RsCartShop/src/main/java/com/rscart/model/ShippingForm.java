@@ -1,7 +1,9 @@
 package com.rscart.model;
 
-public class ShippingForm {
+import java.io.Serializable;
 
+public class ShippingForm  implements Serializable {
+	private static final long serialVersionUID = 1L;
 	private Long shippingId;
 	private String fullName;
 	private String address1;

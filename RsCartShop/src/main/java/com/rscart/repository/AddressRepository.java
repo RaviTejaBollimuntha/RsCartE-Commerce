@@ -9,9 +9,9 @@ public interface AddressRepository {
 
 	public boolean saveAddress(AddressForm address);	
 
-	public List<ShippingForm> readAddressById(Long addressId);
+	public List<ShippingForm> readShippmentAddressByCId(Long customerid);
 
-	public ShippingForm readAddressByCustomerId(Long customerid);
+	//public ShippingForm readAddressByCustomerId(Long customerid);
 
 	public void shippingAddress(ShippingForm shippingAddress);
 
@@ -21,5 +21,5 @@ public interface AddressRepository {
 
 	public void upadateShippingAddress(ShippingForm shippingAddress);
 
-	public ShippingForm readShippmentAddressById(Long shippingId);
+	public ShippingForm readShippmentAddressBySId(Long shippingId);
 }

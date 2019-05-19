@@ -25,8 +25,7 @@ public class PaymentServiceImpl implements PaymentService {
 
 	@Override
 	public CreditCardForm gatherCardDetails(CreditCardForm creditCardForm,
-			HttpServletRequest request) {
-		System.out.println(creditCardForm);
+			HttpServletRequest request) {		
 		session = request.getSession();
 		Long customerId = ((Customer) session.getAttribute("customer")).getCustomerId();
 		double AccountNumber=Double.parseDouble(request.getParameter("AccountNumber"));

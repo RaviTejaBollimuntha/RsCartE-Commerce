@@ -75,27 +75,4 @@ public class CreditCardForm {
 		this.cvvCode = cvvCode;
 	}
 
-	@Override
-	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("CreditCardForm [customerId=");
-		builder.append(customerId);
-		builder.append(", AccountNumber=");
-		builder.append(AccountNumber);
-		builder.append(", amount=");
-		builder.append(amount);
-		builder.append(", creditCardNumber=");
-		builder.append(creditCardNumber);
-		builder.append(", month=");
-		builder.append(month);
-		builder.append(", year=");
-		builder.append(year);
-		builder.append(", name=");
-		builder.append(name);
-		builder.append(", cvvCode=");
-		builder.append(cvvCode);
-		builder.append("]");
-		return builder.toString();
 	}
-   
-}

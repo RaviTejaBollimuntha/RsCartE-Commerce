@@ -103,8 +103,12 @@
 						</tbody>
 					</table>
 					<hr>
-					
-				    <%@include file="template/address.jsp"%>
+				 <c:choose>
+			    <c:when test="${page ne null}">
+			     <c:set var="inpage" value="${page}.jsp" />
+				<jsp:include page="${inpage}"></jsp:include>
+			    </c:when>			    
+			   </c:choose>	
 				</div>
 			</div>
 		</div>

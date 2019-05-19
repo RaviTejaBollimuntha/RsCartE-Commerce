@@ -215,31 +215,30 @@
 	</footer>
 
 	<!--/Footer-->
-
-	<script src="resources/js/jquery-1.8.0.js"></script>
+<script src="resources/js/jquery-1.8.0.js"></script>
 	<script src="resources/js/price-range.js"></script>
 	<script src="resources/js/jquery.scrollUp.min.js"></script>
 	
 	<script src="resources/js/jquery.prettyPhoto.js"></script>
 	<script src="resources/js/main.js"></script>
-	<script src="resources/js/jquery-1.8.0.js.js" type="text/javascript"></script>
-	
 </body>
+
 </html>
+<script src="resources/js/bootstrap.js"></script>
+<script src="resources/js/jquery-1.8.0.js"></script>
 <script>
 	$(document).ready(
-		function() {
-			$(".dropdown").hover(
-				function() {
-					$('.dropdown-menu', this).not('.in .dropdown-menu')
-						.stop(true, true).slideDown("fast");
-					$(this).toggleClass('open');
-				},
-				function() {
-					$('.dropdown-menu', this).not('.in .dropdown-menu')
-						.stop(true, true).slideUp("fast");
-					$(this).toggleClass('open');
-				});
-		});
+			function() {
+				$(".dropdown").hover(
+						function() {
+							$('.dropdown-menu', this).not('.in .dropdown-menu')
+									.stop(true, true).slideDown("fast");
+							$(this).toggleClass('open');
+						},
+						function() {
+							$('.dropdown-menu', this).not('.in .dropdown-menu')
+									.stop(true, true).slideUp("fast");
+							$(this).toggleClass('open');
+						});
+			});
 </script>
-

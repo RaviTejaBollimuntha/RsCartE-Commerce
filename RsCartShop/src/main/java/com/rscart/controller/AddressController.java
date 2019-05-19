@@ -1,5 +1,9 @@
 package com.rscart.controller;
 
+import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -9,10 +13,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.rscart.model.AddressForm;
 import com.rscart.model.Customer;
+import com.rscart.model.ShippingForm;
 import com.rscart.service.AddressService;
 import com.rscart.util.SessionUtils;
 
@@ -27,8 +33,7 @@ public class AddressController {
 	private static String changeAddressPage = "template/changeAddress";
 
 	@RequestMapping(value = "/addressDetails", method = RequestMethod.GET)
-	public String getAddressDetailsPage(HttpServletRequest request, Model model,Boolean flag) {		
-		
+	public String getAddressDetailsPage(HttpServletRequest request, Model model,Boolean flag) {			
 		session = SessionUtils.createSession(request);
 		Customer customer = (Customer) session.getAttribute("customer");
 		if (customer != null) {		  
@@ -44,13 +49,9 @@ public class AddressController {
 				}
   		     return "account";
 		} 
-		
-		
+
 		model.addAttribute("page", changeAddressPage);
-		return "account";
-		
-		
-		
+		return "account";	
 	}
 	
 	@RequestMapping(value = "/saveaddress", method = RequestMethod.POST)
@@ -70,5 +71,15 @@ public class AddressController {
 		SessionUtils.setSessionVariables(address, request, "address");
 		redirectAttributes.addFlashAttribute("flag", flag);
 		return "redirect:addressDetails";
+	}
+	@RequestMapping(value = "/shipmentaddress", method = RequestMethod.POST)
+	public String getShipmentAddressDetails(HttpServletRequest request,@RequestParam("shippingid") String shipmentid, Model model) {
+		session = SessionUtils.createSession(request);
+		@SuppressWarnings("unchecked")
+		List<ShippingForm> address = (List<ShippingForm>)session.getAttribute("shipmentAddressList");
+		List<ShippingForm> shippingAddressList=address.stream().filter(s -> s.getShippingId()==Long.parseLong(shipmentid)).collect(Collectors.toList());
+		ShippingForm shippingAddress=shippingAddressList.get(0);
+		SessionUtils.setSessionVariables(shippingAddress, request, "shippingAddress");
+		return "payment";
 	}
 }

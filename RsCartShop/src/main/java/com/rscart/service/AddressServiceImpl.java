@@ -26,13 +26,8 @@ public class AddressServiceImpl implements AddressService {
 	}
 	@Override
 	public ShippingForm getShippmentAddressById(Long shippingId) {
-		ShippingForm orderShipmentAddress = addressRepository.readShippmentAddressById(shippingId);
+		ShippingForm orderShipmentAddress = addressRepository.readShippmentAddressBySId(shippingId);
 		return orderShipmentAddress;
-	}
-	@Override
-	public ShippingForm getAddressById(Long shippingId) {
-		List<ShippingForm> listSf = addressRepository.readAddressById(shippingId);
-		return listSf.get(0);
 	}
 	@Override
 	public AddressForm getPermentAddressByCustomerId(Long customerid) {
@@ -40,8 +35,8 @@ public class AddressServiceImpl implements AddressService {
 	}
 
 	@Override
-	public ShippingForm getAddressByCustomerId(Long customerid) {
-		return addressRepository.readAddressByCustomerId(customerid);
+	public List<ShippingForm> getShippmentAddressByCustomerId(Long customerid) {
+		return addressRepository.readShippmentAddressByCId(customerid);
 	}
 
 	@Override
@@ -60,8 +55,7 @@ public class AddressServiceImpl implements AddressService {
 	}
 
 	@Override
-	public void updateShippingAddress(ShippingForm shippingAddress, Customer customer) {		
-		shippingAddress.setCustomer_Id(customer.getCustomerId());
+	public void updateShippingAddress(ShippingForm shippingAddress, Customer customer) {
 		addressRepository.upadateShippingAddress(shippingAddress);
 		
 	}

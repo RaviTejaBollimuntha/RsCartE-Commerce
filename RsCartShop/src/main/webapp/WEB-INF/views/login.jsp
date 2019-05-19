@@ -4,6 +4,13 @@
 <head>
 <title>Login Details</title>
 <link rel="stylesheet" href="resources/css/bootstrap.css" />
+<link href="resources/css/bootstrap.min.css" rel="stylesheet">
+<link href="resources/css/font-awesome.min.css" rel="stylesheet">
+<link href="resources/css/prettyPhoto.css" rel="stylesheet">
+<link href="resources/css/price-range.css" rel="stylesheet">
+<link href="resources/css/animate.css" rel="stylesheet">
+<link href="resources/css/main.css" rel="stylesheet">
+<link href="resources/css/responsive.css" rel="stylesheet">
 <style type="text/css">
 .prettyline {
 	height: 5px;

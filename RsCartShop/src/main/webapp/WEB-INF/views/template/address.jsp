@@ -12,7 +12,9 @@
 
 				<div class="col-sm-6">
 					<div class="total_area">
-						<c:set var="address" value="${shippingaddress}" />
+						<c:set var="shippingaddress" value="${shippingaddress}" />
+						<input id="shippingId"
+								name="shippingId" type="hidden" value="${shippingaddress.shippingId}" />
 						<div class="form-group">
 							<label for="fullName"> Full Name </label> <input id="fullName"
 								name="fullName" type="text" class="form-control"

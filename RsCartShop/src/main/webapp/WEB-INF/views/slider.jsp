@@ -39,8 +39,7 @@
 					</div>
 					<div class="col-sm-6">
 						<img src="resources/images/girl1.jpg"
-							class="girl img-responsive" alt="" /> <img
-							src="resources/images/pricing.png" class="pricing" alt="" />
+							class="girl img-responsive" alt="" /> 
 					</div>
 				</div>
 				<div class="item">
@@ -58,8 +57,7 @@
 					</div>
 					<div class="col-sm-6">
 						<img src="resources/images/girl2.jpg"
-							class="girl img-responsive" alt="" /> <img
-							src="resources/images/pricing.png" class="pricing" alt="" />
+							class="girl img-responsive" alt="" />
 					</div>
 				</div>
 				<div class="item">
@@ -77,8 +75,7 @@
 					</div>
 					<div class="col-sm-6">
 						<img src="resources/images/girl3.jpg"
-							class="girl img-responsive" alt="" /> <img
-							src="resources/images/pricing.png" class="pricing" alt="" />
+							class="girl img-responsive" alt="" /> 
 					</div>
 				</div>
 			</div>
