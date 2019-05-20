@@ -32,15 +32,18 @@ public class CheckoutController {
 	private HttpSession session;
 
 	@RequestMapping(value = "/checkout", method = RequestMethod.GET)
-	public String checkOutCart(Model model, HttpServletRequest request,@RequestParam(value="saveorupdate",required=false) String page,@RequestParam(value="id",required=false) String shipmentid) {
+	public String checkOutCart(Model model, HttpServletRequest request,@RequestParam(value="page",required=false) String page,@RequestParam(value="id",required=false) String shipmentid) {
 		session = SessionUtils.createSession(request);
 		Customer customer = (Customer) session.getAttribute("customer");
 		if (customer != null) {		  
 			 @SuppressWarnings("unchecked")
 			List<ShippingForm> address = (List<ShippingForm>)session.getAttribute("shipmentAddressList");
-			 if(address==null &&page==null&&shipmentid==null){
+			 if(page==null&&shipmentid==null){
 			    address = addressService.getShippmentAddressByCustomerId(customer.getCustomerId());
+			    if(!address.isEmpty()) {
 			    SessionUtils.setSessionVariables(address, request, "shipmentAddressList");
+			    SessionUtils.removeSessionVariables("shippingaddress", request);
+			    }
 			    model.addAttribute("page", "shipmentAddressList");
 			 }else {
 				 if(shipmentid!=null) {

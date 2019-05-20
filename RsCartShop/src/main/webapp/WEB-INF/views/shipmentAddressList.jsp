@@ -11,7 +11,9 @@
 <body>
 	<div class="col-md-12">
 		<div class="row">
-			<div class="table-responsive">
+		<c:choose>
+			    <c:when test="${shipmentAddressList ne null}">
+			     <div class="table-responsive">
                  <h1 align="center">Shipment Address Details</h1>
                  <div align="right">	
                  <a href="${pageContext.request.contextPath}/checkout?page=saveorupdate"><button style="color:green;">Add New Address</button></a>
@@ -50,6 +52,15 @@
 				</form:form>
 				<br>
 			</div>
+			    </c:when>
+			    <c:otherwise>
+			     <h1 align="center">Shipment Address Details</h1>
+                 <div align="center">	
+                 <a href="${pageContext.request.contextPath}/checkout?page=saveorupdate"><button style="color:green;">Add New Address</button></a>
+                 </div>	
+                 <br>
+			   </c:otherwise>			    
+			   </c:choose>		
 		</div>
 	</div>
 </body>
