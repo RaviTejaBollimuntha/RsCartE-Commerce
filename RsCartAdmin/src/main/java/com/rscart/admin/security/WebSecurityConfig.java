@@ -24,7 +24,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@Autowired
 	private UserDetailsService customUserDetailsService;
-	
+	@Autowired
+	private CustomAuthenticationFailureHandler custAuth;
 	@Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
@@ -35,7 +36,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
         	.csrf().disable()
             .authorizeRequests()
-            	.antMatchers("/resources/**", "/webjars/**","/assets/**").permitAll()
+            	.antMatchers("/resources/**", "/webjars/**","/assets/**","/login**","/error").permitAll()
                 .antMatchers("/", "/forgotPwd","/resetPwd").permitAll()
                 //.antMatchers(HttpMethod.POST,"/api","/api/**").hasRole("ROLE_ADMIN")
                 .anyRequest().authenticated()
@@ -43,7 +44,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             .formLogin()
                 .loginPage("/login")
                 .defaultSuccessUrl("/home")
-                .failureUrl("/login?error")
+                .failureHandler(custAuth)
                 .permitAll()
                 .and()
             .logout()
@@ -51,7 +52,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             	//.logoutUrl("/logout")
                 .permitAll()
                 .and()
-            .exceptionHandling().accessDeniedPage("/403");
+            .exceptionHandling().accessDeniedPage("/403")
+            .and().sessionManagement().maximumSessions(1).maxSessionsPreventsLogin(true);
     }
 
     @Autowired
