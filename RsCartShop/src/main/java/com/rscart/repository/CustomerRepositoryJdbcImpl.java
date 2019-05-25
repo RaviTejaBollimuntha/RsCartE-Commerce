@@ -29,12 +29,21 @@ public class CustomerRepositoryJdbcImpl implements CustomerRepository {
 	@Override
 	public Customer validateUsers(String userName, String password) {
 		try {
-			String sql = "select * from customer c where (c.User_Name=:userName or c.Email_Address=:userName) and c.Pass=:password and active=1";
+			String sql = "select * from customer c where (c.User_Name=:userName or c.Email_Address=:userName) and c.Pass=:password";
 			SqlParameterSource sqlParameterSource = new MapSqlParameterSource()
 					.addValue("userName", userName).addValue("password",
 							password);
 			Customer customer = namedParameterJdbcTemplate.queryForObject(sql,
 					sqlParameterSource, new CustomerMapper());
+			if(customer.getLogStatus()==1) {
+				SqlParameterSource namedParameters = new MapSqlParameterSource();
+				((MapSqlParameterSource) namedParameters)
+						.addValue("active", 0);
+				((MapSqlParameterSource) namedParameters).addValue("customerId",
+						customer.getCustomerId());
+				String sql1 = "UPDATE customer SET ACTIVE=:active WHERE CUSTOMER_ID=:customerId";
+				namedParameterJdbcTemplate.update(sql1,namedParameters);
+			}
 			return customer;
 		} catch (EmptyResultDataAccessException e) {
 			return null;
@@ -103,6 +112,17 @@ public class CustomerRepositoryJdbcImpl implements CustomerRepository {
 		((MapSqlParameterSource) namedParameters)
 				.addValue("count", count+1);
 		namedParameterJdbcTemplate.update(update, namedParameters);
+	}
+
+	@Override
+	public void updateLogStatus(Customer customer) {
+		SqlParameterSource namedParameters = new MapSqlParameterSource();
+		((MapSqlParameterSource) namedParameters)
+				.addValue("active", 1);
+		((MapSqlParameterSource) namedParameters).addValue("customerId",
+				customer.getCustomerId());
+		String sql1 = "UPDATE customer SET ACTIVE=:active WHERE CUSTOMER_ID=:customerId";
+		namedParameterJdbcTemplate.update(sql1,namedParameters);	
 	}
 
 }

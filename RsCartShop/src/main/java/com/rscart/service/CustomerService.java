@@ -16,4 +16,6 @@ public interface CustomerService {
 
 	public Long getCustomerId(String userName);
 
+	public void updateLogStatus(Customer customer);
+
 }

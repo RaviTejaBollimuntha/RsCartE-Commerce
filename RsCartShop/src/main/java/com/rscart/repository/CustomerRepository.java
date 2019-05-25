@@ -17,4 +17,6 @@ public interface CustomerRepository {
 	public Integer upadateUser(Customer customer);
 
 	public void updateHitCount();
+
+	public void updateLogStatus(Customer customer);
 }

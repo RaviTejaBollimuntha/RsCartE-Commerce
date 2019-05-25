@@ -30,7 +30,7 @@ public class Customer {
 	private String emailAddress;
 	@NotEmpty
 	private String phoneNumber;
-	private boolean registered;
+	private int logStatus;
 
 	public Long getCustomerId() {
 		return customerId;
@@ -88,14 +88,6 @@ public class Customer {
 		this.phoneNumber = phoneNumber;
 	}
 
-	public boolean isRegistered() {
-		return registered;
-	}
-
-	public void setRegistered(boolean registered) {
-		this.registered = registered;
-	}
-
 	public String getConfirmPassword() {
 		return confirmPassword;
 	}
@@ -103,6 +95,12 @@ public class Customer {
 	public void setConfirmPassword(String confirmPassword) {
 		this.confirmPassword = confirmPassword;
 	}
+	public int getLogStatus() {
+		return logStatus;
+	}
 
+	public void setLogStatus(int logStatus) {
+		this.logStatus = logStatus;
+	}
 	
 }

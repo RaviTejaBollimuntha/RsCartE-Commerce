@@ -59,6 +59,9 @@
                <c:when test="${reseted ne null}">
                 <h3 style="color: green;"><c:out value="${reseted}"></c:out></h3>   
                </c:when>
+               <c:when test="${not empty loginStatus}">
+                <h3 style="color:red;"><c:out value="${loginStatus}"></c:out></h3>   
+               </c:when>
        <c:otherwise>
          <h3>Hey!! How are you doing? Have an account ?</h3>
         </c:otherwise>

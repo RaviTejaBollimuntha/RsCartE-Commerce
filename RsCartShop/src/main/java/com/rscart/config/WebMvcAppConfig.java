@@ -33,6 +33,7 @@ import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 import org.thymeleaf.templateresolver.ITemplateResolver;
 
 import com.rscart.interceptor.BaseInterceptor;
+import com.rscart.model.Customer;
 import com.rscart.repository.CustomerRepository;
 
 @Configuration
@@ -70,7 +71,12 @@ public class WebMvcAppConfig extends WebMvcConfigurerAdapter {
 			@Override
 			public void sessionDestroyed(HttpSessionEvent se) {
 				LOGGE.info("Session Destroyed, Session id: "+se.getSession().getId());
-				while (sessionip.values().remove(se.getSession().getId()));
+			    Customer customer=(Customer) se.getSession().getAttribute("customer");
+			    if(customer!=null)
+			    {
+			    	cr.updateLogStatus(customer);
+			    }
+				sessionip.values().remove(se.getSession().getId());
 			}
 		};
 	}

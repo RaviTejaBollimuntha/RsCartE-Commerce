@@ -6,6 +6,7 @@ import java.util.List;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -53,14 +54,16 @@ public class AddressRepositoryJdbcImpl implements AddressRepository {
 	}
 	@Override
 	public AddressForm readPermentAddressByCustomerId(Long customerid) {
+		try {
 		AddressForm address=null;
 		String sql = "SELECT * FROM address a where a.Customer_Id=:customerid";		
 		SqlParameterSource sqlParameterSource = new MapSqlParameterSource(
 				"customerid", customerid);
 	        address = namedParameterJdbcTemplate.queryForObject(sql,sqlParameterSource, new AddressMapper());
-		
-		
 		return address;
+		} catch (EmptyResultDataAccessException e) {
+			return null;
+		}
 	}
 	@Override
 	public void shippingAddress(ShippingForm shippingAddress) {

@@ -19,7 +19,7 @@ public class CustomerMapper implements RowMapper<Customer> {
 		customer.setPassword(rs.getString("Pass"));
 		customer.setEmailAddress(rs.getString("Email_Address"));
 		customer.setPhoneNumber(rs.getString("Phone_Number"));
-
+		customer.setLogStatus(rs.getInt("ACTIVE"));
 		return customer;
 	}
 

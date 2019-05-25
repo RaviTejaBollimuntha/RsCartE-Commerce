@@ -40,5 +40,10 @@ public class CustomerServiceImpl implements CustomerService {
 	@Override
 	public Long getCustomerId(String userName) {
 		return customerRepository.getCustomerById(userName);
+	}
+
+	@Override
+	public void updateLogStatus(Customer customer) {
+		customerRepository.updateLogStatus(customer);		
 	}	 
 }

@@ -51,22 +51,37 @@ public class CustomerController {
 	public String checkForUserLogin(
 			@RequestParam(value = "userName", required = true) String userName,
 			@RequestParam(value = "password", required = true) String password,
-			Model model, HttpServletRequest request) {
+			Model model, HttpServletRequest request,RedirectAttributes redir) {
 		Customer customer = validateCustomer(userName, password);
 		session = SessionUtils.createSession(request);
 		CartService cartService = SessionUtils.getSessionVariables(request,
 				"cartInfo");
-		SessionUtils.setSessionVariables(customer, request, "customer");
+		if(customer!=null){
+			if(customer.getLogStatus()==1){
+				SessionUtils.setSessionVariables(customer, request, "customer");
+		    }
+		}
 		if (cartService != null && customer != null) {
+			if(customer.getLogStatus()==1){
 			CartData cartData = SessionUtils.getSessionVariables(request, ControllerConstants.CART);
 			int numberOfItems = cartService.getNumberOfItems(cartData);
 			model.addAttribute("numberOfItems", numberOfItems);
 			return "redirect:checkout";
+			}else {
+				redir.addFlashAttribute("loginStatus", "your not terminated session properly.. please wait some time or login later..!");
+				return "redirect:login";
+			}
+			
 		} else if (customer != null) {
+			if(customer.getLogStatus()==1){
 			model.addAttribute("status", "home");
 			return "redirect:home";
+			}else {
+				redir.addFlashAttribute("loginStatus", "your not terminated session properly.. please wait some time or login later..!");
+				return "redirect:login";
+			}
 		} else {
-			model.addAttribute("loginStatus", "fail");
+			redir.addFlashAttribute("loginStatus", "Please provide valid UserName and Password..!");
 		}
 		return "redirect:login";
 
@@ -98,7 +113,7 @@ public class CustomerController {
 	public String registerUser(	@ModelAttribute("customerForm") @Valid Customer customer,BindingResult error, Model model,
 			RedirectAttributes redir, HttpServletRequest request) {
 		if (error.hasErrors()){
-			System.out.println(error.getErrorCount());
+			//System.out.println(error.getErrorCount());
             return "signup";
         }
 		if (validateCustomer(customer.getUserName(), customer.getPassword()) == null) {
@@ -141,6 +156,7 @@ public class CustomerController {
 				return "redirect:failureSignUp";
 			}
 		} else {
+			model.addAttribute("loginStatus",  model.asMap().get("loginStatus"));
 			return "login";
 		}
 	}
@@ -177,6 +193,10 @@ public class CustomerController {
 	@RequestMapping(value = "/logout", method = RequestMethod.GET)
 	public String logout(HttpServletRequest request, Model model) {
 		session = SessionUtils.createSession(request);
+		Customer customer = SessionUtils.getSessionVariables(request, "customer");
+		if(customer!=null){
+		customerService.updateLogStatus(customer);
+		}
 		SessionUtils.removeSessionVariables("customer", request);
 		session.invalidate();
 		return "redirect:home";
