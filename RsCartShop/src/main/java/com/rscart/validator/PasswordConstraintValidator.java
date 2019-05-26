@@ -9,7 +9,6 @@ import java.util.stream.Collectors;
 
 public class PasswordConstraintValidator implements ConstraintValidator<ValidPassword, String> {
 
-    private DictionaryRule dictionaryRule;
 
     @Override
     public void initialize(ValidPassword constraintAnnotation) {
@@ -36,12 +35,8 @@ public class PasswordConstraintValidator implements ConstraintValidator<ValidPas
                 new CharacterRule(EnglishCharacterData.Special, 1),
 
                 // no whitespace
-                new WhitespaceRule(),
-
-                // no common passwords
-                dictionaryRule
+                new WhitespaceRule()
         ));
-
         RuleResult result = validator.validate(new PasswordData(password));
 
         if (result.isValid()) {
