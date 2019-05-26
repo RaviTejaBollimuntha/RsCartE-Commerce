@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      layout:decorator="layout/guestLayout">
+  <head>
+    <title>Log in</title>    
+  </head>
+  <body>
+  	<div layout:fragment="content">
+    <div class="login-box">
+      <div class="login-logo">
+         <b th:text="#{label.jcart_admin}">RsCart Admin</b>
+         <h4 style="color: red;">Your not terminated last Session properly..Please Wait Some time or try again later...!</h4>
+        <a href="/home"><b style="color: maroon;">***Go To Home ***</b></a>
+      </div>
+       </div>
+	</div>
+  </body>
+</html>
