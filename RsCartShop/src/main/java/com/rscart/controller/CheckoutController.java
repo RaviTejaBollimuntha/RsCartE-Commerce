@@ -69,7 +69,8 @@ public class CheckoutController {
 		session = SessionUtils.createSession(request);
 		Customer customer = SessionUtils.getSessionVariables(request, "customer");
 		ShippingForm address = (ShippingForm) session.getAttribute("shippingaddress");
-		if(shippingAddress.getShippingId().equals(address.getShippingId())) { 
+		if(shippingAddress!=null && address!=null) { 
+			if(shippingAddress.getShippingId().equals(address.getShippingId()))
 		addressService.updateShippingAddress(shippingAddress, customer);
 		}
 		else

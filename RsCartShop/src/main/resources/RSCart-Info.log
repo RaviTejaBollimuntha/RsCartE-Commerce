@@ -5339,3 +5339,873 @@ Caused by: java.io.FileNotFoundException: class path resource [jdbc.properties] 
 2019-05-26 10:55:32 INFO  CatalogController:64 - Processing information for home page
 2019-05-26 10:55:35 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
 2019-05-26 10:55:35 INFO  BaseInterceptor:23 - User access address: //login, incoming address: 192.168.0.4
+2019-05-26 10:57:16 INFO  WebMvcAppConfig:73 - Session Destroyed, Session id: 7EAC2AB73B25A4D02963EC38B034C078
+2019-05-26 11:00:28 INFO  SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:125 - Application shutdown requested.
+2019-05-26 11:00:28 INFO  AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6089b850: startup date [Sun May 26 10:54:11 IST 2019]; root of context hierarchy
+2019-05-26 11:00:28 INFO  AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2019-05-26 11:00:28 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@6e861fde: startup date [Sun May 26 10:55:26 IST 2019]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6089b850
+2019-05-26 11:00:28 INFO  LocalContainerEntityManagerFactoryBean:548 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-26 11:01:48 INFO  RsCartShopApplication:48 - Starting RsCartShopApplication on DESKTOP-SJHADGA with PID 6168 (G:\JavaWorkspace\RsCartE-Commerce\RsCartShop2\target\classes started by RaviTeja Bollimuntha in G:\JavaWorkspace\RsCartE-Commerce\RsCartShop2)
+2019-05-26 11:01:48 INFO  RsCartShopApplication:593 - No active profile set, falling back to default profiles: default
+2019-05-26 11:01:49 INFO  Version:30 - HV000001: Hibernate Validator 5.3.5.Final
+2019-05-26 11:01:49 INFO  AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4004d16: startup date [Sun May 26 11:01:49 IST 2019]; root of context hierarchy
+2019-05-26 11:02:01 INFO  AutowiredAnnotationBeanPostProcessor:155 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-05-26 11:02:04 INFO  TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 9444 (http)
+2019-05-26 11:02:05 INFO  ContextLoader:276 - Root WebApplicationContext: initialization completed in 15511 ms
+2019-05-26 11:02:06 INFO  ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2019-05-26 11:02:06 INFO  FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-05-26 11:02:07 INFO  LocalContainerEntityManagerFactoryBean:349 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-05-26 11:02:07 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-26 11:02:07 INFO  Version:37 - HHH000412: Hibernate Core {5.0.12.Final}
+2019-05-26 11:02:07 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2019-05-26 11:02:07 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2019-05-26 11:02:07 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-05-26 11:02:07 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2019-05-26 11:02:15 INFO  Version:26 - HSEARCH000034: Hibernate Search 5.5.4.Final
+2019-05-26 11:02:19 WARN  ConfigContext:346 - HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified: using LUCENE_CURRENT.
+2019-05-26 11:02:20 INFO  LocalContainerEntityManagerFactoryBean:379 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addressDetails],methods=[GET]}" onto public java.lang.String com.rscart.controller.AddressController.getAddressDetailsPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Boolean)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/shipmentaddress],methods=[POST]}" onto public java.lang.String com.rscart.controller.AddressController.getShipmentAddressDetails(javax.servlet.http.HttpServletRequest,java.lang.String,org.springframework.ui.Model)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveaddress],methods=[POST]}" onto public java.lang.String com.rscart.controller.AddressController.validateAddressInformation(com.rscart.model.AddressForm,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/getstate],methods=[GET]}" onto public com.rscart.util.StateList com.rscart.controller.CartController.getState(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,java.lang.String)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/getcountry],methods=[GET]}" onto public com.rscart.util.CountryList com.rscart.controller.CartController.getCountry(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/clear],methods=[GET]}" onto public java.lang.String com.rscart.controller.CartController.clearCart(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/update],methods=[POST]}" onto public java.lang.String com.rscart.controller.CartController.updateCart(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addProduct],methods=[GET]}" onto public java.lang.String com.rscart.controller.CartController.addProducts(org.springframework.ui.Model,java.lang.Long,javax.servlet.http.HttpServletRequest)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/cart],methods=[GET]}" onto public java.lang.String com.rscart.controller.CartController.viewCart(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/remove],methods=[GET]}" onto public java.lang.String com.rscart.controller.CartController.removeProduct(java.lang.Long,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/coupon],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.rscart.controller.CartController.getCoupon(org.springframework.web.servlet.ModelAndView,javax.servlet.http.HttpServletRequest,java.lang.String)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/getciti],methods=[GET]}" onto public com.rscart.util.CitiList com.rscart.controller.CartController.getCiti(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,java.lang.String)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home || /],methods=[GET]}" onto public java.lang.String com.rscart.controller.CatalogController.returnHomePage(org.springframework.ui.Model,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/account],methods=[GET]}" onto public java.lang.String com.rscart.controller.CatalogController.getAccountsPage(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/cateogry],methods=[GET]}" onto public java.lang.String com.rscart.controller.CatalogController.fetchProductsByCategory(org.springframework.ui.Model,java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/subcateogry],methods=[GET]}" onto public java.lang.String com.rscart.controller.CatalogController.fetchProductsBySubCategory(org.springframework.ui.Model,java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/changepassword],methods=[POST]}" onto public java.lang.String com.rscart.controller.ChangePasswordController.changePassword(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,org.springframework.ui.Model,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/change-password],methods=[GET]}" onto public java.lang.String com.rscart.controller.ChangePasswordController.getChangePasswordPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Boolean)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/checkout],methods=[GET]}" onto public java.lang.String com.rscart.controller.CheckoutController.checkOutCart(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/address],methods=[POST]}" onto public java.lang.String com.rscart.controller.CheckoutController.ShippingAddressInfo(com.rscart.model.ShippingForm,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/signup],methods=[GET]}" onto public java.lang.String com.rscart.controller.CustomerController.registerUser()
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/signup],methods=[POST]}" onto public java.lang.String com.rscart.controller.CustomerController.registerUser(com.rscart.model.Customer,org.springframework.validation.BindingResult,org.springframework.ui.Model,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpServletRequest)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.rscart.controller.CustomerController.getLoginPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.rscart.controller.CustomerController.logout(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/successSignUp],methods=[GET]}" onto public java.lang.String com.rscart.controller.CustomerController.signupSuccess(org.springframework.ui.Model)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/failureSignUp],methods=[GET]}" onto public java.lang.String com.rscart.controller.CustomerController.signupFailure(org.springframework.ui.Model)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/change-account],methods=[GET]}" onto public java.lang.String com.rscart.controller.CustomerController.getChangePasswordPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Boolean)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[POST]}" onto public java.lang.String com.rscart.controller.CustomerController.checkForUserLogin(java.lang.String,java.lang.String,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/updatecustdetails],methods=[POST]}" onto public java.lang.String com.rscart.controller.CustomerController.updateCustomerDetails(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.ui.Model,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/invoice],methods=[GET]}" onto public java.lang.String com.rscart.controller.InvoiceController.getOrderDetails(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Long)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/invoicetoemail],methods=[GET]}" onto public java.lang.String com.rscart.controller.InvoiceController.getOrderHistoryPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.util.Map<java.lang.String, java.lang.Object>,java.lang.Long,javax.servlet.http.HttpServletResponse)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/createOrderByCC],methods=[POST]}" onto public java.lang.String com.rscart.controller.OrderController.createOrder(org.springframework.ui.Model,com.rscart.model.CreditCardForm,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.text.ParseException,java.io.IOException,javax.mail.MessagingException
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/order],methods=[GET]}" onto public java.lang.String com.rscart.controller.OrderController.getOrderConfirmPage(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/orderDetail],methods=[GET]}" onto public java.lang.String com.rscart.controller.OrderHistoryController.getOrderDetails(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Long)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/orderHistory],methods=[GET]}" onto public java.lang.String com.rscart.controller.OrderHistoryController.getOrderHistoryPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/product],methods=[GET],params=[productId]}" onto public java.lang.String com.rscart.controller.ProductController.handleRequest(org.springframework.ui.Model,java.lang.Long,javax.servlet.http.HttpServletRequest) throws java.text.ParseException
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/resetemail],methods=[GET]}" onto public java.lang.String com.rscart.controller.ResetController.changeEmail(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Boolean)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/account-password-forgot],methods=[POST]}" onto public java.lang.String com.rscart.controller.ResetController.forgotPwdRequest(java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model) throws java.io.IOException
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/registrationConfirm],methods=[GET],params=[token]}" onto public java.lang.String com.rscart.controller.ResetController.activateAccount(java.lang.String,org.springframework.ui.Model)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/resetemail],methods=[POST]}" onto public java.lang.String com.rscart.controller.ResetController.changeemail(com.rscart.util.EmailResetDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model) throws java.io.IOException
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/account-password-forgot],methods=[GET]}" onto public java.lang.String com.rscart.controller.ResetController.forgotPasswordConfirm()
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/emailResetConfirm],methods=[GET],params=[token]}" onto public java.lang.String com.rscart.controller.ResetController.confirmEmailChange(java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/passwordResetConfirm],methods=[GET],params=[token]}" onto public java.lang.String com.rscart.controller.ResetController.forgotPwdChangeconfirm(java.lang.String,org.springframework.ui.Model)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/passwordResetConfirm],methods=[POST]}" onto public java.lang.String com.rscart.controller.ResetController.forgotPwdChangeconfirm(com.rscart.util.PasswordForgotDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/reviews],methods=[GET]}" onto public java.lang.String com.rscart.controller.ReviewsController.getReviewsPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/reviews],methods=[POST]}" onto public java.lang.String com.rscart.controller.ReviewsController.reviewProduct(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,com.rscart.model.ReviewForm) throws java.text.ParseException
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/wishlist],methods=[GET]}" onto public java.lang.String com.rscart.controller.WishListController.getWishListPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/moveToWishList],methods=[GET]}" onto public java.lang.String com.rscart.controller.WishListController.moveToWishList(org.springframework.ui.Model,java.lang.Long,javax.servlet.http.HttpServletRequest)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/moveToCart],methods=[GET]}" onto public java.lang.String com.rscart.controller.WishListController.moveToCart(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addToWishlist],methods=[GET]}" onto public java.lang.String com.rscart.controller.WishListController.addProductToWishList(org.springframework.ui.Model,java.lang.Long,javax.servlet.http.HttpServletRequest)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/removeFromWishList],methods=[GET]}" onto public java.lang.String com.rscart.controller.WishListController.removeProductFromWishList(org.springframework.ui.Model,java.lang.Long,javax.servlet.http.HttpServletRequest)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-05-26 11:02:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-26 11:02:20 INFO  SimpleUrlHandlerMapping:362 - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-05-26 11:02:20 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4004d16: startup date [Sun May 26 11:01:49 IST 2019]; root of context hierarchy
+2019-05-26 11:02:20 INFO  ExceptionHandlerExceptionResolver:273 - Detected @ExceptionHandler methods in exceptionController
+2019-05-26 11:02:22 INFO  OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2019-05-26 11:02:22 INFO  AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2019-05-26 11:02:22 INFO  TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 9444 (http)
+2019-05-26 11:02:23 INFO  SimpleIndexingProgressMonitor:71 - HSEARCH000027: Going to reindex 25 entities
+2019-05-26 11:02:24 INFO  SimpleIndexingProgressMonitor:76 - HSEARCH000028: Reindexed 25 entities
+2019-05-26 11:02:24 INFO  RsCartShopApplication:57 - Started RsCartShopApplication in 37.299 seconds (JVM running for 39.567)
+2019-05-26 11:02:43 INFO  DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2019-05-26 11:02:43 INFO  DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+2019-05-26 11:02:43 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:02:43 INFO  BaseInterceptor:23 - User access address: /, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:02:43 INFO  CatalogController:64 - Processing information for home page
+2019-05-26 11:02:43 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1cc16a1e: startup date [Sun May 26 11:02:43 IST 2019]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4004d16
+2019-05-26 11:02:46 INFO  WebMvcAppConfig:54 - Session Created with session id: 78F9D36D8D206B8BE5AE9CB4A81C71C5
+2019-05-26 11:02:50 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:02:50 INFO  BaseInterceptor:23 - User access address: /login, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:03:11 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:03:11 INFO  BaseInterceptor:23 - User access address: /login, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:03:11 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:03:11 INFO  BaseInterceptor:23 - User access address: /home, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:03:11 INFO  CatalogController:64 - Processing information for home page
+2019-05-26 11:03:16 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:03:16 INFO  BaseInterceptor:23 - User access address: /account, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:03:19 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:03:19 INFO  BaseInterceptor:23 - User access address: /change-account, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:03:21 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:03:21 INFO  BaseInterceptor:23 - User access address: /addressDetails, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:03:23 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:03:23 INFO  BaseInterceptor:23 - User access address: /getcountry, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:03:23 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:03:23 INFO  BaseInterceptor:23 - User access address: /resetemail, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:03:25 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:03:25 INFO  BaseInterceptor:23 - User access address: /change-password, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:03:26 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:03:26 INFO  BaseInterceptor:23 - User access address: /orderHistory, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:03:28 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:03:28 INFO  BaseInterceptor:23 - User access address: /wishlist, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:03:30 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:03:30 INFO  BaseInterceptor:23 - User access address: /reviews, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:03:33 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:03:33 INFO  BaseInterceptor:23 - User access address: /cateogry, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:03:34 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:03:34 INFO  BaseInterceptor:23 - User access address: /cateogry, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:03:35 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:03:35 INFO  BaseInterceptor:23 - User access address: /cateogry, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:03:36 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:03:36 INFO  BaseInterceptor:23 - User access address: /cateogry, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:03:37 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:03:37 INFO  BaseInterceptor:23 - User access address: /cateogry, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:03:38 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:03:38 INFO  BaseInterceptor:23 - User access address: /cateogry, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:03:42 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:03:42 INFO  BaseInterceptor:23 - User access address: /subcateogry, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:03:43 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:03:43 INFO  BaseInterceptor:23 - User access address: /home, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:03:43 INFO  CatalogController:64 - Processing information for home page
+2019-05-26 11:03:47 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:03:47 INFO  BaseInterceptor:23 - User access address: /, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:03:47 INFO  CatalogController:64 - Processing information for home page
+2019-05-26 11:03:50 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:03:50 INFO  BaseInterceptor:23 - User access address: /, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:03:50 INFO  CatalogController:64 - Processing information for home page
+2019-05-26 11:03:55 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:03:55 INFO  BaseInterceptor:23 - User access address: /, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:03:55 INFO  CatalogController:64 - Processing information for home page
+2019-05-26 11:04:00 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:04:00 INFO  BaseInterceptor:23 - User access address: /, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:04:00 INFO  CatalogController:64 - Processing information for home page
+2019-05-26 11:04:04 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:04:04 INFO  BaseInterceptor:23 - User access address: /addProduct, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:04:04 INFO  CartController:53 - add products into cart
+2019-05-26 11:04:04 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:04:04 INFO  BaseInterceptor:23 - User access address: /cart, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:05:04 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:05:04 INFO  BaseInterceptor:23 - User access address: /coupon, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:05:06 INFO  WebMvcAppConfig:73 - Session Destroyed, Session id: F37571D964F4E148A6BB2CB78B65E0CD
+2019-05-26 11:05:43 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:05:43 INFO  BaseInterceptor:23 - User access address: /checkout, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:05:54 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:05:54 INFO  BaseInterceptor:23 - User access address: /checkout, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:05:54 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:05:54 INFO  BaseInterceptor:23 - User access address: /getcountry, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:06:52 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:06:52 INFO  BaseInterceptor:23 - User access address: /getstate, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:06:53 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:06:53 INFO  BaseInterceptor:23 - User access address: /getciti, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:07:11 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:07:11 INFO  BaseInterceptor:23 - User access address: /address, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:14:06 INFO  WebMvcAppConfig:73 - Session Destroyed, Session id: 78F9D36D8D206B8BE5AE9CB4A81C71C5
+2019-05-26 11:15:17 INFO  AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4004d16: startup date [Sun May 26 11:01:49 IST 2019]; root of context hierarchy
+2019-05-26 11:15:17 INFO  AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2019-05-26 11:15:17 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@1cc16a1e: startup date [Sun May 26 11:02:43 IST 2019]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4004d16
+2019-05-26 11:15:17 INFO  LocalContainerEntityManagerFactoryBean:548 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-26 11:15:18 INFO  RsCartShopApplication:48 - Starting RsCartShopApplication on DESKTOP-SJHADGA with PID 6168 (G:\JavaWorkspace\RsCartE-Commerce\RsCartShop2\target\classes started by RaviTeja Bollimuntha in G:\JavaWorkspace\RsCartE-Commerce\RsCartShop2)
+2019-05-26 11:15:18 INFO  RsCartShopApplication:593 - No active profile set, falling back to default profiles: default
+2019-05-26 11:15:18 INFO  AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4585d475: startup date [Sun May 26 11:15:18 IST 2019]; root of context hierarchy
+2019-05-26 11:15:19 INFO  AutowiredAnnotationBeanPostProcessor:155 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-05-26 11:15:19 INFO  TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 9444 (http)
+2019-05-26 11:15:19 INFO  ContextLoader:276 - Root WebApplicationContext: initialization completed in 1289 ms
+2019-05-26 11:15:19 INFO  ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2019-05-26 11:15:19 INFO  FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-05-26 11:15:19 INFO  LocalContainerEntityManagerFactoryBean:349 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-05-26 11:15:19 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-26 11:15:19 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2019-05-26 11:15:19 WARN  ConfigContext:346 - HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified: using LUCENE_CURRENT.
+2019-05-26 11:15:19 INFO  LocalContainerEntityManagerFactoryBean:379 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addressDetails],methods=[GET]}" onto public java.lang.String com.rscart.controller.AddressController.getAddressDetailsPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Boolean)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/shipmentaddress],methods=[POST]}" onto public java.lang.String com.rscart.controller.AddressController.getShipmentAddressDetails(javax.servlet.http.HttpServletRequest,java.lang.String,org.springframework.ui.Model)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveaddress],methods=[POST]}" onto public java.lang.String com.rscart.controller.AddressController.validateAddressInformation(com.rscart.model.AddressForm,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/getstate],methods=[GET]}" onto public com.rscart.util.StateList com.rscart.controller.CartController.getState(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,java.lang.String)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/getcountry],methods=[GET]}" onto public com.rscart.util.CountryList com.rscart.controller.CartController.getCountry(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/clear],methods=[GET]}" onto public java.lang.String com.rscart.controller.CartController.clearCart(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/update],methods=[POST]}" onto public java.lang.String com.rscart.controller.CartController.updateCart(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addProduct],methods=[GET]}" onto public java.lang.String com.rscart.controller.CartController.addProducts(org.springframework.ui.Model,java.lang.Long,javax.servlet.http.HttpServletRequest)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/cart],methods=[GET]}" onto public java.lang.String com.rscart.controller.CartController.viewCart(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/remove],methods=[GET]}" onto public java.lang.String com.rscart.controller.CartController.removeProduct(java.lang.Long,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/coupon],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.rscart.controller.CartController.getCoupon(org.springframework.web.servlet.ModelAndView,javax.servlet.http.HttpServletRequest,java.lang.String)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/getciti],methods=[GET]}" onto public com.rscart.util.CitiList com.rscart.controller.CartController.getCiti(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,java.lang.String)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home || /],methods=[GET]}" onto public java.lang.String com.rscart.controller.CatalogController.returnHomePage(org.springframework.ui.Model,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/account],methods=[GET]}" onto public java.lang.String com.rscart.controller.CatalogController.getAccountsPage(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/cateogry],methods=[GET]}" onto public java.lang.String com.rscart.controller.CatalogController.fetchProductsByCategory(org.springframework.ui.Model,java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/subcateogry],methods=[GET]}" onto public java.lang.String com.rscart.controller.CatalogController.fetchProductsBySubCategory(org.springframework.ui.Model,java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/changepassword],methods=[POST]}" onto public java.lang.String com.rscart.controller.ChangePasswordController.changePassword(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,org.springframework.ui.Model,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/change-password],methods=[GET]}" onto public java.lang.String com.rscart.controller.ChangePasswordController.getChangePasswordPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Boolean)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/checkout],methods=[GET]}" onto public java.lang.String com.rscart.controller.CheckoutController.checkOutCart(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/address],methods=[POST]}" onto public java.lang.String com.rscart.controller.CheckoutController.ShippingAddressInfo(com.rscart.model.ShippingForm,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/signup],methods=[GET]}" onto public java.lang.String com.rscart.controller.CustomerController.registerUser()
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/signup],methods=[POST]}" onto public java.lang.String com.rscart.controller.CustomerController.registerUser(com.rscart.model.Customer,org.springframework.validation.BindingResult,org.springframework.ui.Model,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpServletRequest)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.rscart.controller.CustomerController.getLoginPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.rscart.controller.CustomerController.logout(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/successSignUp],methods=[GET]}" onto public java.lang.String com.rscart.controller.CustomerController.signupSuccess(org.springframework.ui.Model)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/failureSignUp],methods=[GET]}" onto public java.lang.String com.rscart.controller.CustomerController.signupFailure(org.springframework.ui.Model)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/change-account],methods=[GET]}" onto public java.lang.String com.rscart.controller.CustomerController.getChangePasswordPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Boolean)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[POST]}" onto public java.lang.String com.rscart.controller.CustomerController.checkForUserLogin(java.lang.String,java.lang.String,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/updatecustdetails],methods=[POST]}" onto public java.lang.String com.rscart.controller.CustomerController.updateCustomerDetails(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.ui.Model,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/invoice],methods=[GET]}" onto public java.lang.String com.rscart.controller.InvoiceController.getOrderDetails(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Long)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/invoicetoemail],methods=[GET]}" onto public java.lang.String com.rscart.controller.InvoiceController.getOrderHistoryPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.util.Map<java.lang.String, java.lang.Object>,java.lang.Long,javax.servlet.http.HttpServletResponse)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/createOrderByCC],methods=[POST]}" onto public java.lang.String com.rscart.controller.OrderController.createOrder(org.springframework.ui.Model,com.rscart.model.CreditCardForm,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.text.ParseException,java.io.IOException,javax.mail.MessagingException
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/order],methods=[GET]}" onto public java.lang.String com.rscart.controller.OrderController.getOrderConfirmPage(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/orderDetail],methods=[GET]}" onto public java.lang.String com.rscart.controller.OrderHistoryController.getOrderDetails(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Long)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/orderHistory],methods=[GET]}" onto public java.lang.String com.rscart.controller.OrderHistoryController.getOrderHistoryPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/product],methods=[GET],params=[productId]}" onto public java.lang.String com.rscart.controller.ProductController.handleRequest(org.springframework.ui.Model,java.lang.Long,javax.servlet.http.HttpServletRequest) throws java.text.ParseException
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/resetemail],methods=[GET]}" onto public java.lang.String com.rscart.controller.ResetController.changeEmail(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Boolean)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/account-password-forgot],methods=[POST]}" onto public java.lang.String com.rscart.controller.ResetController.forgotPwdRequest(java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model) throws java.io.IOException
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/registrationConfirm],methods=[GET],params=[token]}" onto public java.lang.String com.rscart.controller.ResetController.activateAccount(java.lang.String,org.springframework.ui.Model)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/resetemail],methods=[POST]}" onto public java.lang.String com.rscart.controller.ResetController.changeemail(com.rscart.util.EmailResetDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model) throws java.io.IOException
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/account-password-forgot],methods=[GET]}" onto public java.lang.String com.rscart.controller.ResetController.forgotPasswordConfirm()
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/emailResetConfirm],methods=[GET],params=[token]}" onto public java.lang.String com.rscart.controller.ResetController.confirmEmailChange(java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/passwordResetConfirm],methods=[GET],params=[token]}" onto public java.lang.String com.rscart.controller.ResetController.forgotPwdChangeconfirm(java.lang.String,org.springframework.ui.Model)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/passwordResetConfirm],methods=[POST]}" onto public java.lang.String com.rscart.controller.ResetController.forgotPwdChangeconfirm(com.rscart.util.PasswordForgotDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/reviews],methods=[GET]}" onto public java.lang.String com.rscart.controller.ReviewsController.getReviewsPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/reviews],methods=[POST]}" onto public java.lang.String com.rscart.controller.ReviewsController.reviewProduct(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,com.rscart.model.ReviewForm) throws java.text.ParseException
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/wishlist],methods=[GET]}" onto public java.lang.String com.rscart.controller.WishListController.getWishListPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/moveToWishList],methods=[GET]}" onto public java.lang.String com.rscart.controller.WishListController.moveToWishList(org.springframework.ui.Model,java.lang.Long,javax.servlet.http.HttpServletRequest)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/moveToCart],methods=[GET]}" onto public java.lang.String com.rscart.controller.WishListController.moveToCart(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addToWishlist],methods=[GET]}" onto public java.lang.String com.rscart.controller.WishListController.addProductToWishList(org.springframework.ui.Model,java.lang.Long,javax.servlet.http.HttpServletRequest)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/removeFromWishList],methods=[GET]}" onto public java.lang.String com.rscart.controller.WishListController.removeProductFromWishList(org.springframework.ui.Model,java.lang.Long,javax.servlet.http.HttpServletRequest)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-05-26 11:15:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-26 11:15:19 INFO  SimpleUrlHandlerMapping:362 - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-05-26 11:15:19 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4585d475: startup date [Sun May 26 11:15:18 IST 2019]; root of context hierarchy
+2019-05-26 11:15:19 INFO  ExceptionHandlerExceptionResolver:273 - Detected @ExceptionHandler methods in exceptionController
+2019-05-26 11:15:20 INFO  OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2019-05-26 11:15:20 INFO  AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2019-05-26 11:15:20 INFO  TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 9444 (http)
+2019-05-26 11:15:20 INFO  SimpleIndexingProgressMonitor:71 - HSEARCH000027: Going to reindex 25 entities
+2019-05-26 11:15:21 INFO  SimpleIndexingProgressMonitor:76 - HSEARCH000028: Reindexed 25 entities
+2019-05-26 11:15:21 INFO  RsCartShopApplication:57 - Started RsCartShopApplication in 3.132 seconds (JVM running for 816.63)
+2019-05-26 11:15:46 INFO  DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2019-05-26 11:15:46 INFO  DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 6 ms
+2019-05-26 11:15:46 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:15:46 INFO  BaseInterceptor:23 - User access address: /home, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:15:46 INFO  CatalogController:64 - Processing information for home page
+2019-05-26 11:15:46 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5a06b8b: startup date [Sun May 26 11:15:46 IST 2019]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4585d475
+2019-05-26 11:15:46 INFO  WebMvcAppConfig:54 - Session Created with session id: 43887072D64D49AE8479833E1956AE7C
+2019-05-26 11:15:48 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:15:48 INFO  BaseInterceptor:23 - User access address: /login, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:16:55 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:16:55 INFO  BaseInterceptor:23 - User access address: /login, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:16:55 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:16:55 INFO  BaseInterceptor:23 - User access address: /home, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:16:55 INFO  CatalogController:64 - Processing information for home page
+2019-05-26 11:17:18 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:17:18 INFO  BaseInterceptor:23 - User access address: /addProduct, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:17:18 INFO  CartController:53 - add products into cart
+2019-05-26 11:17:18 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:17:18 INFO  BaseInterceptor:23 - User access address: /cart, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:17:23 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:17:23 INFO  BaseInterceptor:23 - User access address: /checkout, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:17:27 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:17:27 INFO  BaseInterceptor:23 - User access address: /checkout, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:17:27 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:17:27 INFO  BaseInterceptor:23 - User access address: /getcountry, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:17:35 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:17:35 INFO  BaseInterceptor:23 - User access address: /getstate, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:17:35 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:17:35 INFO  BaseInterceptor:23 - User access address: /getciti, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:17:50 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:17:50 INFO  BaseInterceptor:23 - User access address: /address, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:18:33 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:18:33 INFO  BaseInterceptor:23 - User access address: /createOrderByCC, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:18:34 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2019-05-26 11:18:34 INFO  SQLErrorCodesFactory:127 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2019-05-26 11:20:31 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:20:31 INFO  BaseInterceptor:23 - User access address: /home, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:20:31 INFO  CatalogController:64 - Processing information for home page
+2019-05-26 11:20:43 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:20:43 INFO  BaseInterceptor:23 - User access address: /cart, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:20:51 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:20:51 INFO  BaseInterceptor:23 - User access address: /remove, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:20:51 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:20:51 INFO  BaseInterceptor:23 - User access address: /cart, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:20:53 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:20:53 INFO  BaseInterceptor:23 - User access address: /home, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:20:53 INFO  CatalogController:64 - Processing information for home page
+2019-05-26 11:20:57 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:20:57 INFO  BaseInterceptor:23 - User access address: /addProduct, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:20:57 INFO  CartController:53 - add products into cart
+2019-05-26 11:20:57 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:20:57 INFO  BaseInterceptor:23 - User access address: /cart, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:21:02 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:21:02 INFO  BaseInterceptor:23 - User access address: /checkout, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:21:10 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:21:10 INFO  BaseInterceptor:23 - User access address: /shipmentaddress, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:21:51 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:21:51 INFO  BaseInterceptor:23 - User access address: /createOrderByCC, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:21:52 INFO  TemplateEngine:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+2019-05-26 11:21:52 INFO  AbstractTemplateResolver:99 - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.templateresolver.ClassLoaderTemplateResolver
+2019-05-26 11:21:52 INFO  AbstractTemplateResolver:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+2019-05-26 11:21:52 INFO  AbstractMessageResolver:72 - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+2019-05-26 11:21:52 INFO  AbstractMessageResolver:78 - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+2019-05-26 11:21:52 INFO  CONFIG:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * XML
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * HTML5
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.templateresolver.ClassLoaderTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+2019-05-26 11:21:52 INFO  TemplateEngine:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+2019-05-26 11:21:53 ERROR TemplateEngine:1085 - [THYMELEAF][http-nio-9444-exec-6] Exception processing template "email-template": Exception evaluating SpringEL expression: "billingaddress.fullName" (email-template:158)
+2019-05-26 11:27:19 INFO  WebMvcAppConfig:73 - Session Destroyed, Session id: 43887072D64D49AE8479833E1956AE7C
+2019-05-26 11:27:53 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:27:53 INFO  BaseInterceptor:23 - User access address: /home, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:27:53 INFO  CatalogController:64 - Processing information for home page
+2019-05-26 11:27:53 INFO  WebMvcAppConfig:54 - Session Created with session id: 834A805BCD7AA9F8C65A4A701F2DBF1C
+2019-05-26 11:27:56 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:27:56 INFO  BaseInterceptor:23 - User access address: /login, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:28:14 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:28:14 INFO  BaseInterceptor:23 - User access address: /login, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:28:14 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:28:14 INFO  BaseInterceptor:23 - User access address: /home, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:28:14 INFO  CatalogController:64 - Processing information for home page
+2019-05-26 11:28:21 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:28:21 INFO  BaseInterceptor:23 - User access address: /account, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:28:25 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:28:25 INFO  BaseInterceptor:23 - User access address: /addressDetails, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:28:26 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:28:26 INFO  BaseInterceptor:23 - User access address: /getcountry, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:28:29 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:28:29 INFO  BaseInterceptor:23 - User access address: /getstate, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:28:29 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:28:29 INFO  BaseInterceptor:23 - User access address: /getciti, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:28:37 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:28:37 INFO  BaseInterceptor:23 - User access address: /saveaddress, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:28:37 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:28:37 INFO  BaseInterceptor:23 - User access address: /addressDetails, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:28:37 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:28:37 INFO  BaseInterceptor:23 - User access address: /getcountry, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:29:11 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:29:11 INFO  BaseInterceptor:23 - User access address: /change-account, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:29:15 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:29:15 INFO  BaseInterceptor:23 - User access address: /reviews, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:29:18 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:29:18 INFO  BaseInterceptor:23 - User access address: /wishlist, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:29:22 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:29:22 INFO  BaseInterceptor:23 - User access address: /orderHistory, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:29:29 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:29:29 INFO  BaseInterceptor:23 - User access address: /invoice, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:30:01 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:30:01 INFO  BaseInterceptor:23 - User access address: /invoicetoemail, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:33:13 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:33:13 INFO  BaseInterceptor:23 - User access address: /logout, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:33:13 INFO  WebMvcAppConfig:73 - Session Destroyed, Session id: 834A805BCD7AA9F8C65A4A701F2DBF1C
+2019-05-26 11:33:13 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 11:33:13 INFO  BaseInterceptor:23 - User access address: /home, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 11:33:13 INFO  CatalogController:64 - Processing information for home page
+2019-05-26 11:33:13 INFO  WebMvcAppConfig:54 - Session Created with session id: EBF57E356C1A7EE93A7D0D11FF4D9647
+2019-05-26 11:35:05 INFO  SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:125 - Application shutdown requested.
+2019-05-26 11:35:05 INFO  AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4585d475: startup date [Sun May 26 11:15:18 IST 2019]; root of context hierarchy
+2019-05-26 11:35:05 INFO  AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2019-05-26 11:35:05 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@5a06b8b: startup date [Sun May 26 11:15:46 IST 2019]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4585d475
+2019-05-26 11:35:05 INFO  LocalContainerEntityManagerFactoryBean:548 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-26 12:05:51 INFO  RsCartShopApplication:48 - Starting RsCartShopApplication on DESKTOP-SJHADGA with PID 10540 (G:\JavaWorkspace\RsCartE-Commerce\RsCartShop(mysql)\target\classes started by RaviTeja Bollimuntha in G:\JavaWorkspace\RsCartE-Commerce\RsCartShop(mysql))
+2019-05-26 12:05:51 INFO  RsCartShopApplication:593 - No active profile set, falling back to default profiles: default
+2019-05-26 12:05:51 INFO  Version:30 - HV000001: Hibernate Validator 5.3.5.Final
+2019-05-26 12:05:52 INFO  AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@22446117: startup date [Sun May 26 12:05:52 IST 2019]; root of context hierarchy
+2019-05-26 12:05:58 INFO  AutowiredAnnotationBeanPostProcessor:155 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-05-26 12:06:02 INFO  TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 9444 (http)
+2019-05-26 12:06:02 INFO  ContextLoader:276 - Root WebApplicationContext: initialization completed in 10811 ms
+2019-05-26 12:06:04 INFO  ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2019-05-26 12:06:04 INFO  FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-05-26 12:06:04 WARN  DatabaseLookup:80 - Unable to determine jdbc url from datasource
+org.springframework.jdbc.support.MetaDataAccessException: Could not get Connection for extracting meta data; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot load JDBC driver class 'com.mysql.jdbc.Driver'
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:339)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:366)
+	at org.springframework.boot.autoconfigure.orm.jpa.DatabaseLookup.getDatabase(DatabaseLookup.java:72)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.determineDatabase(JpaProperties.java:139)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.jpaVendorAdapter(JpaBaseConfiguration.java:105)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$6b00ecd6.CGLIB$jpaVendorAdapter$6(<generated>)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$6b00ecd6$$FastClassBySpringCGLIB$$80fd849a.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$6b00ecd6.jpaVendorAdapter(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:835)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:467)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:835)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:467)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1078)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:857)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.rscart.RsCartShopApplication.main(RsCartShopApplication.java:11)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot load JDBC driver class 'com.mysql.jdbc.Driver'
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:326)
+	... 66 more
+Caused by: org.apache.commons.dbcp.SQLNestedException: Cannot load JDBC driver class 'com.mysql.jdbc.Driver'
+	at org.apache.commons.dbcp.BasicDataSource.createConnectionFactory(BasicDataSource.java:1429)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1371)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77)
+	... 67 more
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:151)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.apache.commons.dbcp.BasicDataSource.createConnectionFactory(BasicDataSource.java:1420)
+	... 71 more
+2019-05-26 12:06:05 INFO  LocalContainerEntityManagerFactoryBean:349 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-05-26 12:06:05 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-26 12:06:06 INFO  Version:37 - HHH000412: Hibernate Core {5.0.12.Final}
+2019-05-26 12:06:06 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2019-05-26 12:06:06 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2019-05-26 12:06:06 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-05-26 12:06:07 WARN  JdbcEnvironmentInitiator:132 - HHH000342: Could not obtain connection to query metadata : Cannot load JDBC driver class 'com.mysql.jdbc.Driver'
+2019-05-26 12:06:07 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2019-05-26 12:06:07 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2019-05-26 12:06:08 INFO  Version:26 - HSEARCH000034: Hibernate Search 5.5.4.Final
+2019-05-26 12:06:08 ERROR IdTableHelper:105 - Unable obtain JDBC Connection
+org.apache.commons.dbcp.SQLNestedException: Cannot load JDBC driver class 'com.mysql.jdbc.Driver'
+	at org.apache.commons.dbcp.BasicDataSource.createConnectionFactory(BasicDataSource.java:1429)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1371)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.internal.SessionFactoryImpl$2.obtainConnection(SessionFactoryImpl.java:655)
+	at org.hibernate.hql.spi.id.IdTableHelper.executeIdTableCreationStatements(IdTableHelper.java:67)
+	at org.hibernate.hql.spi.id.global.GlobalTemporaryTableBulkIdStrategy.finishPreparation(GlobalTemporaryTableBulkIdStrategy.java:125)
+	at org.hibernate.hql.spi.id.global.GlobalTemporaryTableBulkIdStrategy.finishPreparation(GlobalTemporaryTableBulkIdStrategy.java:42)
+	at org.hibernate.hql.spi.id.AbstractMultiTableBulkIdStrategyImpl.prepare(AbstractMultiTableBulkIdStrategyImpl.java:88)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:455)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:444)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:879)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:353)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:370)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:359)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1078)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:857)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.rscart.RsCartShopApplication.main(RsCartShopApplication.java:11)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:151)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.apache.commons.dbcp.BasicDataSource.createConnectionFactory(BasicDataSource.java:1420)
+	... 38 more
+2019-05-26 12:06:08 WARN  ConfigContext:346 - HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified: using LUCENE_CURRENT.
+2019-05-26 12:06:08 INFO  DirectoryProviderHelper:149 - HSEARCH000041: Index directory not found, creating: 'indexpath'
+2019-05-26 12:06:09 INFO  DirectoryProviderHelper:149 - HSEARCH000041: Index directory not found, creating: 'indexpath\com.rscart.model.Product'
+2019-05-26 12:06:09 INFO  LocalContainerEntityManagerFactoryBean:379 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/shipmentaddress],methods=[POST]}" onto public java.lang.String com.rscart.controller.AddressController.getShipmentAddressDetails(javax.servlet.http.HttpServletRequest,java.lang.String,org.springframework.ui.Model)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addressDetails],methods=[GET]}" onto public java.lang.String com.rscart.controller.AddressController.getAddressDetailsPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Boolean)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveaddress],methods=[POST]}" onto public java.lang.String com.rscart.controller.AddressController.validateAddressInformation(com.rscart.model.AddressForm,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/getstate],methods=[GET]}" onto public com.rscart.util.StateList com.rscart.controller.CartController.getState(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,java.lang.String)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/getcountry],methods=[GET]}" onto public com.rscart.util.CountryList com.rscart.controller.CartController.getCountry(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/cart],methods=[GET]}" onto public java.lang.String com.rscart.controller.CartController.viewCart(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addProduct],methods=[GET]}" onto public java.lang.String com.rscart.controller.CartController.addProducts(org.springframework.ui.Model,java.lang.Long,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/update],methods=[POST]}" onto public java.lang.String com.rscart.controller.CartController.updateCart(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/remove],methods=[GET]}" onto public java.lang.String com.rscart.controller.CartController.removeProduct(java.lang.Long,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/clear],methods=[GET]}" onto public java.lang.String com.rscart.controller.CartController.clearCart(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/coupon],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.rscart.controller.CartController.getCoupon(org.springframework.web.servlet.ModelAndView,javax.servlet.http.HttpServletRequest,java.lang.String)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/getciti],methods=[GET]}" onto public com.rscart.util.CitiList com.rscart.controller.CartController.getCiti(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,java.lang.String)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/subcateogry],methods=[GET]}" onto public java.lang.String com.rscart.controller.CatalogController.fetchProductsBySubCategory(org.springframework.ui.Model,java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/cateogry],methods=[GET]}" onto public java.lang.String com.rscart.controller.CatalogController.fetchProductsByCategory(org.springframework.ui.Model,java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/account],methods=[GET]}" onto public java.lang.String com.rscart.controller.CatalogController.getAccountsPage(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home || /],methods=[GET]}" onto public java.lang.String com.rscart.controller.CatalogController.returnHomePage(org.springframework.ui.Model,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/change-password],methods=[GET]}" onto public java.lang.String com.rscart.controller.ChangePasswordController.getChangePasswordPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Boolean)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/changepassword],methods=[POST]}" onto public java.lang.String com.rscart.controller.ChangePasswordController.changePassword(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,org.springframework.ui.Model,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/address],methods=[POST]}" onto public java.lang.String com.rscart.controller.CheckoutController.ShippingAddressInfo(com.rscart.model.ShippingForm,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/checkout],methods=[GET]}" onto public java.lang.String com.rscart.controller.CheckoutController.checkOutCart(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[POST]}" onto public java.lang.String com.rscart.controller.CustomerController.checkForUserLogin(java.lang.String,java.lang.String,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/change-account],methods=[GET]}" onto public java.lang.String com.rscart.controller.CustomerController.getChangePasswordPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Boolean)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/updatecustdetails],methods=[POST]}" onto public java.lang.String com.rscart.controller.CustomerController.updateCustomerDetails(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.ui.Model,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.rscart.controller.CustomerController.logout(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/successSignUp],methods=[GET]}" onto public java.lang.String com.rscart.controller.CustomerController.signupSuccess(org.springframework.ui.Model)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/failureSignUp],methods=[GET]}" onto public java.lang.String com.rscart.controller.CustomerController.signupFailure(org.springframework.ui.Model)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/signup],methods=[GET]}" onto public java.lang.String com.rscart.controller.CustomerController.registerUser()
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/signup],methods=[POST]}" onto public java.lang.String com.rscart.controller.CustomerController.registerUser(com.rscart.model.Customer,org.springframework.validation.BindingResult,org.springframework.ui.Model,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.rscart.controller.CustomerController.getLoginPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/invoicetoemail],methods=[GET]}" onto public java.lang.String com.rscart.controller.InvoiceController.getOrderHistoryPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.util.Map<java.lang.String, java.lang.Object>,java.lang.Long,javax.servlet.http.HttpServletResponse)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/invoice],methods=[GET]}" onto public java.lang.String com.rscart.controller.InvoiceController.getOrderDetails(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Long)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/order],methods=[GET]}" onto public java.lang.String com.rscart.controller.OrderController.getOrderConfirmPage(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/createOrderByCC],methods=[POST]}" onto public java.lang.String com.rscart.controller.OrderController.createOrder(org.springframework.ui.Model,com.rscart.model.CreditCardForm,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.text.ParseException,java.io.IOException,javax.mail.MessagingException
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/orderHistory],methods=[GET]}" onto public java.lang.String com.rscart.controller.OrderHistoryController.getOrderHistoryPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/orderDetail],methods=[GET]}" onto public java.lang.String com.rscart.controller.OrderHistoryController.getOrderDetails(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Long)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/product],methods=[GET],params=[productId]}" onto public java.lang.String com.rscart.controller.ProductController.handleRequest(org.springframework.ui.Model,java.lang.Long,javax.servlet.http.HttpServletRequest) throws java.text.ParseException
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/emailResetConfirm],methods=[GET],params=[token]}" onto public java.lang.String com.rscart.controller.ResetController.confirmEmailChange(java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/account-password-forgot],methods=[GET]}" onto public java.lang.String com.rscart.controller.ResetController.forgotPasswordConfirm()
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/passwordResetConfirm],methods=[GET],params=[token]}" onto public java.lang.String com.rscart.controller.ResetController.forgotPwdChangeconfirm(java.lang.String,org.springframework.ui.Model)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/passwordResetConfirm],methods=[POST]}" onto public java.lang.String com.rscart.controller.ResetController.forgotPwdChangeconfirm(com.rscart.util.PasswordForgotDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/registrationConfirm],methods=[GET],params=[token]}" onto public java.lang.String com.rscart.controller.ResetController.activateAccount(java.lang.String,org.springframework.ui.Model)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/resetemail],methods=[GET]}" onto public java.lang.String com.rscart.controller.ResetController.changeEmail(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Boolean)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/resetemail],methods=[POST]}" onto public java.lang.String com.rscart.controller.ResetController.changeemail(com.rscart.util.EmailResetDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model) throws java.io.IOException
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/account-password-forgot],methods=[POST]}" onto public java.lang.String com.rscart.controller.ResetController.forgotPwdRequest(java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model) throws java.io.IOException
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/reviews],methods=[POST]}" onto public java.lang.String com.rscart.controller.ReviewsController.reviewProduct(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,com.rscart.model.ReviewForm) throws java.text.ParseException
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/reviews],methods=[GET]}" onto public java.lang.String com.rscart.controller.ReviewsController.getReviewsPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addToWishlist],methods=[GET]}" onto public java.lang.String com.rscart.controller.WishListController.addProductToWishList(org.springframework.ui.Model,java.lang.Long,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/removeFromWishList],methods=[GET]}" onto public java.lang.String com.rscart.controller.WishListController.removeProductFromWishList(org.springframework.ui.Model,java.lang.Long,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/wishlist],methods=[GET]}" onto public java.lang.String com.rscart.controller.WishListController.getWishListPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/moveToWishList],methods=[GET]}" onto public java.lang.String com.rscart.controller.WishListController.moveToWishList(org.springframework.ui.Model,java.lang.Long,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/moveToCart],methods=[GET]}" onto public java.lang.String com.rscart.controller.WishListController.moveToCart(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-05-26 12:06:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-26 12:06:11 INFO  SimpleUrlHandlerMapping:362 - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-05-26 12:06:11 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@22446117: startup date [Sun May 26 12:05:52 IST 2019]; root of context hierarchy
+2019-05-26 12:06:12 INFO  ExceptionHandlerExceptionResolver:273 - Detected @ExceptionHandler methods in exceptionController
+2019-05-26 12:06:13 INFO  OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2019-05-26 12:06:13 INFO  AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2019-05-26 12:06:14 INFO  TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 9444 (http)
+2019-05-26 12:06:14 WARN  SqlExceptionHelper:127 - SQL Error: 0, SQLState: null
+2019-05-26 12:06:14 ERROR SqlExceptionHelper:129 - Cannot load JDBC driver class 'com.mysql.jdbc.Driver'
+2019-05-26 12:06:14 ERROR LogErrorHandler:67 - HSEARCH000058: HSEARCH000211: An exception occurred while the MassIndexer was fetching the primary identifiers list
+org.hibernate.exception.GenericJDBCException: Unable to acquire JDBC Connection
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:47)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:109)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:95)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:90)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:112)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getConnectionForTransactionManagement(LogicalConnectionManagedImpl.java:230)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.begin(LogicalConnectionManagedImpl.java:237)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.begin(JdbcResourceLocalTransactionCoordinatorImpl.java:214)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.begin(TransactionImpl.java:52)
+	at org.hibernate.search.batchindexing.impl.IdentifierProducer.inTransactionWrapper(IdentifierProducer.java:108)
+	at org.hibernate.search.batchindexing.impl.IdentifierProducer.run(IdentifierProducer.java:85)
+	at org.hibernate.search.batchindexing.impl.OptionallyWrapInJTATransaction.runWithErrorHandler(OptionallyWrapInJTATransaction.java:69)
+	at org.hibernate.search.batchindexing.impl.ErrorHandledRunnable.run(ErrorHandledRunnable.java:32)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.apache.commons.dbcp.SQLNestedException: Cannot load JDBC driver class 'com.mysql.jdbc.Driver'
+	at org.apache.commons.dbcp.BasicDataSource.createConnectionFactory(BasicDataSource.java:1429)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1371)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.internal.AbstractSessionImpl$NonContextualJdbcConnectionAccess.obtainConnection(AbstractSessionImpl.java:386)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:87)
+	... 14 more
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:151)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.apache.commons.dbcp.BasicDataSource.createConnectionFactory(BasicDataSource.java:1420)
+	... 19 more
+2019-05-26 12:06:14 INFO  SimpleIndexingProgressMonitor:76 - HSEARCH000028: Reindexed 0 entities
+2019-05-26 12:06:14 INFO  RsCartShopApplication:57 - Started RsCartShopApplication in 25.052 seconds (JVM running for 28.056)
+2019-05-26 12:08:18 INFO  SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:125 - Application shutdown requested.
+2019-05-26 12:08:18 INFO  AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@22446117: startup date [Sun May 26 12:05:52 IST 2019]; root of context hierarchy
+2019-05-26 12:08:18 INFO  AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2019-05-26 12:08:18 INFO  LocalContainerEntityManagerFactoryBean:548 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-26 12:09:43 INFO  RsCartShopApplication:48 - Starting RsCartShopApplication on DESKTOP-SJHADGA with PID 5472 (G:\JavaWorkspace\RsCartE-Commerce\RsCartShop(mysql)\target\classes started by RaviTeja Bollimuntha in G:\JavaWorkspace\RsCartE-Commerce\RsCartShop(mysql))
+2019-05-26 12:09:43 INFO  RsCartShopApplication:593 - No active profile set, falling back to default profiles: default
+2019-05-26 12:09:43 INFO  Version:30 - HV000001: Hibernate Validator 5.3.5.Final
+2019-05-26 12:09:43 INFO  AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@69891f07: startup date [Sun May 26 12:09:43 IST 2019]; root of context hierarchy
+2019-05-26 12:09:45 INFO  AutowiredAnnotationBeanPostProcessor:155 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-05-26 12:09:46 INFO  TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 9444 (http)
+2019-05-26 12:09:47 INFO  ContextLoader:276 - Root WebApplicationContext: initialization completed in 3487 ms
+2019-05-26 12:09:47 INFO  ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2019-05-26 12:09:47 INFO  FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-05-26 12:09:49 INFO  LocalContainerEntityManagerFactoryBean:349 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-05-26 12:09:49 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-26 12:09:50 INFO  Version:37 - HHH000412: Hibernate Core {5.0.12.Final}
+2019-05-26 12:09:50 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2019-05-26 12:09:50 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2019-05-26 12:09:50 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-05-26 12:09:50 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2019-05-26 12:09:51 INFO  Version:26 - HSEARCH000034: Hibernate Search 5.5.4.Final
+2019-05-26 12:09:51 WARN  ConfigContext:346 - HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified: using LUCENE_CURRENT.
+2019-05-26 12:09:51 INFO  LocalContainerEntityManagerFactoryBean:379 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/shipmentaddress],methods=[POST]}" onto public java.lang.String com.rscart.controller.AddressController.getShipmentAddressDetails(javax.servlet.http.HttpServletRequest,java.lang.String,org.springframework.ui.Model)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveaddress],methods=[POST]}" onto public java.lang.String com.rscart.controller.AddressController.validateAddressInformation(com.rscart.model.AddressForm,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addressDetails],methods=[GET]}" onto public java.lang.String com.rscart.controller.AddressController.getAddressDetailsPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Boolean)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/getstate],methods=[GET]}" onto public com.rscart.util.StateList com.rscart.controller.CartController.getState(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,java.lang.String)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/getcountry],methods=[GET]}" onto public com.rscart.util.CountryList com.rscart.controller.CartController.getCountry(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addProduct],methods=[GET]}" onto public java.lang.String com.rscart.controller.CartController.addProducts(org.springframework.ui.Model,java.lang.Long,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/coupon],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.rscart.controller.CartController.getCoupon(org.springframework.web.servlet.ModelAndView,javax.servlet.http.HttpServletRequest,java.lang.String)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/cart],methods=[GET]}" onto public java.lang.String com.rscart.controller.CartController.viewCart(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/clear],methods=[GET]}" onto public java.lang.String com.rscart.controller.CartController.clearCart(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/update],methods=[POST]}" onto public java.lang.String com.rscart.controller.CartController.updateCart(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/remove],methods=[GET]}" onto public java.lang.String com.rscart.controller.CartController.removeProduct(java.lang.Long,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/getciti],methods=[GET]}" onto public com.rscart.util.CitiList com.rscart.controller.CartController.getCiti(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,java.lang.String)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/cateogry],methods=[GET]}" onto public java.lang.String com.rscart.controller.CatalogController.fetchProductsByCategory(org.springframework.ui.Model,java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/subcateogry],methods=[GET]}" onto public java.lang.String com.rscart.controller.CatalogController.fetchProductsBySubCategory(org.springframework.ui.Model,java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/account],methods=[GET]}" onto public java.lang.String com.rscart.controller.CatalogController.getAccountsPage(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home || /],methods=[GET]}" onto public java.lang.String com.rscart.controller.CatalogController.returnHomePage(org.springframework.ui.Model,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/change-password],methods=[GET]}" onto public java.lang.String com.rscart.controller.ChangePasswordController.getChangePasswordPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Boolean)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/changepassword],methods=[POST]}" onto public java.lang.String com.rscart.controller.ChangePasswordController.changePassword(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,org.springframework.ui.Model,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/address],methods=[POST]}" onto public java.lang.String com.rscart.controller.CheckoutController.ShippingAddressInfo(com.rscart.model.ShippingForm,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/checkout],methods=[GET]}" onto public java.lang.String com.rscart.controller.CheckoutController.checkOutCart(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[POST]}" onto public java.lang.String com.rscart.controller.CustomerController.checkForUserLogin(java.lang.String,java.lang.String,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/updatecustdetails],methods=[POST]}" onto public java.lang.String com.rscart.controller.CustomerController.updateCustomerDetails(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.ui.Model,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/change-account],methods=[GET]}" onto public java.lang.String com.rscart.controller.CustomerController.getChangePasswordPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Boolean)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/signup],methods=[POST]}" onto public java.lang.String com.rscart.controller.CustomerController.registerUser(com.rscart.model.Customer,org.springframework.validation.BindingResult,org.springframework.ui.Model,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/signup],methods=[GET]}" onto public java.lang.String com.rscart.controller.CustomerController.registerUser()
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.rscart.controller.CustomerController.getLoginPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.rscart.controller.CustomerController.logout(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/failureSignUp],methods=[GET]}" onto public java.lang.String com.rscart.controller.CustomerController.signupFailure(org.springframework.ui.Model)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/successSignUp],methods=[GET]}" onto public java.lang.String com.rscart.controller.CustomerController.signupSuccess(org.springframework.ui.Model)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/invoicetoemail],methods=[GET]}" onto public java.lang.String com.rscart.controller.InvoiceController.getOrderHistoryPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.util.Map<java.lang.String, java.lang.Object>,java.lang.Long,javax.servlet.http.HttpServletResponse)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/invoice],methods=[GET]}" onto public java.lang.String com.rscart.controller.InvoiceController.getOrderDetails(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Long)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/order],methods=[GET]}" onto public java.lang.String com.rscart.controller.OrderController.getOrderConfirmPage(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/createOrderByCC],methods=[POST]}" onto public java.lang.String com.rscart.controller.OrderController.createOrder(org.springframework.ui.Model,com.rscart.model.CreditCardForm,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.text.ParseException,java.io.IOException,javax.mail.MessagingException
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/orderHistory],methods=[GET]}" onto public java.lang.String com.rscart.controller.OrderHistoryController.getOrderHistoryPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/orderDetail],methods=[GET]}" onto public java.lang.String com.rscart.controller.OrderHistoryController.getOrderDetails(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Long)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/product],methods=[GET],params=[productId]}" onto public java.lang.String com.rscart.controller.ProductController.handleRequest(org.springframework.ui.Model,java.lang.Long,javax.servlet.http.HttpServletRequest) throws java.text.ParseException
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/emailResetConfirm],methods=[GET],params=[token]}" onto public java.lang.String com.rscart.controller.ResetController.confirmEmailChange(java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/account-password-forgot],methods=[GET]}" onto public java.lang.String com.rscart.controller.ResetController.forgotPasswordConfirm()
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/passwordResetConfirm],methods=[GET],params=[token]}" onto public java.lang.String com.rscart.controller.ResetController.forgotPwdChangeconfirm(java.lang.String,org.springframework.ui.Model)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/passwordResetConfirm],methods=[POST]}" onto public java.lang.String com.rscart.controller.ResetController.forgotPwdChangeconfirm(com.rscart.util.PasswordForgotDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/registrationConfirm],methods=[GET],params=[token]}" onto public java.lang.String com.rscart.controller.ResetController.activateAccount(java.lang.String,org.springframework.ui.Model)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/resetemail],methods=[GET]}" onto public java.lang.String com.rscart.controller.ResetController.changeEmail(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Boolean)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/account-password-forgot],methods=[POST]}" onto public java.lang.String com.rscart.controller.ResetController.forgotPwdRequest(java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model) throws java.io.IOException
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/resetemail],methods=[POST]}" onto public java.lang.String com.rscart.controller.ResetController.changeemail(com.rscart.util.EmailResetDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model) throws java.io.IOException
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/reviews],methods=[GET]}" onto public java.lang.String com.rscart.controller.ReviewsController.getReviewsPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/reviews],methods=[POST]}" onto public java.lang.String com.rscart.controller.ReviewsController.reviewProduct(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,com.rscart.model.ReviewForm) throws java.text.ParseException
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/removeFromWishList],methods=[GET]}" onto public java.lang.String com.rscart.controller.WishListController.removeProductFromWishList(org.springframework.ui.Model,java.lang.Long,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addToWishlist],methods=[GET]}" onto public java.lang.String com.rscart.controller.WishListController.addProductToWishList(org.springframework.ui.Model,java.lang.Long,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/wishlist],methods=[GET]}" onto public java.lang.String com.rscart.controller.WishListController.getWishListPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/moveToWishList],methods=[GET]}" onto public java.lang.String com.rscart.controller.WishListController.moveToWishList(org.springframework.ui.Model,java.lang.Long,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/moveToCart],methods=[GET]}" onto public java.lang.String com.rscart.controller.WishListController.moveToCart(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-05-26 12:09:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-26 12:09:52 INFO  SimpleUrlHandlerMapping:362 - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-05-26 12:09:52 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@69891f07: startup date [Sun May 26 12:09:43 IST 2019]; root of context hierarchy
+2019-05-26 12:09:52 INFO  ExceptionHandlerExceptionResolver:273 - Detected @ExceptionHandler methods in exceptionController
+2019-05-26 12:09:53 INFO  OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2019-05-26 12:09:53 INFO  AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2019-05-26 12:09:54 INFO  TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 9444 (http)
+2019-05-26 12:09:55 INFO  SimpleIndexingProgressMonitor:71 - HSEARCH000027: Going to reindex 25 entities
+2019-05-26 12:09:57 INFO  SimpleIndexingProgressMonitor:76 - HSEARCH000028: Reindexed 25 entities
+2019-05-26 12:09:57 INFO  RsCartShopApplication:57 - Started RsCartShopApplication in 15.189 seconds (JVM running for 16.439)
+2019-05-26 12:10:23 INFO  DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2019-05-26 12:10:24 INFO  DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 157 ms
+2019-05-26 12:10:24 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 12:10:24 INFO  BaseInterceptor:23 - User access address: /, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 12:10:24 INFO  CatalogController:64 - Processing information for home page
+2019-05-26 12:10:26 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@63e201c3: startup date [Sun May 26 12:10:26 IST 2019]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@69891f07
+2019-05-26 12:10:39 INFO  WebMvcAppConfig:54 - Session Created with session id: 06A25EE0ACCD0BB6B3BFC1104A786728
+2019-05-26 12:11:41 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 12:11:41 INFO  BaseInterceptor:23 - User access address: /home, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 12:11:41 INFO  CatalogController:64 - Processing information for home page
+2019-05-26 12:11:46 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 12:11:46 INFO  BaseInterceptor:23 - User access address: /addProduct, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 12:11:46 INFO  CartController:53 - add products into cart
+2019-05-26 12:11:46 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 12:11:46 INFO  BaseInterceptor:23 - User access address: /cart, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 12:11:57 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 12:11:57 INFO  BaseInterceptor:23 - User access address: /checkout, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 12:12:13 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 12:12:13 INFO  BaseInterceptor:23 - User access address: /login, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 12:12:14 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 12:12:14 INFO  BaseInterceptor:23 - User access address: /checkout, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 12:12:35 INFO  SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:125 - Application shutdown requested.
+2019-05-26 12:12:35 INFO  AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@69891f07: startup date [Sun May 26 12:09:43 IST 2019]; root of context hierarchy
+2019-05-26 12:12:35 INFO  AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2019-05-26 12:12:35 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@63e201c3: startup date [Sun May 26 12:10:26 IST 2019]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@69891f07
+2019-05-26 12:12:35 INFO  LocalContainerEntityManagerFactoryBean:548 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-26 12:34:19 INFO  RsCartShopApplication:48 - Starting RsCartShopApplication on DESKTOP-SJHADGA with PID 420 (G:\JavaWorkspace\RsCartE-Commerce\RsCartShop-mysql\target\classes started by RaviTeja Bollimuntha in G:\JavaWorkspace\RsCartE-Commerce\RsCartShop-mysql)
+2019-05-26 12:34:19 INFO  RsCartShopApplication:593 - No active profile set, falling back to default profiles: default
+2019-05-26 12:34:19 INFO  Version:30 - HV000001: Hibernate Validator 5.3.5.Final
+2019-05-26 12:34:20 INFO  AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c63fde5: startup date [Sun May 26 12:34:20 IST 2019]; root of context hierarchy
+2019-05-26 12:34:32 INFO  AutowiredAnnotationBeanPostProcessor:155 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-05-26 12:34:36 INFO  TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 9444 (http)
+2019-05-26 12:34:36 INFO  ContextLoader:276 - Root WebApplicationContext: initialization completed in 16791 ms
+2019-05-26 12:34:37 INFO  ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2019-05-26 12:34:37 INFO  FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-05-26 12:34:40 INFO  LocalContainerEntityManagerFactoryBean:349 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-05-26 12:34:40 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-26 12:34:40 INFO  Version:37 - HHH000412: Hibernate Core {5.0.12.Final}
+2019-05-26 12:34:40 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2019-05-26 12:34:40 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2019-05-26 12:34:40 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-05-26 12:34:41 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2019-05-26 12:34:42 INFO  Version:26 - HSEARCH000034: Hibernate Search 5.5.4.Final
+2019-05-26 12:34:42 WARN  ConfigContext:346 - HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified: using LUCENE_CURRENT.
+2019-05-26 12:34:43 INFO  DirectoryProviderHelper:149 - HSEARCH000041: Index directory not found, creating: 'indexpath'
+2019-05-26 12:34:43 INFO  DirectoryProviderHelper:149 - HSEARCH000041: Index directory not found, creating: 'indexpath\com.rscart.model.Product'
+2019-05-26 12:34:43 INFO  LocalContainerEntityManagerFactoryBean:379 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveaddress],methods=[POST]}" onto public java.lang.String com.rscart.controller.AddressController.validateAddressInformation(com.rscart.model.AddressForm,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addressDetails],methods=[GET]}" onto public java.lang.String com.rscart.controller.AddressController.getAddressDetailsPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Boolean)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/shipmentaddress],methods=[POST]}" onto public java.lang.String com.rscart.controller.AddressController.getShipmentAddressDetails(javax.servlet.http.HttpServletRequest,java.lang.String,org.springframework.ui.Model)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/getstate],methods=[GET]}" onto public com.rscart.util.StateList com.rscart.controller.CartController.getState(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,java.lang.String)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/getcountry],methods=[GET]}" onto public com.rscart.util.CountryList com.rscart.controller.CartController.getCountry(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/coupon],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.rscart.controller.CartController.getCoupon(org.springframework.web.servlet.ModelAndView,javax.servlet.http.HttpServletRequest,java.lang.String)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/cart],methods=[GET]}" onto public java.lang.String com.rscart.controller.CartController.viewCart(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/update],methods=[POST]}" onto public java.lang.String com.rscart.controller.CartController.updateCart(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/remove],methods=[GET]}" onto public java.lang.String com.rscart.controller.CartController.removeProduct(java.lang.Long,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addProduct],methods=[GET]}" onto public java.lang.String com.rscart.controller.CartController.addProducts(org.springframework.ui.Model,java.lang.Long,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/clear],methods=[GET]}" onto public java.lang.String com.rscart.controller.CartController.clearCart(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/getciti],methods=[GET]}" onto public com.rscart.util.CitiList com.rscart.controller.CartController.getCiti(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,java.lang.String)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/subcateogry],methods=[GET]}" onto public java.lang.String com.rscart.controller.CatalogController.fetchProductsBySubCategory(org.springframework.ui.Model,java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/cateogry],methods=[GET]}" onto public java.lang.String com.rscart.controller.CatalogController.fetchProductsByCategory(org.springframework.ui.Model,java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/account],methods=[GET]}" onto public java.lang.String com.rscart.controller.CatalogController.getAccountsPage(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home || /],methods=[GET]}" onto public java.lang.String com.rscart.controller.CatalogController.returnHomePage(org.springframework.ui.Model,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/change-password],methods=[GET]}" onto public java.lang.String com.rscart.controller.ChangePasswordController.getChangePasswordPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Boolean)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/changepassword],methods=[POST]}" onto public java.lang.String com.rscart.controller.ChangePasswordController.changePassword(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,org.springframework.ui.Model,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/address],methods=[POST]}" onto public java.lang.String com.rscart.controller.CheckoutController.ShippingAddressInfo(com.rscart.model.ShippingForm,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/checkout],methods=[GET]}" onto public java.lang.String com.rscart.controller.CheckoutController.checkOutCart(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/change-account],methods=[GET]}" onto public java.lang.String com.rscart.controller.CustomerController.getChangePasswordPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Boolean)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[POST]}" onto public java.lang.String com.rscart.controller.CustomerController.checkForUserLogin(java.lang.String,java.lang.String,org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/updatecustdetails],methods=[POST]}" onto public java.lang.String com.rscart.controller.CustomerController.updateCustomerDetails(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.ui.Model,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/signup],methods=[GET]}" onto public java.lang.String com.rscart.controller.CustomerController.registerUser()
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/signup],methods=[POST]}" onto public java.lang.String com.rscart.controller.CustomerController.registerUser(com.rscart.model.Customer,org.springframework.validation.BindingResult,org.springframework.ui.Model,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.rscart.controller.CustomerController.getLoginPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/successSignUp],methods=[GET]}" onto public java.lang.String com.rscart.controller.CustomerController.signupSuccess(org.springframework.ui.Model)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/failureSignUp],methods=[GET]}" onto public java.lang.String com.rscart.controller.CustomerController.signupFailure(org.springframework.ui.Model)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.rscart.controller.CustomerController.logout(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/invoicetoemail],methods=[GET]}" onto public java.lang.String com.rscart.controller.InvoiceController.getOrderHistoryPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.util.Map<java.lang.String, java.lang.Object>,java.lang.Long,javax.servlet.http.HttpServletResponse)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/invoice],methods=[GET]}" onto public java.lang.String com.rscart.controller.InvoiceController.getOrderDetails(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Long)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/order],methods=[GET]}" onto public java.lang.String com.rscart.controller.OrderController.getOrderConfirmPage(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/createOrderByCC],methods=[POST]}" onto public java.lang.String com.rscart.controller.OrderController.createOrder(org.springframework.ui.Model,com.rscart.model.CreditCardForm,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.text.ParseException,java.io.IOException,javax.mail.MessagingException
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/orderHistory],methods=[GET]}" onto public java.lang.String com.rscart.controller.OrderHistoryController.getOrderHistoryPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/orderDetail],methods=[GET]}" onto public java.lang.String com.rscart.controller.OrderHistoryController.getOrderDetails(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Long)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/product],methods=[GET],params=[productId]}" onto public java.lang.String com.rscart.controller.ProductController.handleRequest(org.springframework.ui.Model,java.lang.Long,javax.servlet.http.HttpServletRequest) throws java.text.ParseException
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/account-password-forgot],methods=[GET]}" onto public java.lang.String com.rscart.controller.ResetController.forgotPasswordConfirm()
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/passwordResetConfirm],methods=[GET],params=[token]}" onto public java.lang.String com.rscart.controller.ResetController.forgotPwdChangeconfirm(java.lang.String,org.springframework.ui.Model)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/passwordResetConfirm],methods=[POST]}" onto public java.lang.String com.rscart.controller.ResetController.forgotPwdChangeconfirm(com.rscart.util.PasswordForgotDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/emailResetConfirm],methods=[GET],params=[token]}" onto public java.lang.String com.rscart.controller.ResetController.confirmEmailChange(java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/resetemail],methods=[POST]}" onto public java.lang.String com.rscart.controller.ResetController.changeemail(com.rscart.util.EmailResetDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model) throws java.io.IOException
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/registrationConfirm],methods=[GET],params=[token]}" onto public java.lang.String com.rscart.controller.ResetController.activateAccount(java.lang.String,org.springframework.ui.Model)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/resetemail],methods=[GET]}" onto public java.lang.String com.rscart.controller.ResetController.changeEmail(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Boolean)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/account-password-forgot],methods=[POST]}" onto public java.lang.String com.rscart.controller.ResetController.forgotPwdRequest(java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model) throws java.io.IOException
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/reviews],methods=[POST]}" onto public java.lang.String com.rscart.controller.ReviewsController.reviewProduct(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,com.rscart.model.ReviewForm) throws java.text.ParseException
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/reviews],methods=[GET]}" onto public java.lang.String com.rscart.controller.ReviewsController.getReviewsPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addToWishlist],methods=[GET]}" onto public java.lang.String com.rscart.controller.WishListController.addProductToWishList(org.springframework.ui.Model,java.lang.Long,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/removeFromWishList],methods=[GET]}" onto public java.lang.String com.rscart.controller.WishListController.removeProductFromWishList(org.springframework.ui.Model,java.lang.Long,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/wishlist],methods=[GET]}" onto public java.lang.String com.rscart.controller.WishListController.getWishListPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/moveToWishList],methods=[GET]}" onto public java.lang.String com.rscart.controller.WishListController.moveToWishList(org.springframework.ui.Model,java.lang.Long,javax.servlet.http.HttpServletRequest)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/moveToCart],methods=[GET]}" onto public java.lang.String com.rscart.controller.WishListController.moveToCart(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-05-26 12:34:45 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-26 12:34:45 INFO  SimpleUrlHandlerMapping:362 - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-05-26 12:34:45 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c63fde5: startup date [Sun May 26 12:34:20 IST 2019]; root of context hierarchy
+2019-05-26 12:34:45 INFO  ExceptionHandlerExceptionResolver:273 - Detected @ExceptionHandler methods in exceptionController
+2019-05-26 12:34:46 INFO  OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2019-05-26 12:34:47 INFO  AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2019-05-26 12:34:47 INFO  TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 9444 (http)
+2019-05-26 12:34:48 INFO  SimpleIndexingProgressMonitor:71 - HSEARCH000027: Going to reindex 25 entities
+2019-05-26 12:34:50 INFO  SimpleIndexingProgressMonitor:76 - HSEARCH000028: Reindexed 25 entities
+2019-05-26 12:34:50 INFO  RsCartShopApplication:57 - Started RsCartShopApplication in 31.8 seconds (JVM running for 33.732)
+2019-05-26 12:35:26 INFO  DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2019-05-26 12:35:26 INFO  DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 578 ms
+2019-05-26 12:35:28 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 12:35:28 INFO  BaseInterceptor:23 - User access address: /, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 12:35:29 INFO  CatalogController:64 - Processing information for home page
+2019-05-26 12:35:32 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 12:35:32 INFO  BaseInterceptor:23 - User access address: /, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 12:35:32 INFO  CatalogController:64 - Processing information for home page
+2019-05-26 12:35:32 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5036004f: startup date [Sun May 26 12:35:32 IST 2019]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c63fde5
+2019-05-26 12:35:51 INFO  WebMvcAppConfig:54 - Session Created with session id: 320E523D83B50A810EE887F4ED8DF035
+2019-05-26 12:35:51 INFO  WebMvcAppConfig:54 - Session Created with session id: 5CE2C069D4258A19610E8891C7BC9B4F
+2019-05-26 12:36:24 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 12:36:24 INFO  BaseInterceptor:23 - User access address: /addProduct, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 12:36:24 INFO  CartController:53 - add products into cart
+2019-05-26 12:36:24 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 12:36:24 INFO  BaseInterceptor:23 - User access address: /cart, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 12:36:56 INFO  BaseInterceptor:22 - UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+2019-05-26 12:36:56 INFO  BaseInterceptor:23 - User access address: /checkout, incoming address: 0:0:0:0:0:0:0:1
+2019-05-26 12:37:13 INFO  SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:125 - Application shutdown requested.
+2019-05-26 12:37:13 INFO  AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c63fde5: startup date [Sun May 26 12:34:20 IST 2019]; root of context hierarchy
+2019-05-26 12:37:13 INFO  AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2019-05-26 12:37:13 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@5036004f: startup date [Sun May 26 12:35:32 IST 2019]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c63fde5
+2019-05-26 12:37:13 INFO  LocalContainerEntityManagerFactoryBean:548 - Closing JPA EntityManagerFactory for persistence unit 'default'
